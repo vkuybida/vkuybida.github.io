@@ -12,10 +12,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;900&display=swap"" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css?r=1" />
 
 	<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="js/global.js"></script>  
+	<script src="js/global.js?r=1"></script>  
 
 	<!--[if lt IE 9]> 
 	 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -28,7 +28,7 @@
 
 <body>
 
-<header>
+<header id="header">
 	<div class="top-mobile">
 		<a href="#" class="logo"><img src="images/logo-mccain.png" alt="Image"></a>
 		<div class="mobile-menu"></div>
@@ -199,12 +199,14 @@
 </section>
 
 <section class="header-widget section">
-	<div class="content-holder">
-		<div class="h1">Veggies</div>
-	</div>
-	<div class="image-holder">
-		<img class="desktop" src="images/banner-veggies.png" alt="Image">
-		<img class="mobile" src="images/banner-veggies-mobile.png" alt="Image">
+	<div class="header-widget-banner">
+		<div class="content-holder">
+			<div class="h1">Veggies</div>
+		</div>
+		<div class="image-holder">
+			<img class="desktop" src="images/banner-veggies.png" alt="Image">
+			<img class="mobile" src="images/banner-veggies-mobile.png" alt="Image">
+		</div>
 	</div>
 	<div class="section-text"><p>Our farm-grown vegetables are harvested at their peak and snap frozen within hours. This locks in the flavour and essential nutrients, so they taste like they were picked from your own garden.</p></div>
 </section>
@@ -450,7 +452,7 @@
 		<div class="pobox">
 			P.O. Box 6215<br/>
 			Melbourne VIC 3004<br/>
-			1800 065 521
+			1800 065 521<br/><br/>
 		</div>
 	</div>
 </section>
@@ -636,7 +638,7 @@
 	</div>
 </section>
 
-<section class="products-menu small">
+<section class="products-menu">
 	<div class="cards-holder">
 		<a href="#" class="card-item">
 			<div class="h1">Veggies</div>
@@ -723,7 +725,7 @@
 			<a href="#" class="instagram"><img src="images/icon-instagram.png" alt="Image"></a>
 		</div>
 	</div>
-	<div class="copy">© 2021 McCain Foods Limited</div>
+	<div class="copy">© 2022 McCain Foods Limited</div>
 </footer>
 </body>
 </html>
