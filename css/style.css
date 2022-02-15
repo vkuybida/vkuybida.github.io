@@ -205,42 +205,47 @@ header {
 			gap: 30px;
 			background: #F3B628;
 			border-radius: 50px 0px 0px 50px;
-			margin-left: 52%;
-			transition: margin 700ms;
+			margin-left: 55%;
+				-webkit-transition: margin 0.7s;
+			transition: margin 0.7s;
 		}
 			header.active .top-holder {
-				margin-left: 40%;
-				transition: margin 700ms;
+				margin-left: 39%;
+					-webkit-transition: margin 0.7s;
+				transition: margin  0.7s;
 			}
 			header .search-holder {
 				position: relative;
-				padding: 15px;
-			}
+				width: 42px;
+				height: 56px;
+				-webkit-transition: width 1s;
+				transition: width 1s;
+			 }
 				header.active .search-holder {
-					padding: 0px;
-				}
+					width: 280px;
+					-webkit-transition: width 1s;
+					transition: width 1s;
+				 }
 				header .search-holder .search-icon {
-					display: inline-block;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 15px;
 					max-width: 27px;
 					cursor: pointer;
-					vertical-align: middle;
 				}
 					header.active .search-holder .search-icon {
-						position: absolute;
-						top: 50%;
-						transform: translateY(-50%);
-						left: 15px;
 					}
 				header .top .search-holder input {
-					display: none;
+					visibility: hidden;
 				}
 					header.active .top .search-holder input, header .search-holder input {
-						display: inline-block;
-						vertical-align: middle;
+						visibility: visible;
 						padding: 15px 15px 15px 50px;
 						background: #F3B628;
 						box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.4);
 						border-radius: 50px;
+						max-width: 280px;
 					}
 			.social-networks {
 				display: grid;
@@ -453,6 +458,10 @@ footer {
 				color: #000000;
 				margin-top: 30px;
 			}
+			.product-highlights .products-grid-item .image-holder {
+				max-width: 230px;
+				margin: 0px auto;
+			}
 		.product-highlights .button-holder {
 			display: table;
 			margin: 30px auto 0px auto;
@@ -573,8 +582,9 @@ footer {
 	}
 	.header-widget .content-holder {
 		position: absolute;
-		top: 20%;
+		top: 50%;
 		left: 15%;
+		transform: translateY(-50%);
 	}
 		.header-widget .content-holder .h1 {
 			text-transform: uppercase;
@@ -717,6 +727,8 @@ footer {
 		.products-details .products-details-image {
 		}
 			.products-details .image-holder {
+				max-width: 500px;
+				margin: 0px auto;
 			}
 			.products-details .tumbnails {
 				display: grid;
@@ -822,6 +834,10 @@ footer {
 			.related-products .related-products-item .title {
 				text-align: center;
 				color: #000000;
+			}
+			.related-products .related-products-item .image-holder {
+				max-width: 245px;
+				margin: 0px auto;
 			}
 
 
@@ -1234,7 +1250,8 @@ footer {
 				text-decoration: none;
 			}
 				.trending-products .trending-item .image-holder {
-					margin-bottom: 20px;
+					max-width: 340px;
+					margin: 0px auto 20px auto;
 				}
 				.trending-products .trending-item .title {
 					text-align: center;
@@ -1310,6 +1327,8 @@ footer {
 				grid-gap: 20px;
 			}
 			.search-page .search-results-grid-item .image-holder {
+				max-width: 340px;
+				margin: 0px auto;
 			}
 				.search-page .search-results-grid-item .content-holder {
 					display: grid;
@@ -1354,10 +1373,10 @@ footer {
 	h4{font-size: 16px;}
 	h5{font-size: 14px;}
 	header .top-holder {
-		margin-left: 49%;
+		margin-left: 52%;
 	}
 		header.active .top-holder {
-			margin-left: 25%;
+			margin-left: 29%;
 		}
 	.navigation-holder nav .menu-item a {
 		padding: 0px 20px;
@@ -1467,6 +1486,8 @@ footer {
 		position: relative;
 		margin: 20px 0px;
 		padding: 0px 20px;
+		width: auto;
+		height: auto;
 	}
 		header .search-holder.mobile .search-icon {
 			position: absolute;
@@ -1475,6 +1496,7 @@ footer {
 			left: 35px;
 		}
 		header .search-holder.mobile input {
+			max-width: 100%;
 			width: 100%;
 			padding: 15px 15px 15px 50px;
 		}
