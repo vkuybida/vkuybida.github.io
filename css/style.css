@@ -247,6 +247,10 @@ header {
 						border-radius: 50px;
 						max-width: 280px;
 					}
+					header .top .search-holder input::placeholder {
+						font-weight: bold;
+						color: #000000;
+					}
 			.social-networks {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
@@ -336,6 +340,9 @@ header {
 		border-radius: 200px;
 		padding: 10px 20px;
 		width: 100%;
+	}
+	.form-holder input::placeholder {
+		color: #000000;
 	}
 .signup {
 }
@@ -560,9 +567,10 @@ footer {
 		grid-gap: 50px;
 	}
 		.article .column .h1 {
+			font-size: 58px;
 			margin-bottom: 30px;
 			text-transform: uppercase;
-			word-break: break-all;
+			word-break: break-word;
 		}
 		.article .column .image-holder {
 		}
@@ -1287,6 +1295,9 @@ footer {
 			padding: 20px 20px 20px 70px;
 			width: 100%;
 		}
+			.search-page .search-header input::placeholder {
+				color: #000000;
+			}
 		.search-page .search-header .search-icon {
 			position: absolute;
 			max-width: 38px;
