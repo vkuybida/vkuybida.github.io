@@ -175,6 +175,9 @@ article,aside,figcaption,figure,footer,header,hgroup,nav,section,time {
 	.button:focus {
 		background: #F3B628;
 	}
+	.button.gold {
+		background: #F3B628;
+	}
 	body {padding-top: 0.5px;}
 	.sticky {
 		position: fixed;
@@ -933,6 +936,51 @@ footer {
 				font-weight: bold;
 				color: #000000;
 			}
+	.contact.form-holder {
+	}
+		.contact.form-holder .form-holder {
+			display: grid;
+			grid-auto-flow: column;
+			grid-gap: 20px;
+		}
+		.contact.form-holder .form-holder input, .contact.form-holder .form-holder textarea {
+			border: 3px solid #F3B628;
+			border-radius: 5px;
+		}
+		.contact.form-holder textarea {
+			resize: vertical;
+			box-sizing: border-box;
+			border-radius: 200px;
+			padding: 10px 20px;
+			width: 100%;
+		}
+			.contact.form-holder textarea::placeholder {
+				color: #000000;
+			}
+		.contact.form-holder .error-message {
+			display: none;
+		}
+		.contact.form-holder .error-message.active {
+			display: block;
+			font-size: 12px;
+			color: #D93420;
+		}
+		.contact.form-holder .image-upload {
+			background: rgba(196, 196, 196, 0.2);
+			border: 3px solid #817F7F;
+			border-radius: 4px;
+			text-align: center;
+			padding: 20px;
+			text-decoration: none;
+			color: #000000;
+		}
+			.contact.form-holder .image-upload .image-holder img {
+				max-width: 42px;
+				margin: 20px auto 0px auto;
+			}
+		.contact.form-holder .footnote {
+			text-align: right;
+		}
 	.direct-contact {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -1721,6 +1769,10 @@ footer {
 	}
 	.instagram-widget .header-holder h3, .instagram-widget .header-holder .text {
 		font-size: 14px;
+	}
+	.contact.form-holder .form-holder {
+		grid-auto-flow: inherit;
+		grid-gap: 0px;
 	}
 }
 
