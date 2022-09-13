@@ -22,13 +22,15 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css?=1" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 			crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/slick/slick.min.js"></script>
 	<script src="js/global.js"></script>
 
 
@@ -41,7 +43,7 @@
 	<!-- Header -->
 	<header>
 		<div class="logo">
-			<a href="#"><img src="images/mccain-logo.png" alt="McCain Logo" /></a>
+			<a href="index.html"><img src="images/mccain-logo.png" alt="McCain Logo" /></a>
 		</div>
 
 		<div class="search-box-holder">
@@ -62,6 +64,15 @@
 			</div>
 		</div>
 
+		<div class="language-selector">
+			<div class="selected-language">
+				FR
+			</div>
+			<div class="language-popup">
+				
+			</div>
+		</div>
+
 		<div class="menu-icon">
 			<img src="images/icon-menu.png" alt="Menu Hamburger Icon" class="menu-open">
 		</div>
@@ -71,7 +82,7 @@
 	<div class="menu-section">
 		<nav class="main-navigation">
 			<div class="main-items">
-				<a href="#">Products</a>
+				<a href="products.html">Products</a>
 				<a href="#">Inspiration</a>
 				<a href="#">Recipes</a>
 				<a href="#">About Us</a>
@@ -128,235 +139,289 @@
 			</div>
 		</nav>
 	</div>
-	
-	<!-- Products Landing page -->
-	<section class="products">
-		<div class="products-wrapper">
-			<div class="filters-holder">
-				Filters
-			</div>
-			
-			<div class="products-holder">
-				<div class="header">
-					<div class="filters-button">Filters</div>
-					<div class="search-holder"><input type="text" placeholder="Search Products"></div>
-				</div>
-				<div class="statistics">
-					<div class="results-number">1-12 of 45</div>
-				</div>
-				<div class="products-grid">
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/SPICY-CRISPERS.jpg" alt="Image"></div> <div class="title">Spicy Crispers</div></a>
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/Mini_Onion_Rings.jpg" alt="Image"></div> <div class="title">Mini Crispy Onion Rings</div></a>
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/Apple-Turnover.jpg" alt="Image"></div> <div class="title">Apple Turnover</div></a>
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/Spicy-Lattice-Fries.jpg" alt="Image"></div> <div class="title">Spicy Lattice Fries</div></a>
-					
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/Apple-Turnover.jpg" alt="Image"></div> <div class="title">Apple Turnover</div></a>
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/Spicy-Lattice-Fries.jpg" alt="Image"></div> <div class="title">Spicy Lattice Fries</div></a>
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/SPICY-CRISPERS.jpg" alt="Image"></div> <div class="title">Spicy Crispers</div></a>
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/Mini_Onion_Rings.jpg" alt="Image"></div> <div class="title">Mini Crispy Onion Rings</div></a>
-					
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/mcs110.png" alt="Image"></div> <div class="title">Bistro Style fries</div></a>
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/mcs03691.png" alt="Image"></div> <div class="title">Sweet Potato</div></a>
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/mcs75.png" alt="Image"></div> <div class="title">Spicy Crispers</div></a>
-					<a href="#" class="product-item"><div class="image-holder"><img src="images/products/mcs140.png" alt="Image"></div> <div class="title">Illusion Thin Coated Skin On Shoestring Fries</div></a>
-					
 
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Product Details page -->
-	<section class="product-details">
-		<div class="product-holder">
-			<div class="product-header">
-
-				<div class="images-holder">
+	<!-- Grid Section -->
+	<section class="grid-section">
+		<div class="grid">
+			<div class="col-2">
+				<div class="item">
 					<div class="image-holder">
-						<img src="images/products/Illusion-Thin-Coated-Skin-On-Shoestring-Fries-McCain_arange-00.jpg" alt="Product Image"/>
+						<img src="images/masthead_v2-min-min.png" alt="Image">
 					</div>
-					<div class="thumbnails-holder">
-						<img src="images/products/Illusion-Thin-Coated-Skin-On-Shoestring-Fries-McCain_arange-00.jpg" alt="Product Image" class="active"/>
-						<img src="images/products/Illusion-Thin-Coated-Skin-On-Shoestring-Fries-McCain_arange-00.jpg"  alt="Product Image"/>
-						<img src="images/products/Illusion-Thin-Coated-Skin-On-Shoestring-Fries-McCain_arange-00.jpg"  alt="Product Image"/>
-					</div>
-				</div>
-
-				<div class="details-holder">
-					<div class="upper-title">P!ckers Range</div>
-					<div class="title">Illusion Thin Coated Skin On Shoestring Fries</div>
-					<div class="description">Shoestring skin on fries made from 100% Canadian potatoes and lightly battered to perfection in a smooth clear coating. Prefried and quick frozen.</div>
-					
-					<div class="product-info">
-						<div class="info-item">
-							<div class="title">Packaging:</div>
-							<div class="value">6 × 2,04 kg</div>
-						</div> 
-						<div class="info-item">
-							<div class="title">Net weight:</div>
-							<div class="value">2,04 kg</div>
-						</div> 
-						<div class="info-item">
-							<div class="title">Article number:</div>
-							<div class="value">1000006350</div>
-						</div> 
-					</div>
-	
-					<div class="tags">
-						<div class="title"></div>
-						<a href="#">conventional</a>
-						<a href="#">uncoated fries</a>
-						<a href="#">hashbrowns</a>
-						<a href="#">thin cut size</a>
-						<a href="#">breakfast</a>
-					</div>
-					
-					<div class="buttons-holder">
+					<div class="content">
+						<div class="title">Title</div>
+						<div class="sub-title">Sub title</div>
 						<div class="button-holder">
-							<a href="#" class="button yellow">View product information</a>
-						</div>
-						<div class="button-holder">
-							<a href="#" class="button button-download-file yellow">Spec Sheet</a>
-						</div>
-						<div class="button-holder">
-							<a href="#" class="button button-whats-this">Add favorite</a>
+							<a href="#" class="button yellow">View details</a>
 						</div>
 					</div>
 				</div>
-				
-			</div>
-			
-		</div>
-		
-		<div class="details-bottom">
-				<div class="details-holder">
-					<div class="tabs-holder">
-						<div class="tabs">
-							<div class="tab-label active">Nutritional</div>
-							<div class="tab-label">Ingredients</div>
-							<div class="tab-label">Allergens</div>
-							<div class="tab-label">Logistic</div>
-							<div class="tab-label">Preparation</div>
-							<div class="tab-label">Claims</div>
+				<div class="item">
+					<div class="row-2">
+						<div class="item">
+							<div class="image-holder">
+								<img src="images/masthead_v2-min-min.png" alt="Image">
+							</div>
+							<div class="content">
+								<div class="title">Title</div>
+								<div class="sub-title">Sub title</div>
+								<div class="button-holder">
+									<a href="#" class="button yellow">View details</a>
+								</div>
+							</div>
 						</div>
-						<div class="tab-section-holder">
-							<div class="tab-section">
-								<div class="tab-section-item">
-									<!-- <div class="tab-title mobile">Nutritional information</div> -->
-									<div class="tab-content">
-										<!-- tab-content->Nutritional information -->
-									</div>
-								</div>
-								<div class="tab-section-item" style="display: none;">
-									<!-- <div class="tab-title mobile">Ingredients</div> -->
-									<div class="tab-content">
-										<!-- tab-content->Ingredients -->
-									</div>
-								</div>
-								<div class="tab-section-item" style="display: none;">
-									<!-- <div class="tab-title mobile">Allergens</div> -->
-									<div class="tab-content">
-										<!-- tab-content->Allergens -->
-									</div>
-								</div>
-								<div class="tab-section-item" style="display: none;">
-									<!-- <div class="tab-title mobile">Logistic information</div> -->
-									<div class="tab-content">
-										<!-- tab-content->Logistic information -->
-									</div>
-								</div>
-								<div class="tab-section-item" style="display: none;">
-									<!-- <div class="tab-title mobile">Preparation & Storage</div> -->
-									<div class="tab-content">
-										<!-- tab-content->Preparation & Storage -->
-									</div>
-								</div>
-								<div class="tab-section-item" style="display: none;">
-									<!-- <div class="tab-title mobile">Claims</div> -->
-									<div class="tab-content">
-										<!-- tab-content->Claims -->
-									</div>
+						<div class="item">
+							<div class="image-holder">
+								<img src="images/masthead_v2-min-min.png" alt="Image">
+							</div>
+							<div class="content">
+								<div class="title">Title</div>
+								<div class="sub-title">Sub title</div>
+								<div class="button-holder">
+									<a href="#" class="button yellow">View details</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		
-		<div class="related-recipes">
-			<div class="main-title">Related Recipes</div>
-			<!--<div class="sub-title">Sub title</div>-->
-			<div class="recipes-holder">
-				<a href="#" class="relative-item">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
-                    </div>
-                    <!-- <div class="title">Falafel wrap</div> -->
-                </a>
-				<a href="#" class="relative-item">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/recipes/McCain-Shawarma-Wrap.jpg" />
-                    </div>
-                    <!-- <div class="title">Shawarma wrap</div> -->
-                </a>
-				<a href="#" class="relative-item">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
-                    </div>
-                    <!-- <div class="title">Falafel wrap</div> -->
-                </a>
-			</div>
-			<section class="view-all" >
-				<div class="button-holder">
-					<a href="#" class="view-all button yellow">View all recipes</a>
-				</div>
-			</section>
 		</div>
-
-		<div class="product-range-holder">
-			<div class="content-holder">
-				<div class="main-title">See the full product range</div>
-				
-				<div class="details">
-					<div class="button-holder">
-						<a href="#" class="button yellow">View catalogue</a>
+	</section>
+	
+	<!--Trendy Recipes widget -->
+	<section class="trendy-recipes-widget">
+		<div class="trendy-recipes">
+			<div class="media-holder">
+				<iframe src="https://www.youtube.com/embed/WLCyWvO6UMg" title="So Bar & Eats put SureCrisp to the test!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="recipes-holder">
+				<div class="grid-items two">
+					<div class="cards">
+						<a href="#" class="card">
+							<div class="image-holder">
+								<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
+							</div>
+							<div class="title">Falafel Wrap</div>
+						</a>
+						<a href="#" class="card">
+							<div class="image-holder">
+								<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
+							</div>
+							<div class="title">Falafel Wrap</div>
+						</a>
+						<a href="#" class="card">
+							<div class="image-holder">
+								<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
+							</div>
+							<div class="title">Falafel Wrap</div>
+						</a>
+						<a href="#" class="card">
+							<div class="image-holder">
+								<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
+							</div>
+							<div class="title">Falafel Wrap</div>
+						</a>
 					</div>
 				</div>
+				<div class="button-holder">
+					<a class="button yellow" href="#">View all recipes</a>
+				</div>
 			</div>
 		</div>
-		
+	</section>
+
+	<!-- Our newest products -->
+	<section class="our-newest-products">
 		<div class="grid-items three">
-			<div class="main-title">Others also viewed</div>
+			<div class="main-title">Our newest products</div>
 			<div class="cards">
 				<a href="#" class="card">
                     <div class="image-holder">
-                        <img alt="Image" src="images/products/SPICY-CRISPERS.jpg" />
+                        <img alt="Image" src="images/products/Mini_Onion_Rings.jpg" />
                     </div>
-					<!--<div class="description">text</div>-->
                     <div class="title">Spicy Crispers</div>
                 </a>
 				<a href="#" class="card">
                     <div class="image-holder">
                         <img alt="Image" src="images/products/Mini_Onion_Rings.jpg" />
                     </div>
-					<!--<div class="description">text</div>-->
                     <div class="title">McCain Onion Rings</div>
                 </a>
 				<a href="#" class="card">
                     <div class="image-holder">
-                        <img alt="Image" src="images/products/Spicy-Lattice-Fries.jpg" />
+                        <img alt="Image" src="images/products/Mini_Onion_Rings.jpg" />
                     </div>
-					<!--<div class="description">text</div>-->
                     <div class="title">Spicy Lattice Fries</div>
                 </a>
 			</div>
 		</div>
+	</section>
 
-		<div class="contact-wrapper">
-			<div class="title">Contact our sales team</div>
-			<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-			<div class="button-holder">
-				<a href="#" class="button yellow">Contact</a>
+	<!-- Our Brands -->
+	<section class="brands-holder">
+		<section class="brands">
+			<div class="title">Our Brands</div>
+			<div class="cards-holder">
+				<div class="card">
+					<a href="#"><img src="images/brands/anchor.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/brew-city.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/golden-crisp.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/harvest-splendor.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/mccain-sunshine-2x-min.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/moores.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/ore-ida.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/mora-logo.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/lutosa-logo.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/pickers-logo.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/hebro-logo.png"/></a>
+				</div>
+				<div class="card">
+					<a href="#"><img src="images/brands/van-geloven-logo.png"/></a>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<section class="slider-wrapper">
+		<div class="main-title">
+			Trends
+		</div>
+		<div class="slider">
+			<div class="slide">
+				<a href="#">
+					<div class="image-holder">
+						<img src="images/products/Ambiance-1063_Wedges skin on-min.jpg" alt="Image">
+					</div>
+					<div class="title">Wedges Skin On</div>
+				</a>
+			</div>
+			<div class="slide">
+				<a href="#">
+					<div class="image-holder">
+						<img src="images/products/Ambiance_1000001357_Tradistyle fries-min.jpg" alt="Image">
+					</div>
+					<div class="title">Tradistyle Fries</div>
+				</a>
+			</div>
+			<div class="slide">
+				<a href="#">
+					<div class="image-holder">
+						<img src="images/products/Ambiance_1957_Crinkle fries-min.jpg" alt="Image">
+					</div>
+					<div class="title">Crinkle Fries</div>
+				</a>
+			</div>
+			<div class="slide">
+				<a href="#">
+					<div class="image-holder">
+						<img src="images/products/Ambiance_202804_Potato Pancake_Kartoffelpuffer-min.jpg" alt="Image">
+					</div>
+					<div class="title">Potato Pancake / Kartoffelpuffer</div>
+				</a>
+			</div>
+			<div class="slide">
+				<a href="#">
+					<div class="image-holder">
+						<img src="images/products/Ambiance_222501_Mini rosti-min.jpg" alt="Image">
+					</div>
+					<div class="title">Mini Rosti</div>
+				</a>
+			</div>
+			<div class="slide">
+				<a href="#">
+					<div class="image-holder">
+						<img src="images/products/Ambiance_512715_Potato Petals-min.jpg" alt="Image">
+					</div>
+					<div class="title">Potato Petals</div>
+				</a>
+			</div>
+		  </div>
+	</section>
+
+	<!-- FAQs -->
+	<section class="faq">
+		<div class="faq-holder">
+			<div class="faq-item">
+				<div class="faq-item-inner">
+					<div class="title-holder">
+						<div class="title">Title</div>
+						<div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus pariatur iure dolores architecto atque dicta, reprehenderit dolorum eveniet tempore odio molestiae quasi nostrum sed sapiente. Nostrum, temporibus quam! Eos, temporibus.</div>
+					</div>
+					<div class="content">
+						<div class="faq-sub-item">
+							<div class="question">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel libero non quos cumque cupiditate doloribus, voluptatum deleniti ipsam, labore dicta obcaecati esse explicabo ab nam repudiandae accusantium, tempore ex?</p>
+							</div>
+							<div class="answer">
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque optio reiciendis aliquam illo. Nisi facilis possimus, illo eos saepe nostrum cum placeat facere natus odio sunt neque optio omnis porro.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="faq-item">
+				<div class="faq-item-inner">
+					<div class="title-holder">
+						<div class="title">Title</div>
+						<div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus pariatur iure dolores architecto atque dicta, reprehenderit dolorum eveniet tempore odio molestiae quasi nostrum sed sapiente. Nostrum, temporibus quam! Eos, temporibus.</div>
+					</div>
+					<div class="content">
+						<div class="faq-sub-item">
+							<div class="question">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel libero non quos cumque cupiditate doloribus, voluptatum deleniti ipsam, labore dicta obcaecati esse explicabo ab nam repudiandae accusantium, tempore ex?</p>
+							</div>
+							<div class="answer">
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque optio reiciendis aliquam illo. Nisi facilis possimus, illo eos saepe nostrum cum placeat facere natus odio sunt neque optio omnis porro.</p>
+							</div>
+						</div>
+						<div class="faq-sub-item">
+							<div class="question">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel libero non quos cumque cupiditate doloribus, voluptatum deleniti ipsam, labore dicta obcaecati esse explicabo ab nam repudiandae accusantium, tempore ex?</p>
+							</div>
+							<div class="answer">
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque optio reiciendis aliquam illo. Nisi facilis possimus, illo eos saepe nostrum cum placeat facere natus odio sunt neque optio omnis porro.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="faq-item">
+				<div class="faq-item-inner">
+					<div class="title-holder">
+						<div class="title">Title</div>
+						<div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus pariatur iure dolores architecto atque dicta, reprehenderit dolorum eveniet tempore odio molestiae quasi nostrum sed sapiente. Nostrum, temporibus quam! Eos, temporibus.</div>
+					</div>
+					<div class="content">
+						<div class="faq-sub-item">
+							<div class="question">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel libero non quos cumque cupiditate doloribus, voluptatum deleniti ipsam, labore dicta obcaecati esse explicabo ab nam repudiandae accusantium, tempore ex?</p>
+							</div>
+							<div class="answer">
+								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque optio reiciendis aliquam illo. Nisi facilis possimus, illo eos saepe nostrum cum placeat facere natus odio sunt neque optio omnis porro.</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
