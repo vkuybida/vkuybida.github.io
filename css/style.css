@@ -197,7 +197,7 @@ header .menu-icon .menu-open {
 	.menu-section nav {
 		position: relative;
 		display: flex;
-		padding: 15px 140px 15px 40px;
+		padding: 10px 20px;
 		margin: auto;
 	}
 
@@ -210,7 +210,7 @@ nav .main-items {
 	}
 
 nav a {
-	font-weight: 700;
+	font-weight: 600;
 	color: #000;
 	text-decoration: none;
 	font-size: 16px;
@@ -285,6 +285,11 @@ nav .select-language {
 	nav .select-language .dropdown-content a:hover {
 		background-color: #FFDD00;
 		opacity: .5;
+	}
+
+
+	.language-selector {
+		display: none;
 	}
 
 /* Mobile menu*/
