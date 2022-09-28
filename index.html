@@ -22,7 +22,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css?r=2" />
+	<link rel="stylesheet" type="text/css" href="css/style.css?r=3" />
 	<link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -31,7 +31,7 @@
 			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 			crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/slick/slick.min.js"></script>
-	<script src="js/global.js?r=1"></script>
+	<script src="js/global.jsr=3"></script>
 
 
 	<title>McCain CEU Foodservice</title>
@@ -74,357 +74,263 @@
 		</div>
 
 		<div class="menu-icon">
-			<img src="images/icon-menu.png" alt="Menu Hamburger Icon" class="menu-open">
+			<img src="images/icon-menu.png" alt="Menu Hamburger Icon" class="menu-open" />
+			<img src="images/icon-close-black.png" alt="Menu Close Icon" class="menu-close" />
 		</div>
 	</header>
 	
 	<!-- Main menu -->
-	<div class="menu-section">
-		<nav class="main-navigation">
-			<div class="main-items">
-				<a href="products.html">Products</a>
-				<a href="#">Inspiration</a>
-				<a href="#">Recipes</a>
-				<a href="#">About Us</a>
-				<a href="#">Contact</a>
-			</div>
-			<div class="select-language">
-				<div class="dropdown">
-					<button class="dropbtn">Dutch</button>
-					<div class="dropdown-content">
-						<a href="#">Dutch</a>
-						<a href="#">French</a>
-					</div>
-				</div>
-			</div>
+	<div class="main-menu">
+		<nav>
+			<ul class="menu-items">
+				<li><a href="products.html">Products</a></li>
+				<li><a href="#">Inspiration</a></li>
+				<li><a href="recipes.html">Recipes</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
 		</nav>
 	</div>
 
-	<div class="mobile-menu-section">
-		<div class="menu-icon">
-			<img src="images/icon-close-black.png" alt="Menu Close Icon" class="menu-close">
-		</div>
-		<nav class="mobile-main-navigation">
-			<div class="main-items">
-				<ul>
-					<li>
-						<a href="#">Products</a>
-						<!--<ul>
-							<li><a href="#">Category 1</a></li>
-							<li><a href="#">Category 2</a></li>
-							<li><a href="#">Category 3</a></li>
-							<li><a href="#">More category</a></li>
-						</ul>-->
-					</li>
-					<li>
-						<a href="#">Inspiration</a>
-						<!--<ul>
-							<li><a href="#">Inspiration 1</a></li>
-							<li><a href="#">Inspiration 2</a></li>
-							<li><a href="#">Inspiration 3</a></li>
-							<li><a href="#">More inspiration</a></li>
-						</ul>-->
-					</li>
-					<li><a href="#">Recipes</a></li>
-					<li>
-						<a href="#">About Us</a>
-						<ul>
-							<li><a href="#">Sustainability</a></li>
-							<li><a href="#">Our brand</a></li>
-							<li><a href="#">Jobs</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>
+	<div class="mobile-menu">
+		<nav>
+			<ul class="menu-items">
+				<li>
+					<a href="products.html">Products</a>
+				</li>
+				<li>
+					<a href="#">Inspiration</a>
+				</li>
+				<li><a href="recipes.html">Recipes</a></li>
+				<li>
+					<a href="#">About Us</a>
+					<ul class="sub-items">
+						<li><a href="#">Sustainability</a></li>
+						<li><a href="#">Our brand</a></li>
+						<li><a href="#">Jobs</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Contact</a></li>
+			</ul>
 		</nav>
 	</div>
 
-	<!-- Grid Section -->
-	<section class="grid-section">
-		<div class="grid">
-			<div class="col-2">
-				<div class="item">
-					<div class="image-holder">
-						<img src="images/masthead_v2-min-min.png" alt="Image">
-					</div>
-					<div class="content">
-						<div class="title">Title</div>
-						<div class="sub-title">Sub title</div>
-						<div class="button-holder">
-							<a href="#" class="button yellow">View details</a>
+	<div class="main-content">
+		<!-- Grid Section -->
+		<section class="grid-section">
+			<div class="grid">
+				<div class="col-2">
+					<div class="item">
+						<div class="image-holder">
+							<img src="images/masthead_v2-min-min.png" alt="Image">
+						</div>
+						<div class="content">
+							<div class="title">Title</div>
+							<div class="sub-title">Sub title</div>
+							<div class="button-holder">
+								<a href="#" class="button yellow">View details</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="item">
-					<div class="row-2">
-						<div class="item">
-							<div class="image-holder">
-								<img src="images/masthead_v2-min-min.png" alt="Image">
-							</div>
-							<div class="content">
-								<div class="title">Title</div>
-								<div class="sub-title">Sub title</div>
-								<div class="button-holder">
-									<a href="#" class="button yellow">View details</a>
+					<div class="item">
+						<div class="row-2">
+							<div class="item">
+								<div class="image-holder">
+									<img src="images/masthead_v2-min-min.png" alt="Image">
+								</div>
+								<div class="content">
+									<div class="title">Title</div>
+									<div class="sub-title">Sub title</div>
+									<div class="button-holder">
+										<a href="#" class="button yellow">View details</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="item">
-							<div class="image-holder">
-								<img src="images/masthead_v2-min-min.png" alt="Image">
-							</div>
-							<div class="content">
-								<div class="title">Title</div>
-								<div class="sub-title">Sub title</div>
-								<div class="button-holder">
-									<a href="#" class="button yellow">View details</a>
+							<div class="item">
+								<div class="image-holder">
+									<img src="images/masthead_v2-min-min.png" alt="Image">
+								</div>
+								<div class="content">
+									<div class="title">Title</div>
+									<div class="sub-title">Sub title</div>
+									<div class="button-holder">
+										<a href="#" class="button yellow">View details</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<!--Trendy Recipes widget -->
-	<section class="trendy-recipes-widget">
-		<div class="trendy-recipes">
-			<div class="media-holder">
-				<iframe src="https://www.youtube.com/embed/WLCyWvO6UMg" title="So Bar & Eats put SureCrisp to the test!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			<div class="recipes-holder">
-				<div class="grid-items two">
-					<div class="cards">
-						<a href="#" class="card">
-							<div class="image-holder">
-								<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
-							</div>
-							<div class="title">Falafel Wrap</div>
-						</a>
-						<a href="#" class="card">
-							<div class="image-holder">
-								<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
-							</div>
-							<div class="title">Falafel Wrap</div>
-						</a>
-						<a href="#" class="card">
-							<div class="image-holder">
-								<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
-							</div>
-							<div class="title">Falafel Wrap</div>
-						</a>
-						<a href="#" class="card">
-							<div class="image-holder">
-								<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
-							</div>
-							<div class="title">Falafel Wrap</div>
-						</a>
-					</div>
-				</div>
-				<div class="button-holder">
-					<a class="button yellow" href="#">View all recipes</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Our newest products -->
-	<section class="our-newest-products">
-		<div class="grid-items three">
-			<div class="main-title">Our newest products</div>
-			<div class="cards">
-				<a href="#" class="card">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/products/Mini_Onion_Rings.jpg" />
-                    </div>
-                    <div class="title">Spicy Crispers</div>
-                </a>
-				<a href="#" class="card">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/products/Mini_Onion_Rings.jpg" />
-                    </div>
-                    <div class="title">McCain Onion Rings</div>
-                </a>
-				<a href="#" class="card">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/products/Mini_Onion_Rings.jpg" />
-                    </div>
-                    <div class="title">Spicy Lattice Fries</div>
-                </a>
-			</div>
-		</div>
-	</section>
-
-	<!-- Our Brands -->
-	<section class="brands-holder">
-		<section class="brands">
-			<div class="title">Our Brands</div>
-			<div class="cards-holder">
-				<div class="card">
-					<a href="#"><img src="images/brands/anchor.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/brew-city.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/golden-crisp.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/harvest-splendor.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/mccain-sunshine-2x-min.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/moores.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/ore-ida.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/mora-logo.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/lutosa-logo.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/pickers-logo.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/hebro-logo.png"/></a>
-				</div>
-				<div class="card">
-					<a href="#"><img src="images/brands/van-geloven-logo.png"/></a>
 				</div>
 			</div>
 		</section>
-	</section>
+		
+		<!--Trendy Recipes widget -->
+		<section class="trendy-recipes-widget">
+			<div class="trendy-recipes">
+				<div class="left-content">
+					<div class="video-holder">
+						<iframe src="https://www.youtube.com/embed/WLCyWvO6UMg" title="So Bar & Eats put SureCrisp to the test!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="recipes-holder">
+					<div class="grid-items two">
+						<div class="cards">
+							<a href="#" class="card">
+								<div class="image-holder">
+									<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
+								</div>
+								<div class="title">Falafel Wrap</div>
+							</a>
+							<a href="#" class="card">
+								<div class="image-holder">
+									<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
+								</div>
+								<div class="title">Falafel Wrap</div>
+							</a>
+							<a href="#" class="card">
+								<div class="image-holder">
+									<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
+								</div>
+								<div class="title">Falafel Wrap</div>
+							</a>
+							<a href="#" class="card">
+								<div class="image-holder">
+									<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
+								</div>
+								<div class="title">Falafel Wrap</div>
+							</a>
+						</div>
+					</div>
+					<div class="button-holder">
+						<a class="button yellow" href="#">View all recipes</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
-	<section class="slider-wrapper">
-		<div class="main-title">
-			Trends
-		</div>
-		<div class="slider">
-			<div class="slide">
-				<a href="#">
-					<div class="image-holder">
-						<img src="images/products/Ambiance-1063_Wedges skin on-min.jpg" alt="Image">
-					</div>
-					<div class="title">Wedges Skin On</div>
-				</a>
+		<!-- Our newest products -->
+		<section class="our-newest-products">
+			<div class="grid-items three">
+				<div class="main-title">Our newest products</div>
+				<div class="cards">
+					<a href="#" class="card">
+						<div class="image-holder">
+							<img alt="Image" src="images/products/Mini_Onion_Rings.jpg" />
+						</div>
+						<div class="title">Spicy Crispers</div>
+					</a>
+					<a href="#" class="card">
+						<div class="image-holder">
+							<img alt="Image" src="images/products/Mini_Onion_Rings.jpg" />
+						</div>
+						<div class="title">McCain Onion Rings</div>
+					</a>
+					<a href="#" class="card">
+						<div class="image-holder">
+							<img alt="Image" src="images/products/Mini_Onion_Rings.jpg" />
+						</div>
+						<div class="title">Spicy Lattice Fries</div>
+					</a>
+				</div>
 			</div>
-			<div class="slide">
-				<a href="#">
-					<div class="image-holder">
-						<img src="images/products/Ambiance_1000001357_Tradistyle fries-min.jpg" alt="Image">
-					</div>
-					<div class="title">Tradistyle Fries</div>
-				</a>
-			</div>
-			<div class="slide">
-				<a href="#">
-					<div class="image-holder">
-						<img src="images/products/Ambiance_1957_Crinkle fries-min.jpg" alt="Image">
-					</div>
-					<div class="title">Crinkle Fries</div>
-				</a>
-			</div>
-			<div class="slide">
-				<a href="#">
-					<div class="image-holder">
-						<img src="images/products/Ambiance_202804_Potato Pancake_Kartoffelpuffer-min.jpg" alt="Image">
-					</div>
-					<div class="title">Potato Pancake / Kartoffelpuffer</div>
-				</a>
-			</div>
-			<div class="slide">
-				<a href="#">
-					<div class="image-holder">
-						<img src="images/products/Ambiance_222501_Mini rosti-min.jpg" alt="Image">
-					</div>
-					<div class="title">Mini Rosti</div>
-				</a>
-			</div>
-			<div class="slide">
-				<a href="#">
-					<div class="image-holder">
-						<img src="images/products/Ambiance_512715_Potato Petals-min.jpg" alt="Image">
-					</div>
-					<div class="title">Potato Petals</div>
-				</a>
-			</div>
-		  </div>
-	</section>
+		</section>
 
-	<!-- FAQs -->
-	<section class="faq">
-		<div class="faq-holder">
-			<div class="faq-item">
-				<div class="faq-item-inner">
-					<div class="title-holder">
-						<div class="title">Title</div>
-						<div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus pariatur iure dolores architecto atque dicta, reprehenderit dolorum eveniet tempore odio molestiae quasi nostrum sed sapiente. Nostrum, temporibus quam! Eos, temporibus.</div>
+		<!-- Our Brands -->
+		<section class="brands-holder">
+			<section class="brands">
+				<div class="title">Our Brands</div>
+				<div class="cards-holder">
+					<div class="card">
+						<a href="#"><img src="images/brands/anchor.png"/></a>
 					</div>
-					<div class="content">
-						<div class="faq-sub-item">
-							<div class="question">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel libero non quos cumque cupiditate doloribus, voluptatum deleniti ipsam, labore dicta obcaecati esse explicabo ab nam repudiandae accusantium, tempore ex?</p>
-							</div>
-							<div class="answer">
-								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque optio reiciendis aliquam illo. Nisi facilis possimus, illo eos saepe nostrum cum placeat facere natus odio sunt neque optio omnis porro.</p>
-							</div>
-						</div>
+					<div class="card">
+						<a href="#"><img src="images/brands/brew-city.png"/></a>
 					</div>
-				</div>
-			</div>
-			<div class="faq-item">
-				<div class="faq-item-inner">
-					<div class="title-holder">
-						<div class="title">Title</div>
-						<div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus pariatur iure dolores architecto atque dicta, reprehenderit dolorum eveniet tempore odio molestiae quasi nostrum sed sapiente. Nostrum, temporibus quam! Eos, temporibus.</div>
+					<div class="card">
+						<a href="#"><img src="images/brands/mccain-sunshine-2x-min.png"/></a>
 					</div>
-					<div class="content">
-						<div class="faq-sub-item">
-							<div class="question">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel libero non quos cumque cupiditate doloribus, voluptatum deleniti ipsam, labore dicta obcaecati esse explicabo ab nam repudiandae accusantium, tempore ex?</p>
-							</div>
-							<div class="answer">
-								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque optio reiciendis aliquam illo. Nisi facilis possimus, illo eos saepe nostrum cum placeat facere natus odio sunt neque optio omnis porro.</p>
-							</div>
-						</div>
-						<div class="faq-sub-item">
-							<div class="question">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel libero non quos cumque cupiditate doloribus, voluptatum deleniti ipsam, labore dicta obcaecati esse explicabo ab nam repudiandae accusantium, tempore ex?</p>
-							</div>
-							<div class="answer">
-								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque optio reiciendis aliquam illo. Nisi facilis possimus, illo eos saepe nostrum cum placeat facere natus odio sunt neque optio omnis porro.</p>
-							</div>
-						</div>
+					<div class="card">
+						<a href="#"><img src="images/brands/moores.png"/></a>
+					</div>
+					<div class="card">
+						<a href="#"><img src="images/brands/ore-ida.png"/></a>
+					</div>
+					<div class="card">
+						<a href="#"><img src="images/brands/mora-logo.png"/></a>
+					</div>
+					<div class="card">
+						<a href="#"><img src="images/brands/lutosa-logo.png"/></a>
+					</div>
+					<div class="card">
+						<a href="#"><img src="images/brands/pickers-logo.png"/></a>
+					</div>
+					<div class="card">
+						<a href="#"><img src="images/brands/hebro-logo.png"/></a>
+					</div>
+					<div class="card">
+						<a href="#"><img src="images/brands/van-geloven-logo.png"/></a>
 					</div>
 				</div>
+			</section>
+		</section>
+
+		<section class="slider-wrapper">
+			<div class="main-title">
+				Trends
 			</div>
-			<div class="faq-item">
-				<div class="faq-item-inner">
-					<div class="title-holder">
-						<div class="title">Title</div>
-						<div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus pariatur iure dolores architecto atque dicta, reprehenderit dolorum eveniet tempore odio molestiae quasi nostrum sed sapiente. Nostrum, temporibus quam! Eos, temporibus.</div>
-					</div>
-					<div class="content">
-						<div class="faq-sub-item">
-							<div class="question">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel libero non quos cumque cupiditate doloribus, voluptatum deleniti ipsam, labore dicta obcaecati esse explicabo ab nam repudiandae accusantium, tempore ex?</p>
-							</div>
-							<div class="answer">
-								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque optio reiciendis aliquam illo. Nisi facilis possimus, illo eos saepe nostrum cum placeat facere natus odio sunt neque optio omnis porro.</p>
-							</div>
+			<div class="slider">
+				<div class="slide">
+					<a href="#">
+						<div class="image-holder">
+							<img src="images/products/Ambiance-1063_Wedges skin on-min.jpg" alt="Image">
 						</div>
-					</div>
+						<div class="title">Wedges Skin On</div>
+					</a>
+				</div>
+				<div class="slide">
+					<a href="#">
+						<div class="image-holder">
+							<img src="images/products/Ambiance_1000001357_Tradistyle fries-min.jpg" alt="Image">
+						</div>
+						<div class="title">Tradistyle Fries</div>
+					</a>
+				</div>
+				<div class="slide">
+					<a href="#">
+						<div class="image-holder">
+							<img src="images/products/Ambiance_1957_Crinkle fries-min.jpg" alt="Image">
+						</div>
+						<div class="title">Crinkle Fries</div>
+					</a>
+				</div>
+				<div class="slide">
+					<a href="#">
+						<div class="image-holder">
+							<img src="images/products/Ambiance_202804_Potato Pancake_Kartoffelpuffer-min.jpg" alt="Image">
+						</div>
+						<div class="title">Potato Pancake / Kartoffelpuffer</div>
+					</a>
+				</div>
+				<div class="slide">
+					<a href="#">
+						<div class="image-holder">
+							<img src="images/products/Ambiance_222501_Mini rosti-min.jpg" alt="Image">
+						</div>
+						<div class="title">Mini Rosti</div>
+					</a>
+				</div>
+				<div class="slide">
+					<a href="#">
+						<div class="image-holder">
+							<img src="images/products/Ambiance_512715_Potato Petals-min.jpg" alt="Image">
+						</div>
+						<div class="title">Potato Petals</div>
+					</a>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+
+	</div>
 
 	<!-- Footer -->
 	<footer>
@@ -454,7 +360,6 @@
 						<a href="#">French</a>
 						<a href="#">View all countries</a>
 
-
 						<div class="social-icons-holder">
 							<div class="title">Find us on</div>
 						
@@ -465,8 +370,6 @@
 							</div>
 						</div> 
 					</div>
-
-				 
 
 				</div>
 			</div>

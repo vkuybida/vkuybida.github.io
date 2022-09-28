@@ -19,14 +19,11 @@ $(function(){
 		$('.products-wrapper').removeClass('filter-active')
 	})
 
-
-	$(".menu-open").click(function () {
-		$(".mobile-menu-section").css("display", "block");
+	/* Main Menu */
+	$(".menu-icon").click(function () {
+		$("body").toggleClass("menu-active");
 	});
 
-	$(".menu-close").click(function () {
-		$(".mobile-menu-section").css("display", "none");
-	});
 		
 	$('.slider').slick({
 		slidesToShow: 3,
@@ -94,5 +91,22 @@ $(function(){
 			$this.addClass("active");
 		}
 	});
+
+	$(".dialog .close").click(function(){
+		$("#share-dialog").removeClass('show'); 
+	});
+
+	$(".btn-share").click(function(){
+		$("#share-dialog").addClass("show");
+	});
+
+	$(".thumbnails-holder img").click(function () {
+        var $this = $(this);
+        var urlImg = $this.attr("src");
+      
+        $(".thumbnails-holder img").removeClass('active');
+        $("#recipe-main-img").attr("src", urlImg);
+        $this.addClass("active");
+    });
 
 })

@@ -22,7 +22,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css?r=2" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -31,7 +31,7 @@
 			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 			crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/slick/slick.min.js"></script>
-	<script src="js/global.js?r=1"></script>
+	<script src="js/global.js"></script>
 
 
 	<title>McCain CEU Foodservice</title>
@@ -64,302 +64,290 @@
 			</div>
 		</div>
 
+		<div class="language-selector">
+			<div class="selected-language">
+				FR
+			</div>
+			<div class="language-popup">
+				
+			</div>
+		</div>
+
 		<div class="menu-icon">
-			<img src="images/icon-menu.png" alt="Menu Hamburger Icon" class="menu-open">
+			<img src="images/icon-menu.png" alt="Menu Hamburger Icon" class="menu-open" />
+			<img src="images/icon-close-black.png" alt="Menu Close Icon" class="menu-close" />
 		</div>
 	</header>
 	
 	<!-- Main menu -->
-	<div class="menu-section">
-		<nav class="main-navigation">
-			<div class="main-items">
-				<a href="products.html">Products</a>
-				<a href="#">Inspiration</a>
-				<a href="#">Recipes</a>
-				<a href="#">About Us</a>
-				<a href="#">Contact</a>
-			</div>
-			<div class="select-language">
-				<div class="dropdown">
-					<button class="dropbtn">Dutch</button>
-					<div class="dropdown-content">
-						<a href="#">Dutch</a>
-						<a href="#">French</a>
-					</div>
-				</div>
-			</div>
+	<div class="main-menu">
+		<nav>
+			<ul class="menu-items">
+				<li><a href="products.html">Products</a></li>
+				<li><a href="#">Inspiration</a></li>
+				<li><a href="recipes.html">Recipes</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
 		</nav>
 	</div>
 
-	<div class="mobile-menu-section">
-		<div class="menu-icon">
-			<img src="images/icon-close-black.png" alt="Menu Close Icon" class="menu-close">
+	<div class="mobile-menu">
+		<nav>
+			<ul class="menu-items">
+				<li>
+					<a href="products.html">Products</a>
+				</li>
+				<li>
+					<a href="#">Inspiration</a>
+				</li>
+				<li><a href="#">Recipes</a></li>
+				<li>
+					<a href="#">About Us</a>
+					<ul class="sub-items">
+						<li><a href="#">Sustainability</a></li>
+						<li><a href="#">Our brand</a></li>
+						<li><a href="#">Jobs</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+
+
+	<div class="main-content">
+
+		<!-- Breadcrumb -->
+		<div class="breadcrumb-holder" style="max-width: 1350px;">
+			<ul class="breadcrumb">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="#">Rosti 3-Kant</a></li>
+			</ul>
 		</div>
-		<nav class="mobile-main-navigation">
-			<div class="main-items">
-				<ul>
-					<li>
-						<a href="#">Products</a>
-						<!--<ul>
-							<li><a href="#">Category 1</a></li>
-							<li><a href="#">Category 2</a></li>
-							<li><a href="#">Category 3</a></li>
-							<li><a href="#">More category</a></li>
-						</ul>-->
-					</li>
-					<li>
-						<a href="#">Inspiration</a>
-						<!--<ul>
-							<li><a href="#">Inspiration 1</a></li>
-							<li><a href="#">Inspiration 2</a></li>
-							<li><a href="#">Inspiration 3</a></li>
-							<li><a href="#">More inspiration</a></li>
-						</ul>-->
-					</li>
-					<li><a href="#">Recipes</a></li>
-					<li>
-						<a href="#">About Us</a>
-						<ul>
-							<li><a href="#">Sustainability</a></li>
-							<li><a href="#">Our brand</a></li>
-							<li><a href="#">Jobs</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
-	</div>
+		
+		<!-- Product Details page -->
+		<section class="product-details">
+			<div class="product-holder">
+				<div class="product-header">
 
-	<!-- Breadcrumb -->
-	<div class="breadcrumb-holder" style="max-width: 1350px;">
-		<ul class="breadcrumb">
-			<li><a href="index.html">HOME</a></li>
-			<li><a href="products.html">Products</a></li>
-			<li><a href="#">Rosti 3-Kant</a></li>
-		</ul>
-    </div>
-	
-	<!-- Product Details page -->
-	<section class="product-details">
-		<div class="product-holder">
-			<div class="product-header">
+					<div class="images-holder">
+						<div class="image-holder">
+							<img id="product-main-img" src="images/products/Ambiance_210800_Rosti 3-kant-min-square.jpg" alt="Product Image"/>
+						</div>
+						<div class="thumbnails-holder">
+							<img src="images/products/Ambiance_210800_Rosti 3-kant-min-square.jpg" alt="Product Image" class="active"/>
+							<img src="images/products/ChoiseRoesti3kant210816-scaled.jpg"  alt="Product Image"/>
+							<img src="images/products/Inspiration_210800_Rosti-3-kant.jpg"  alt="Product Image"/>
+						</div>
+					</div>
 
-				<div class="images-holder">
-					<div class="image-holder">
-						<img id="product-main-img" src="images/products/Ambiance_210800_Rosti 3-kant-min-square.jpg" alt="Product Image"/>
-					</div>
-					<div class="thumbnails-holder">
-						<img src="images/products/Ambiance_210800_Rosti 3-kant-min-square.jpg" alt="Product Image" class="active"/>
-						<img src="images/products/ChoiseRoesti3kant210816-scaled.jpg"  alt="Product Image"/>
-						<img src="images/products/Inspiration_210800_Rosti-3-kant.jpg"  alt="Product Image"/>
-					</div>
-				</div>
-
-				<div class="details-holder">
-					<div class="upper-title">Our Original Choice</div>
-					<div class="title">Rosti 3-Kant</div>
-					<div class="description">Shredded potatoes, seasoned, formed into triangles. Prefried and quick frozen. Genuine potato experience: soft potato inner and crisp external bite with a hint of onion. Original triangular shape of the product creates a unique dish. Easy to prepare - fried, oven, combi-oven or pan.</div>
-					
-					<div class="product-info">
-						<div class="info-item">
-							<div class="title">Packaging:</div>
-							<div class="value">6 × 2,04 kg</div>
-						</div> 
-						<div class="info-item">
-							<div class="title">Net weight:</div>
-							<div class="value">2,04 kg</div>
-						</div> 
-						<div class="info-item">
-							<div class="title">Article number:</div>
-							<div class="value">1000006350</div>
-						</div> 
-					</div>
-	
-					<div class="tags">
-						<div class="title"></div>
-						<a href="#">conventional</a>
-						<a href="#">uncoated fries</a>
-						<a href="#">hashbrowns</a>
-						<a href="#">thin cut size</a>
-						<a href="#">breakfast</a>
+					<div class="details-holder">
+						<div class="upper-title">Our Original Choice</div>
+						<div class="title">Rosti 3-Kant</div>
+						<div class="description">Shredded potatoes, seasoned, formed into triangles. Prefried and quick frozen. Genuine potato experience: soft potato inner and crisp external bite with a hint of onion. Original triangular shape of the product creates a unique dish. Easy to prepare - fried, oven, combi-oven or pan.</div>
+						
+						<div class="product-info">
+							<div class="info-item">
+								<div class="title">Packaging:</div>
+								<div class="value">6 × 2,04 kg</div>
+							</div> 
+							<div class="info-item">
+								<div class="title">Net weight:</div>
+								<div class="value">2,04 kg</div>
+							</div> 
+							<div class="info-item">
+								<div class="title">Article number:</div>
+								<div class="value">1000006350</div>
+							</div> 
+						</div>
+		
+						<div class="tags">
+							<div class="title"></div>
+							<a href="#">conventional</a>
+							<a href="#">uncoated fries</a>
+							<a href="#">hashbrowns</a>
+							<a href="#">thin cut size</a>
+							<a href="#">breakfast</a>
+						</div>
+						
+						<div class="buttons-holder">
+							<div class="button-holder">
+								<a href="#" class="button yellow">View product information</a>
+							</div>
+							<div class="button-holder">
+								<a href="#" class="button button-download-file yellow">Spec Sheet</a>
+							</div>
+							<div class="button-holder">
+								<a href="#" class="button button-whats-this">Add favorite</a>
+							</div>
+						</div>
 					</div>
 					
-					<div class="buttons-holder">
-						<div class="button-holder">
-							<a href="#" class="button yellow">View product information</a>
-						</div>
-						<div class="button-holder">
-							<a href="#" class="button button-download-file yellow">Spec Sheet</a>
-						</div>
-						<div class="button-holder">
-							<a href="#" class="button button-whats-this">Add favorite</a>
-						</div>
-					</div>
 				</div>
 				
 			</div>
 			
-		</div>
-		
-		<div class="details-bottom">
-				<div class="details-holder">
-					<div class="tabs-holder">
-						<div class="tabs">
-							<div class="tab-label active" data-product-details-item="nutritional">Nutritional</div>
-							<div class="tab-label" data-product-details-item="ingredients">Ingredients</div>
-							<div class="tab-label" data-product-details-item="allergens">Allergens</div>
-							<div class="tab-label" data-product-details-item="logistic">Logistic</div>
-							<div class="tab-label" data-product-details-item="preparation">Preparation</div>
-							<div class="tab-label" data-product-details-item="claims">Claims</div>
-						</div>
-						<div class="tab-section-holder">
-							<div class="tab-section">
-								<div class="tab-section-item" id="nutritional">
-									<div class="tab-title mobile">Nutritional</div>
-									<div class="tab-content">
-										<div class="nutrition">
-											<div class="nutrition-details">
-												<div class="nutrition-column">
-													<div class="row-item bold">
-														<div class="left"><div class="title">Nutrition Information:</div></div> 
-														<div class="right">per 100g</div>
+			<div class="details-bottom">
+					<div class="details-holder">
+						<div class="tabs-holder">
+							<div class="tabs">
+								<div class="tab-label active" data-product-details-item="nutritional">Nutritional</div>
+								<div class="tab-label" data-product-details-item="ingredients">Ingredients</div>
+								<div class="tab-label" data-product-details-item="allergens">Allergens</div>
+								<div class="tab-label" data-product-details-item="logistic">Logistic</div>
+								<div class="tab-label" data-product-details-item="preparation">Preparation</div>
+								<div class="tab-label" data-product-details-item="claims">Claims</div>
+							</div>
+							<div class="tab-section-holder">
+								<div class="tab-section">
+									<div class="tab-section-item" id="nutritional">
+										<div class="tab-title mobile">Nutritional</div>
+										<div class="tab-content">
+											<div class="nutrition">
+												<div class="nutrition-details">
+													<div class="nutrition-column">
+														<div class="row-item bold">
+															<div class="left"><div class="title">Nutrition Information:</div></div> 
+															<div class="right">per 100g</div>
+														</div> 
+														<div class="row-item bold">
+															<div class="left">Energy</div> 
+															<div class="right">703kJ (168kcal)</div>
+														</div> 
+														<div class="row-item bold">
+															<div class="left">Fat</div> 
+															<div class="right">6.5g</div>
+														</div> 
+														<div class="row-item normal with-tab">
+															<div class="left">Of which saturates</div> 
+															<div class="right">0.7g</div>
+														</div> 
+														<div class="row-item bold">
+															<div class="left">Carbohydrate</div> 
+															<div class="right">23.5g</div>
+														</div> 
+														<div class="row-item normal with-tab">
+															<div class="left">Of which is sugars</div> 
+															<div class="right">0.5g</div>
+														</div> 
+														<div class="row-item bold">
+															<div class="left">Protein</div> 
+															<div class="right">2.5g</div>
+														</div> 
+														<div class="row-item bold">
+															<div class="left">Salt</div> 
+															<div class="right">0.5g</div>
+														</div> 
 													</div> 
-													<div class="row-item bold">
-														<div class="left">Energy</div> 
-														<div class="right">703kJ (168kcal)</div>
-													</div> 
-													<div class="row-item bold">
-														<div class="left">Fat</div> 
-														<div class="right">6.5g</div>
-													</div> 
-													<div class="row-item normal with-tab">
-														<div class="left">Of which saturates</div> 
-														<div class="right">0.7g</div>
-													</div> 
-													<div class="row-item bold">
-														<div class="left">Carbohydrate</div> 
-														<div class="right">23.5g</div>
-													</div> 
-													<div class="row-item normal with-tab">
-														<div class="left">Of which is sugars</div> 
-														<div class="right">0.5g</div>
-													</div> 
-													<div class="row-item bold">
-														<div class="left">Protein</div> 
-														<div class="right">2.5g</div>
-													</div> 
-													<div class="row-item bold">
-														<div class="left">Salt</div> 
-														<div class="right">0.5g</div>
-													</div> 
-												</div> 
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="tab-section-item" id="ingredients" style="display: none;">
-									<div class="tab-title mobile">Ingredients</div>
-									<div class="tab-content">
-										<div class="ingredients">
-											<p>Potatoes (88%), sunflower oil (6,5%), coating (5,5%) [corn flour, rice flour, corn starch, salt, garlic powder, onion powder, spices (1,2%: black pepper, capsicum extract), yeast extract, paprika oil, thickener: xanthan gum].</p>
-										</div>
-									</div>
-								</div>
-								<div class="tab-section-item" id="allergens" style="display: none;">
-									<div class="tab-title mobile">Allergens</div>
-									<div class="tab-content">
-										<div class="allergens">
-											<div class="title">This product contains ingredients which may cause an allergic reaction to the following:</div> 
-											<div class="icon-holder">
-												<div class="icon">
-													<img src="images/allergens/allergen-dairy.svg" title="Dairy"> 
-													<div class="icon-title">Dairy</div>
-												</div> 
-												<div class="icon">
-													<img src="images/allergens/allergen-wheat.svg" title="Wheat"> 
-													<div class="icon-title">Wheat</div>
-												</div> 
-												<div class="icon">
-													<img src="images/allergens/allergen-eggs.svg" title="Egg"> 
-													<div class="icon-title">Egg</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="tab-section-item" id="logistic" style="display: none;">
-									<div class="tab-title mobile">Logistic</div>
-									<div class="tab-content">
-										<div class="logistic tabs-columns">
-											<div class="column">
-												<div class="title">General:</div>
-												<div class="row-item">
-													<div class="title">Packaging</div>
-													<div class="value">6 × 2,04 kg</div>
-												</div>
-											</div>
-											<div class="column">
-												<div class="title">Case:</div>
-												<div class="row-item">
-													<div class="title">Net weight case</div>
-													<div class="value">2,04 kg</div>
-												</div>
-											</div>
-											<div class="column">
-												<div class="title">product codes:</div>
-												<div class="row-item">
-													<div class="title">SKU</div>
-													<div class="value">1000006350</div>
-												</div>
+									<div class="tab-section-item" id="ingredients" style="display: none;">
+										<div class="tab-title mobile">Ingredients</div>
+										<div class="tab-content">
+											<div class="ingredients">
+												<p>Potatoes (88%), sunflower oil (6,5%), coating (5,5%) [corn flour, rice flour, corn starch, salt, garlic powder, onion powder, spices (1,2%: black pepper, capsicum extract), yeast extract, paprika oil, thickener: xanthan gum].</p>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="tab-section-item" id="preparation" style="display: none;">
-									<div class="tab-title mobile">Preparation</div>
-									<div class="tab-content">
-										<div class="tabs-columns preparation">
-											<div class="column">
-												<div class="preparation-item">
+									<div class="tab-section-item" id="allergens" style="display: none;">
+										<div class="tab-title mobile">Allergens</div>
+										<div class="tab-content">
+											<div class="allergens">
+												<div class="title">This product contains ingredients which may cause an allergic reaction to the following:</div> 
+												<div class="icon-holder">
 													<div class="icon">
-														<img src="images/temperature-2-64.png" title="Storage">
-													</div>
-													<div class="value">
-														<div class="title">Storage:</div>
-														-18°C | 18 months
-													</div>
-												</div>
-											</div>
-											<div class="column">
-												<div class="preparation-item">
-													<div class="icon"><img src="images/fryer.png" title="Fryer"></div>
-													<div class="value">
-														<div class="title">Fryer:</div> 
-														<strong>Temp (°C):</strong> 175<br> 
-														<strong>Cooking Time (min):</strong> 3 (1/2 basket)
+														<img src="images/allergens/allergen-dairy.svg" title="Dairy"> 
+														<div class="icon-title">Dairy</div>
+													</div> 
+													<div class="icon">
+														<img src="images/allergens/allergen-wheat.svg" title="Wheat"> 
+														<div class="icon-title">Wheat</div>
+													</div> 
+													<div class="icon">
+														<img src="images/allergens/allergen-eggs.svg" title="Egg"> 
+														<div class="icon-title">Egg</div>
 													</div>
 												</div>
 											</div>
-											<div class="column">
-												<div class="preparation-item">
-													<div class="icon"><img src="images/oven.png" title="Fan Assisted Oven"></div>
-													<div class="value">
-														<div class="title">Fan Assisted Oven:</div> 
-														<strong>Temp (°C):</strong> 200<br> 
-														<strong>Cooking Time (min):</strong> 11
-													</div>
-												</div>
-											</div>
-										
 										</div>
 									</div>
-								</div>
-								<div class="tab-section-item" id="claims" style="display: none;">
-									<div class="tab-title mobile">Claims</div>
-									<div class="tab-content">
-										<div class="claims-content">
-											<p>Vegan, Gluten Free, Organic</p>
+									<div class="tab-section-item" id="logistic" style="display: none;">
+										<div class="tab-title mobile">Logistic</div>
+										<div class="tab-content">
+											<div class="logistic tabs-columns">
+												<div class="column">
+													<div class="title">General:</div>
+													<div class="row-item">
+														<div class="title">Packaging</div>
+														<div class="value">6 × 2,04 kg</div>
+													</div>
+												</div>
+												<div class="column">
+													<div class="title">Case:</div>
+													<div class="row-item">
+														<div class="title">Net weight case</div>
+														<div class="value">2,04 kg</div>
+													</div>
+												</div>
+												<div class="column">
+													<div class="title">product codes:</div>
+													<div class="row-item">
+														<div class="title">SKU</div>
+														<div class="value">1000006350</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-section-item" id="preparation" style="display: none;">
+										<div class="tab-title mobile">Preparation</div>
+										<div class="tab-content">
+											<div class="tabs-columns preparation">
+												<div class="column">
+													<div class="preparation-item">
+														<div class="icon">
+															<img src="images/temperature-2-64.png" title="Storage">
+														</div>
+														<div class="value">
+															<div class="title">Storage:</div>
+															-18°C | 18 months
+														</div>
+													</div>
+												</div>
+												<div class="column">
+													<div class="preparation-item">
+														<div class="icon"><img src="images/fryer.png" title="Fryer"></div>
+														<div class="value">
+															<div class="title">Fryer:</div> 
+															<strong>Temp (°C):</strong> 175<br> 
+															<strong>Cooking Time (min):</strong> 3 (1/2 basket)
+														</div>
+													</div>
+												</div>
+												<div class="column">
+													<div class="preparation-item">
+														<div class="icon"><img src="images/oven.png" title="Fan Assisted Oven"></div>
+														<div class="value">
+															<div class="title">Fan Assisted Oven:</div> 
+															<strong>Temp (°C):</strong> 200<br> 
+															<strong>Cooking Time (min):</strong> 11
+														</div>
+													</div>
+												</div>
+											
+											</div>
+										</div>
+									</div>
+									<div class="tab-section-item" id="claims" style="display: none;">
+										<div class="tab-title mobile">Claims</div>
+										<div class="tab-content">
+											<div class="claims-content">
+												<p>Vegan, Gluten Free, Organic</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -367,85 +355,85 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		
-		<div class="related-recipes">
-			<div class="main-title">Related Recipes</div>
-			<!--<div class="sub-title">Sub title</div>-->
-			<div class="recipes-holder">
-				<a href="#" class="relative-item">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
-                    </div>
-                    <div class="title">Falafel Wrap</div>
-                </a>
-				<a href="#" class="relative-item">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/recipes/McCain-Shawarma-Wrap.jpg" />
-                    </div>
-                    <div class="title">Shawarma Wrap</div>
-                </a>
-				<a href="#" class="relative-item">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/recipes/LOADED TOFU FRIES.jpg" />
-                    </div>
-                    <div class="title">Loaded Tofu Fries</div>
-                </a>
-			</div>
-			<section class="view-all" >
-				<div class="button-holder">
-					<a href="#" class="view-all button yellow">View all recipes</a>
+			
+			<div class="related-recipes">
+				<div class="main-title">Related Recipes</div>
+				<!--<div class="sub-title">Sub title</div>-->
+				<div class="recipes-holder">
+					<a href="#" class="relative-item">
+						<div class="image-holder">
+							<img alt="Image" src="images/recipes/McCain-Falafel-Wrap-1-768x768.jpg" />
+						</div>
+						<div class="title">Falafel Wrap</div>
+					</a>
+					<a href="#" class="relative-item">
+						<div class="image-holder">
+							<img alt="Image" src="images/recipes/McCain-Shawarma-Wrap.jpg" />
+						</div>
+						<div class="title">Shawarma Wrap</div>
+					</a>
+					<a href="#" class="relative-item">
+						<div class="image-holder">
+							<img alt="Image" src="images/recipes/LOADED TOFU FRIES.jpg" />
+						</div>
+						<div class="title">Loaded Tofu Fries</div>
+					</a>
 				</div>
-			</section>
-		</div>
-
-		<div class="product-range-holder">
-			<div class="content-holder">
-				<div class="main-title">See the full product range</div>
-				
-				<div class="details">
+				<section class="view-all" >
 					<div class="button-holder">
-						<a href="#" class="button yellow">View catalogue</a>
+						<a href="#" class="view-all button yellow">View all recipes</a>
+					</div>
+				</section>
+			</div>
+
+			<div class="product-range-holder">
+				<div class="content-holder">
+					<div class="main-title">See the full product range</div>
+					
+					<div class="details">
+						<div class="button-holder">
+							<a href="#" class="button yellow">View catalogue</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="grid-items three">
-			<div class="main-title">Others also viewed</div>
-			<div class="cards">
-				<a href="#" class="product-item">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/products/Ambiance_1000006742_Crispers-min.jpg" />
-                    </div>
-					<!--<div class="description">text</div>-->
-                    <div class="title">Spicy Crispers</div>
-                </a>
-				<a href="#" class="product-item">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/products/Ambiance_1000001357_Tradistyle fries-min.jpg" />
-                    </div>
-					<!--<div class="description">text</div>-->
-                    <div class="title">Tradistyle Fries</div>
-                </a>
-				<a href="#" class="product-item">
-                    <div class="image-holder">
-                        <img alt="Image" src="images/products/Ambiance_1000001943_Potato Pops-min.jpg" />
-                    </div>
-					<!--<div class="description">text</div>-->
-                    <div class="title">Potato Pops</div>
-                </a>
+			
+			<div class="grid-items three">
+				<div class="main-title">Others also viewed</div>
+				<div class="cards">
+					<a href="#" class="product-item">
+						<div class="image-holder">
+							<img alt="Image" src="images/products/Ambiance_1000006742_Crispers-min.jpg" />
+						</div>
+						<!--<div class="description">text</div>-->
+						<div class="title">Spicy Crispers</div>
+					</a>
+					<a href="#" class="product-item">
+						<div class="image-holder">
+							<img alt="Image" src="images/products/Ambiance_1000001357_Tradistyle fries-min.jpg" />
+						</div>
+						<!--<div class="description">text</div>-->
+						<div class="title">Tradistyle Fries</div>
+					</a>
+					<a href="#" class="product-item">
+						<div class="image-holder">
+							<img alt="Image" src="images/products/Ambiance_1000001943_Potato Pops-min.jpg" />
+						</div>
+						<!--<div class="description">text</div>-->
+						<div class="title">Potato Pops</div>
+					</a>
+				</div>
 			</div>
-		</div>
 
-		<div class="contact-wrapper">
-			<div class="title">Contact our sales team</div>
-			<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-			<div class="button-holder">
-				<a href="#" class="button yellow">Contact</a>
+			<div class="contact-wrapper">
+				<div class="title">Contact our sales team</div>
+				<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+				<div class="button-holder">
+					<a href="#" class="button yellow">Contact</a>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 
 	<!-- Footer -->
 	<footer>
