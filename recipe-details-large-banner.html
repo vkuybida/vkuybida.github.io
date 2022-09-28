@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta http-equiv="X-UA-Compatible" name="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+	<link rel='dns-prefetch' href='//code.jquery.com' />
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+	<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+		  rel="stylesheet">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick/slick.css"/>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+			crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/slick/slick.min.js"></script>
+	<script src="js/global.js"></script>
+
+
+	<title>McCain CEU Foodservice</title>
+</head>
+
+
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="logo">
+			<a href="index.html"><img src="images/mccain-logo.png" alt="McCain Logo" /></a>
+		</div>
+
+		<div class="search-box-holder">
+			<input type="text" placeholder="Search" />
+			<a onclick="document.getElementById('search_header').submit();"></a>
+		</div>
+
+		<div class="nav-right">
+			<div class="button-holder">
+				<a class="button yellow" href="#">
+					Subscribe
+				</a>
+			</div>
+			<div class="button-holder">
+				<a class="button yellow" href="#">
+					Contact Us
+				</a>
+			</div>
+		</div>
+
+		<div class="language-selector">
+			<div class="selected-language">
+				FR
+			</div>
+			<div class="language-popup">
+				
+			</div>
+		</div>
+
+		<div class="menu-icon">
+			<img src="images/icon-menu.png" alt="Menu Hamburger Icon" class="menu-open" />
+			<img src="images/icon-close-black.png" alt="Menu Close Icon" class="menu-close" />
+		</div>
+	</header>
+	
+	<!-- Main menu -->
+	<div class="main-menu">
+		<nav>
+			<ul class="menu-items">
+				<li><a href="products.html">Products</a></li>
+				<li><a href="#">Inspiration</a></li>
+				<li><a href="recipes.html">Recipes</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="mobile-menu">
+		<nav>
+			<ul class="menu-items">
+				<li>
+					<a href="products.html">Products</a>
+				</li>
+				<li>
+					<a href="#">Inspiration</a>
+				</li>
+				<li><a href="recipes.html">Recipes</a></li>
+				<li>
+					<a href="#">About Us</a>
+					<ul class="sub-items">
+						<li><a href="#">Sustainability</a></li>
+						<li><a href="#">Our brand</a></li>
+						<li><a href="#">Jobs</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="main-content">
+
+		<!-- Breadcrumb -->
+		<div class="breadcrumb-holder">
+			<ul class="breadcrumb">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="recipes.html">Recipes</a></li>
+				<li><a href="#">Nachos de Pappas</a></li>
+			</ul>
+		</div>
+		
+		<!-- Recipe Details -->
+		<section class="recipe-details">
+			<div class="recipe-holder">
+
+				<div class="recipe-info">
+					<div class="image-holder desktop">
+						<img src="images/recipes/20220504_McCain_LoadedPommes_0772-zuschnitt.jpg">
+					</div>
+					<div class="content-holder">
+						<div class="recipe-info-item">
+							<h1 class="title">Nachos de Pappas</h1>
+							<div class="text">
+								<p>Uniquely cut Dip’n Wedges™ loaded with white queso, spicy chorizo, pico de gallo and cilantro</p>
+							</div>
+							<div class="price-table">
+								<div class="table-cell">
+									<div class="cell-title">menu price</div>
+									<div class="cell-price">6.99</div>
+								</div>
+								<div class="table-cell">
+									<div class="cell-title">food cost*</div>
+									<div class="cell-price">2.20</div>
+								</div> <div class="table-cell">
+									<div class="cell-title">profit</div>
+									<div class="cell-price">4.79</div>
+								</div>
+							</div>
+							<div class="tags">
+								<div class="title"></div>
+								<a href="#">Takeout &amp; Delivery</a>
+								<a href="#">Dip'n Wedges</a>
+							</div>
+							<div class="buttons-holder">
+								<div class="button-holder">
+									<a href="#" class="button yellow">View preparation</a>
+								</div>
+								<div class="button-holder">
+									<a href="#" class="button button-print yellow">Print recipe</a>
+								</div>
+								<div class="button-holder">
+									<a href="#" class="button button-whats-this">Add favorite</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="recipe-directions">
+					<div class="ingredients-holder active">
+						<div class="title">Ingredients</div>
+						<div class="content">
+							<ul>
+								<li><strong>1 package</strong> <a href="#">McCain® Tasti Taters®</a></li>
+								<li><strong>1 can (284ml)</strong> condensed cream of mushroom soup</li>
+								<li><strong>1/2 Cup</strong> of milk</li>
+								<li><strong>1/2 Cup</strong> of sour cream</li>
+							</ul>
+						</div>
+					</div>
+					<div class="preparation-holder active">
+						<div class="title">Preparation</div>
+						<div class="content">
+							<ul>
+								<li>Preheat the oven to 350F (176C)</li>
+								<li>Mix the soup, milk and sour cream in a bowl.</li>
+								<li>In a baking dish (9 x13) spread melted butter.</li>
+								<li>Spread half of the McCain® Tasti Taters® evenly in the dish.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="step-by-step">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="main-title">Step by step</div>
+								<div class="video-wrapper">
+									<div class="video-holder">
+										<iframe width="630" height="350"
+											src="https://www.youtube.com/embed/EGOUtPMt-g8?list=PL9UwYZAnQy-t23YaqajBFxGH2VffeorCP"
+											title="McCain USA Foodservice K12 Schools" frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+											allowfullscreen></iframe>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Share Dialog -->
+		<div class="share-dialog-wrapper" id="share-dialog">
+			<div class="dialog">
+				<span class="close">&times;</span>
+				<div class="title">Share</div>
+				<div class="buttons-holder">
+					<div class="button-holder">
+						<a href="#" target="_blank" title="Email" class="button button-social email">Email</a>
+					</div>
+					<div class="button-holder">
+						<a href="#" target="_blank" title="Facebook" class="button button-social facebook">Facebook</a>
+					</div>
+					<div class="button-holder">
+						<a href="#" target="_blank" title="Twitter" class="button button-social twitter">Twitter</a>
+					</div>
+				</div>
+			</div> 
+		</div>
+
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer-top">
+			<div class="left-container">
+				<div class="footer-links">
+					<div class="group-links">
+						<div class="title">Navigation</div>
+						<a href="#">Products</a>
+						<a href="#">Brand</a>
+						<a href="#">Inspiration</a>
+						<a href="#">Trends</a>
+						<a href="#">Contact</a>
+					</div>
+
+					<div class="group-links">
+						<div class="title">About McCain</div>
+						<a href="#">Background</a>
+						<a href="#">Sustainability</a>
+						<a href="#">Jobs</a>
+						<a href="#">FAQ</a>
+					</div>
+					
+					<div class="group-links">
+						<div class="title">Language</div>
+						<a href="#">English</a>
+						<a href="#">French</a>
+						<a href="#">View all countries</a>
+
+						<div class="social-icons-holder">
+							<div class="title">Find us on</div>
+						
+							<div class="social-icons">
+								<a href="#" target="_blank" title="Facebook" class="facebook"></a>
+								<a href="#" target="_blank" title="Instagram" class="instagram"></a>
+								<a href="#" target="_blank" title="Linkedin" class="linkedin"></a>
+							</div>
+						</div> 
+					</div>
+
+				</div>
+			</div>
+
+			<div class="right-container">
+				<div class="newsletter-holder">
+					<div class="title">Sign up for our newsletter</div>
+					<div class="form-holder">
+						<form>
+							<div class="form-row columns">
+								<input class="name" type="text" placeholder="First Name" />
+								<input type="text" placeholder="Last Name" />
+							</div>
+							<div class="form-row">
+								<input class="company" type="text" placeholder="Company" />
+							</div>
+							<div class="form-row">
+								<input class="email" type="email" placeholder="Email" />
+							</div>
+							<div class="form-row">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="agreed" checked>
+									<label class="form-check-label" for="agreed">
+										Yes, I opt in for all communications
+									</label>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="button-holder">
+									<a href="#" class="button yellow">Submit</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			
+			
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+		
+
+			<div class="bottom-links">
+				<a href="#">Global Privacy Policy</a>
+				<a href="#">Legal Information</a>
+				<a href="#">Cookies</a>
+			</div>
+			<div class="rights-reserved">©2022 McCain® Foods Limited | All rights reserved</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
