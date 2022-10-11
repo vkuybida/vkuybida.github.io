@@ -25,7 +25,7 @@ $(function(){
 	});
 
 		
-	$('.slider').slick({
+	$('.slider-wrapper .slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplay: true,
@@ -108,5 +108,42 @@ $(function(){
         $("#recipe-main-img").attr("src", urlImg);
         $this.addClass("active");
     });
+
+	$(".newsletter-icon").click(function () {
+		var $this = $(this);
+		if ($this.hasClass("active")) {
+			$this.removeClass('active');
+			$(".footer-links").removeClass("active");
+		} else {
+			$this.toggleClass("active");
+			$(".footer-links").toggleClass("active");
+		}
+	});
+
+	// Banner
+	$(".generic-slider .slider").slick({
+		slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+		autoplaySpeed: 3000,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+				}
+			}
+		]
+	});
+
+	// Search
+	$(".mobile-search-open").click(function () {
+		$("body header").toggleClass("mobile-open");
+	});
+
+	$(".mobile-search-close").click(function(){
+		$("body header").removeClass("mobile-open");
+	});
 
 })
