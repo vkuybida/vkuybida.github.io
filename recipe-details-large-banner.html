@@ -47,9 +47,12 @@
 			<a href="index.html"><img src="images/mccain-logo.png" alt="McCain Logo" /></a>
 		</div>
 
-		<div class="search-box-holder">
-			<input type="text" placeholder="Search" />
-			<a onclick="document.getElementById('search_header').submit();"></a>
+		<div class="search-wrapper">
+			<div class="search-close-icon"></div>
+			<div class="search-box-holder">
+				<input type="text" placeholder="Search" />
+				<a onclick="document.getElementById('search_header').submit();"></a>
+			</div>
 		</div>
 
 		<div class="nav-right">
@@ -63,23 +66,27 @@
 					Contact Us
 				</a>
 			</div>
+			<div class="language-holder">
+				<div class="language-selector">
+					<div class="selected-language">Dutch</div>
+					<div class="languages-popup">
+						<div class="select-title">Select your language</div>
+						<ul>
+							<li class="selected"><a href="#">Dutch</a></li>
+							<li><a href="#">French</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<div class="language-selector">
-			<div class="selected-language">
-				FR
-			</div>
-			<div class="language-popup">
-				
-			</div>
+		<div class="nav-right-mobile">
+			<div class="search-open-icon"></div>
+			<div class="menu-icon"></div>
 		</div>
-
-		<div class="menu-icon">
-			<img src="images/icon-menu.png" alt="Menu Hamburger Icon" class="menu-open" />
-			<img src="images/icon-close-black.png" alt="Menu Close Icon" class="menu-close" />
-		</div>
+		
 	</header>
-	
+
 	<!-- Main menu -->
 	<div class="main-menu">
 		<nav>

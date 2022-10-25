@@ -22,7 +22,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css?r=4" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?r=5" />
     <link rel="stylesheet" type="text/css" href="css/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css" />
 
@@ -32,7 +32,7 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/slick/slick.min.js"></script>
-    <script src="js/global.js?r=4"></script>
+    <script src="js/global.js?r=5"></script>
 
 
     <title>McCain CEU Foodservice</title>
@@ -47,13 +47,12 @@
 			<a href="index.html"><img src="images/mccain-logo.png" alt="McCain Logo" /></a>
 		</div>
 
-		<div class="search-box-holder">
-			<div class="search-icon">
-				<img src="images/icon-arrow-left-black.png" alt="Close Search Icon" class="mobile-search-close"></img>
+		<div class="search-wrapper">
+			<div class="search-close-icon"></div>
+			<div class="search-box-holder">
+				<input type="text" placeholder="Search" />
+				<a onclick="document.getElementById('search_header').submit();"></a>
 			</div>
-			<input type="text" placeholder="Search" />
-			<a onclick="document.getElementById('search_header').submit();"></a>
-			<a href="#" class="mobile-search-open"></a>
 		</div>
 
 		<div class="nav-right">
@@ -67,21 +66,25 @@
 					Contact Us
 				</a>
 			</div>
+			<div class="language-holder">
+				<div class="language-selector">
+					<div class="selected-language">Dutch</div>
+					<div class="languages-popup">
+						<div class="select-title">Select your language</div>
+						<ul>
+							<li class="selected"><a href="#">Dutch</a></li>
+							<li><a href="#">French</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<div class="language-selector">
-			<div class="selected-language">
-				FR
-			</div>
-			<div class="language-popup">
-				
-			</div>
+		<div class="nav-right-mobile">
+			<div class="search-open-icon"></div>
+			<div class="menu-icon"></div>
 		</div>
-
-		<div class="menu-icon">
-			<img src="images/icon-menu.png" alt="Menu Hamburger Icon" class="menu-open" />
-			<img src="images/icon-close-black.png" alt="Menu Close Icon" class="menu-close" />
-		</div>
+		
 	</header>
 
 	<!-- Main menu -->
@@ -89,7 +92,7 @@
 		<nav>
 			<ul class="menu-items">
 				<li><a href="products.html">Products</a></li>
-				<li><a href="#">Inspiration</a></li>
+				<li><a href="inspiration.html">Inspiration</a></li>
 				<li><a href="recipes.html">Recipes</a></li>
 				<li><a href="#">About Us</a></li>
 				<li><a href="#">Contact</a></li>
@@ -121,47 +124,65 @@
 	</div>
 
 	<div class="main-content">
+		<!-- Main Banner -->
+		<section class="main-banner" style="display:none;">
+			<div class="banner-holder">
+				<div class="content">
+					<h1 class="title">Be on the winning team with</h1> 
+					<div class="description"><p></p></div>
+					<div class="button-holder">
+						<a href="#" class="button yellow">Find out more</a>
+					</div>
+				</div>
+				<picture>
+					<source media="(max-width: 600px)" srcset="images/banners/main-banner-1-Pickers.jpg"> 
+					<source media="(min-width: 601px)" srcset="images/banners/main-banner-1-Pickers.jpg"> 
+					<img src="images/banners/main-banner-1-Pickers.jpg" alt="Banner Image" />
+				</picture>
+			</div>
+		</section>
+	
 		<!-- Grid Section -->
-		<section class="grid-section">
-			<div class="grid">
-				<div class="col-2">
-					<div class="item">
+		<section class="grid3-banners">
+			<div class="banners-holder">
+				<div class="left-column">
+					<div class="banner-holder">
 						<div class="image-holder">
-							<img src="images/banners/banner-1-Big-Profit.jpg" alt="Image">
+							<img src="images/banners/main-banner-1-Pickers.jpg" alt="Image" />
 						</div>
 						<div class="content">
-							<div class="title">Title</div>
-							<div class="sub-title">Sub title</div>
+							<h1 class="title">Be on the winning team with <span style="color: #f5a700;">P!CKERS</span></h1>
+							<div class="sub-title" style="display: none;"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
 							<div class="button-holder">
-								<a href="#" class="button yellow">Learn More</a>
+								<a href="#" class="button yellow">Find out more</a>
 							</div>
 						</div>
 					</div>
-					<div class="item">
-						<div class="row-2">
-							<div class="item">
-								<div class="image-holder">
-									<img src="images/banners/banner-2-Surecrisp.jpg" alt="Image">
-								</div>
-								<div class="content">
-									<div class="title">Title</div>
-									<div class="sub-title">Sub title</div>
-									<div class="button-holder small">
-										<a href="#" class="button yellow">Learn More</a>
-									</div>
-								</div>
+				</div>
+				<div class="right-column">
+					<div class="banner-holder">
+						<div class="image-holder">
+							<img src="images/banners/main-banner-2-Good-to-Go.jpg" alt="Image" />
+						</div>
+						<div class="content">
+							<div class="title">GOOD TO GO</div>
+							<div class="sub-title"><p>Looking to excel your delivery or take out offering ? Redefine your menu? Adapt to current market and staffing challenges? 
+								Find out McCain solutions for delivery.</p></div>
+							<div class="button-holder">
+								<a href="#" class="button yellow">Find out more</a>
 							</div>
-							<div class="item">
-								<div class="image-holder">
-									<img src="images/banners/banner-3-Future-delivered.jpg" alt="Image">
-								</div>
-								<div class="content">
-									<div class="title">Title</div>
-									<div class="sub-title">Sub title</div>
-									<div class="button-holder small">
-										<a href="#" class="button yellow">Learn More</a>
-									</div>
-								</div>
+						</div>
+					</div>
+					<div class="banner-holder">
+						<div class="image-holder">
+							<img src="images/banners/main-banner-3-Be-Good-Do-Good.jpg" alt="Image" />
+						</div>
+						<div class="content">
+							<div class="title">BE GOOD. DO GOOD.</div>
+							<div class="sub-title"><p>At McCain, we believe that good ethics is good business. Find out our ambitious commitments for 2025 and 2030 in 4 areas</p>
+							</div>
+							<div class="button-holder">
+								<a href="#" class="button yellow">Learn More</a>
 							</div>
 						</div>
 					</div>
@@ -427,10 +448,6 @@
 	<footer>
 		<div class="footer-top">
 			<div class="left-container">
-				<div class="newsletter-icon">
-					<img src="images/icon-arrow-down.png" alt="Newsletter Expand Icon" class="newsletter-expand">
-					<img src="images/icon-arrow-up.png" alt="Newsletter Collapse Icon" class="newsletter-collapse">
-				</div>
 				<div class="footer-links">
 					<div class="group-links">
 						<div class="title">Navigation</div>
@@ -450,10 +467,24 @@
 					</div>
 					
 					<div class="group-links">
-						<div class="title">Language</div>
-						<a href="#">English</a>
-						<a href="#">French</a>
-						<a href="#">View all countries</a>
+						<div class="language-holder dark">
+							<div class="title">Language</div>
+							<div class="language-selector">
+								<div class="selected-language">Dutch</div>
+								<div class="languages-popup">
+									<div class="select-title">Select your language</div>
+									<ul>
+										<li class="selected"><a href="#">Dutch</a></li>
+										<li><a href="#">French</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="change-location-holder">
+							<div class="title">McCain in Europe</div>
+							<a href="#">View all countries</a>
+						</div>
 
 						<div class="social-icons-holder">
 							<div class="title">Find us on</div>
@@ -500,14 +531,10 @@
 						</form>
 					</div>
 				</div>
-			
-			
 			</div>
 		</div>
 
 		<div class="footer-bottom">
-		
-
 			<div class="bottom-links">
 				<a href="#">Global Privacy Policy</a>
 				<a href="#">Legal Information</a>
