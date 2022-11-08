@@ -148,3 +148,16 @@ $(function(){
 
 
 })
+
+$(function () {
+    $('body').on('click', '.filters-panel .filters-item .filters-title', function (e) {
+        e.stopPropagation();
+        $(this).parent().siblings('.filters-item').removeClass('active');
+        $(this).parent().toggleClass('active');
+    });
+
+    $('body').on('click', function () {
+            $('.filters-panel .filters-item').removeClass('active');
+        });
+
+});

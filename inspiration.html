@@ -126,6 +126,21 @@
 
 	<div class="main-content">
 
+		<!-- Main Banner -->
+		<section class="main-banner">
+			<div class="banner-holder">
+				<div class="content">
+					<h1 class="title">Inspiration</h1>
+					<div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+				</div> 
+				<picture>
+					<source media="(max-width: 600px)" srcset="images/banners/banner-trend-mobile.jpg"> 
+					<source media="(min-width: 601px)" srcset="images/banners/banner-trend.jpg"> 
+					<img src="images/banners/banner-trend.jpg" alt="banner image">
+				</picture>
+			</div>
+		</section>
+
 		<!-- Breadcrumb -->
 		<div class="breadcrumb-holder">
 			<ul class="breadcrumb">
@@ -136,77 +151,83 @@
 		
 		<!-- Products Landing page -->
 		<section class="inspiration">
-			<div>
-				
-			</div>
+			
 
 			<div class="products-wrapper">
-				<div class="filters-holder">
-					<div class="filters-content">
-						<a href="#" class="close"></a>
-						<div class="main-title">Filters</div>
-
-						<div class="filter-groups">
-							<div class="filter-group">
-								<div class="title">
-									TBD:
-								</div>
-								<div class="filter-options">
-									<div class="item"><label><input type="checkbox" /> French Fries</label></div>
-									<div class="item"><label><input type="checkbox" /> Potato Specialties</label></div>
-									<div class="item"><label><input type="checkbox" /> Cheese Appetizers</label></div>
-									<div class="item"><label><input type="checkbox" /> Veggie Appetizers</label></div>
-									<div class="item"><label><input type="checkbox" /> Meat Appetizers</label></div>
-									<div class="item"><label><input type="checkbox" /> Waffles</label></div>
-									<div class="item"><label><input type="checkbox" /> Ingredients</label></div>
-								</div>
-							</div>
-
-							<div class="filter-group">
-								<div class="title">
-									TBD:
-								</div>
-								<div class="filter-options">
-									<div class="item"><label><input type="checkbox" /> Gourmet Burgers</label></div>
-									<div class="item"><label><input type="checkbox" /> Snacking</label></div>
-									<div class="item"><label><input type="checkbox" /> Starters</label></div>
-									<div class="item"><label><input type="checkbox" /> Sharers</label></div>
-									<div class="item"><label><input type="checkbox" /> Loaded Fries</label></div>
-									<div class="item"><label><input type="checkbox" /> Traditional</label></div>
-								</div>
-							</div>
-
-							<div class="filter-group">
-								<div class="title">
-									TBD:
-								</div>
-								<div class="filter-options">
-									<div class="item"><label><input type="checkbox" /> Veggie</label></div>
-									<div class="item"><label><input type="checkbox" /> Vegan</label></div>
-									<div class="item"><label><input type="checkbox" /> Halal</label></div>
-									<div class="item"><label><input type="checkbox" /> Gluten Free</label></div>
-									<div class="item"><label><input type="checkbox" /> Lactose Free</label></div>
-								</div>
-							</div>
-
-							
-						</div>
-
-						<div class="action-buttons">
-							<div class="button-holder small">
-								<a class="button yellow show-products" href="#">
-									Show Inspirations
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
 				
 				<div class="inspirations-holder">
 					<div class="header">
-						<h1>Inspiration</h1>
 						<div class="action-buttons">
-							<a href="#" class="open-filters-button">Filters</a>
+							<div class="filters-panel">
+								<div class="filters-item">
+									<div class="filters-title">Filter by Topic</div>
+									<div class="filters-content">
+										<div class="filters-row">
+											<div class="checkbox-item">
+												<input type="checkbox" id="f1" value="1" />
+												<label for="f1">Delivery & Take away</label>
+											</div>
+											<div class="count">11</div>
+										</div>
+										<div class="filters-row">
+											<div class="checkbox-item">
+												<input type="checkbox" id="f2" value="2" />
+												<label for="f2">Eating moments</label>
+											</div>
+											<div class="count">4</div>
+										</div>
+										<div class="filters-row">
+											<div class="checkbox-item">
+												<input type="checkbox" id="f3" value="3" />
+												<label for="f3">Appetizers & Snacks</label>
+											</div>
+											<div class="count">2</div>
+										</div>
+										<div class="filters-row">
+											<div class="checkbox-item">
+												<input type="checkbox" id="f4" value="4" />
+												<label for="f4">All about potatoes</label>
+											</div>
+											<div class="count">11</div>
+										</div>
+										<div class="filters-row">
+											<div class="checkbox-item">
+												<input type="checkbox" id="f5" value="5" />
+												<label for="f5">Menu Engineering</label>
+											</div>
+											<div class="count">1</div>
+										</div>
+										<div class="filters-row">
+											<div class="checkbox-item">
+												<input type="checkbox" id="f6" value="6" />
+												<label for="f6">Tips & Tricks</label>
+											</div>
+											<div class="count">0</div>
+										</div>
+										<div class="filters-row">
+											<div class="checkbox-item">
+												<input type="checkbox" id="f7" value="7" />
+												<label for="f7">Trends</label>
+											</div>
+											<div class="count">4</div>
+										</div>
+										<div class="filters-row">
+											<div class="checkbox-item">
+												<input type="checkbox" id="f8" value="8" />
+												<label for="f8">Foodcost</label>
+											</div>
+											<div class="count">3</div>
+										</div>
+										<div class="filters-row">
+											<div class="checkbox-item">
+												<input type="checkbox" id="f9" value="9" />
+												<label for="f9">Sustainability</label>
+											</div>
+											<div class="count">5</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div class="search-holder"><input type="text" placeholder="Search..."></div>
 						</div>
 					</div>
