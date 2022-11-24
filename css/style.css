@@ -523,7 +523,7 @@ header {
 	.breadcrumb-holder {
 		max-width: 1600px;
 		margin: 0px auto;
-		padding: 12px 20px;
+		padding: 12px 0;
 	}
 	
 	.breadcrumb-holder .breadcrumb {
@@ -736,6 +736,31 @@ footer {
 	}
 
 
+	/* PAGE CONTENT General - START */
+	.page-content {
+		max-width: 1600px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	.page-content.faq-page {
+		max-width: 1200px;
+	}
+
+	.page-content.home-page, .page-content.product-details-page, .page-content.recipe-details-page {
+		max-width: 100%;
+		padding: 0;
+	}
+
+	.page-content.product-details-page .breadcrumb-holder,
+	.page-content.recipe-details-page .breadcrumb-holder {
+		max-width: 1360px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	/* PAGE CONTENT General - END */
+
 	/* COMMON WIDGETS - START */
 
 
@@ -746,6 +771,11 @@ footer {
 	.banner-holder {
 		position: relative;
 	}
+
+	.banner-holder img {
+		width: 100%;
+	}
+
 	.banner-holder .content {
 		position: absolute;
 		top: 50%;
@@ -755,12 +785,12 @@ footer {
 		width: 90%;
 	}
 	.banner-holder .title {
-		color: #ffffff;
+		color: #fff;
 		margin-bottom: 30px;
 	}
 	.banner-holder .description p {
-		color: #ffffff;
-		font-size: 18px;
+		color: #fff;
+		font-size: 24px;
 	}
 
 
@@ -1113,8 +1143,9 @@ footer {
 		position: relative;
 		background-color: #000;
 		color: #fff;
-		padding:  7px 20px 7px 50px;
+		padding: 10px 20px 10px 50px;
 		width: 315px;
+		border-radius: 5px;
 	}
 	
 	.header .action-buttons .open-filters-button:before {
@@ -1150,105 +1181,109 @@ footer {
 	}
 	
 	.header .action-buttons .search-holder input {
-		padding: 6px 10px 6px 45px;
+		padding: 8px 10px 8px 45px;
 		width: 100%;
+		border-radius: 5px;
 	}
 
 
 	.statistics {
 		margin: 15px 0;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 	}
 	/* Products, Recipes and Inspirations common - END */
+
+	/* Content fith filters - START */
+	.content-with-filters {
+		position: relative;
+		width: 100%;
+		display: flex;
+		margin: 20px auto;
+		justify-content: center;
+		justify-items: center;
+		gap: 50px;
+	}
+	
+	.content-with-filters .filters-holder {
+		flex-shrink: 0;
+		width: 250px;
+	}
+	
+	.content-with-filters .filters-holder.animation {
+		animation: slide-from-right 10s;
+		transition: opacity 0.3s ease-in-out;
+	}
+	
+	.content-with-filters .filters-holder.active {
+		animation: slide-from-left 0.1s;
+	}
+	
+	.filters-holder .filters-content {
+		position: relative;
+	}
+	
+	.filters-holder .filters-content .close {
+		position: absolute;
+		top: 5px;
+		right: 0;
+		display: block;
+	}
+	
+	.filters-holder .filters-content .close:after {
+		content: '';
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		background: url(../images/icon-close-white.svg) center no-repeat;
+		cursor: pointer;
+	}
+	
+	.filters-holder .filters-content .main-title {
+		font-size: 24px;
+	}
+	
+	.filters-holder .filters-content .filter-group .title{
+		font-size: 16px;
+		font-weight: 500;
+		border-bottom: 1px solid #cfcfcf;
+		padding: 8px 0;
+	}
+	
+	.filters-holder .filters-content .filter-group .filter-options {
+		padding: 5px 20px;
+	}
+	
+	.filters-holder .filters-content .filter-group .filter-options .item {
+		margin: 3px 0;
+	}
+	
+	.filters-holder .filters-content .filter-group .filter-options label {
+		cursor: pointer;
+		font-size: 14px;
+	}
+	
+	.filters-holder .filters-content .filter-group .filter-options input[type=checkbox] {
+		accent-color: #111;
+		margin-right: 4px;
+	}
+	
+	.filters-holder .filters-content .action-buttons {
+		margin: 20px 0;
+		display: none;
+	}
+
+	.content-items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 30px;
+		column-gap: 40px;
+	}
+
+	/* Content fith filters - END */
 
 /* Products */
 .products {
 	margin-bottom: 40px;
-}
-
-.products-wrapper {
-	position: relative;
-	width: 100%;
-	display: flex;
-	max-width: 1600px;
-	margin: 20px auto;
-	justify-content: center;
-	justify-items: center;
-	gap: 50px;
-	padding: 0 20px;
-}
-
-
-.products-wrapper .filters-holder {
-	flex-shrink: 0;
-	width: 250px;
-}
-
-.products-wrapper .filters-holder.animation {
-	-webkit-animation: slide-from-right 10s;
-	-webkit-transition: opacity 0.3s ease-in-out;
-	-moz-transition: opacity 0.3s ease-in-out;
-	-ms-transition: opacity 0.3s ease-in-out;
-	-o-transition: opacity 0.3s ease-in-out;
-	transition: opacity 0.3s ease-in-out;
-}
-
-.products-wrapper .filters-holder.active {
-	-webkit-animation: slide-from-left 0.1s;
-}
-
-.filters-holder .filters-content {
-	position: relative;
-}
-
-.filters-holder .filters-content .close {
-	position: absolute;
-	top: 5px;
-	right: 0;
-	display: block;
-}
-
-.filters-holder .filters-content .close:after {
-	content: '';
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	background: url(../images/icon-close-white.svg) center no-repeat;
-	cursor: pointer;
-}
-
-.filters-holder .filters-content .main-title {
-	font-size: 24px;
-}
-
-.filters-holder .filters-content .filter-group .title{
-	font-size: 16px;
-	font-weight: 500;
-	border-bottom: 1px solid #cfcfcf;
-	padding: 8px 0;
-}
-
-.filters-holder .filters-content .filter-group .filter-options {
-	padding: 5px 20px;
-}
-
-.filters-holder .filters-content .filter-group .filter-options .item {
-	margin: 3px 0;
-}
-
-.filters-holder .filters-content .filter-group .filter-options label {
-	cursor: pointer;
-	font-size: 14px;
-}
-
-.filters-holder .filters-content .filter-group .filter-options input[type=checkbox] {
-	accent-color: #111;
-	margin-right: 4px;
-}
-
-.filters-holder .filters-content .action-buttons {
-	margin: 20px 0;
-	display: none;
 }
 
 .products-holder {
@@ -1256,15 +1291,6 @@ footer {
 	margin: 0 auto;
 	padding: 0;
 }
-
-
-
-	.products-holder .products-grid {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-gap: 30px;
-		column-gap: 40px;
-	}
 
 .product-item {
 	text-align: center;
@@ -1276,7 +1302,6 @@ footer {
 	position: relative;
 	border: 1px solid #cfcfcf;
 	overflow: hidden;
-
 	position: relative;
 	max-width: 100%;
 }
@@ -1312,11 +1337,11 @@ footer {
 	  }
 
 
-.product-item .title {
-	font-size: 21px;
-	line-height: 1.25em;
-	font-weight: 500;
-}
+	.product-item .title {
+		font-size: 21px;
+		line-height: 1.25em;
+		font-weight: 500;
+	}
 
 /* Product Details */
 .product-details{
@@ -1520,32 +1545,13 @@ footer {
 		text-align: left;
 		margin-bottom: 20px;
 	}
-	.related-recipes .recipes-holder{
+	.related-recipes .related-items {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 50px;
 		padding-bottom: 30px;
 	}
 
-	.related-recipes .relative-item{
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
-		-webkit-transform: scale(1.05);
-		-moz-transform: scale(1.05);
-		transform: scale(1.05);
-	}
-
-	.related-recipes .recipes-holder .relative-item .title {
-		font-weight: normal;
-		margin: 20px 0;
-		white-space: normal;
-		text-align: center;
-		font-weight: 500;
-		font-size: 21px;
-		line-height: 1.25em;
-	}
 
 	.product-range-holder{
 		position: relative;
@@ -1708,11 +1714,7 @@ footer {
 		text-transform: uppercase;
 	}
 
-	.nutrition .nutrition-details {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
+	.nutrition .nutrition-details {		
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -1770,12 +1772,13 @@ footer {
 		max-width: 1150px;
 		margin: 0px auto;
 		white-space: normal;
+		text-align: center;
 	}
 	
-		.ingredients p {
-			font-size: 14px;
-			letter-spacing: 0.88px;
-		}
+	.ingredients p {
+		font-size: 14px;
+		letter-spacing: 0.88px;
+	}
 /* Product Allergens Tab*/
 .allergens {
 	max-width: 1150px;
@@ -1801,18 +1804,15 @@ footer {
 		margin: 0px 20px;
 	}
 
+	.allergens .icon img {
+		max-width: 64px;
+	}
+
 	.allergens .icon-title {
 		text-align: center;
 		margin-top: 10px;
+		font-size: 14px;
 	}
-
-		.tabs-columns.allergens .icon img {
-		}
-
-		.tabs-columns.allergens .icon .icon-title {
-			text-align: center;
-			font-size: 14px;
-		}
 
 /* Product Tab Section*/
 .tab-section-item .tabs-columns {
@@ -2271,6 +2271,7 @@ footer {
 	max-width: 500px;
 	width: 100%;
 	z-index: 1;
+	margin-top: 0;
 }
 
 .recipe-holder .main-info.large-banner .content-holder {
@@ -2338,23 +2339,31 @@ footer {
 
 
 /* Inspiration */
+
+.inspirations-holder {
+	margin-bottom: 50px;
+}
+
 .inspirations-holder .header .action-buttons {
 	display: flex;
     gap: 20px;
     align-items: center;
     margin: 0 0 10px 0;
-	justify-content: space-between;
+	justify-content: flex-end;
 	width: 100%;
+}
+
+.inspirations-holder .header .action-buttons .search-holder {
+	width: 350px;
 }
 
 .filters-panel .filters-item {
 	position: relative;
 	display: inline-block;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
+	border-radius: 2px;
 	vertical-align: top;
 	z-index: 1;
-	min-width: 320px;
+	min-width: 350px;
 }
 
 	.filters-panel .filters-item.active .filters-content {
@@ -2364,20 +2373,37 @@ footer {
 	.filters-panel .filters-item .filters-title {
 		font-size: 16px;
 		text-transform: uppercase;
-		border-radius: 2px;
+		border-radius: 5px;
 		border: 1px solid #d3d3d3;
-		padding: 10px;
+		padding: 8px 20px 8px 45px;
 		cursor: pointer;
+	}
+
+	.filters-panel .filters-item.active .filters-title {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.filters-panel .filters-item .filters-title:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 8px;
+		left: 10px;
+		width: 27px;
+		height: 27px;
+		background: url("../images/icon-filters.png") left no-repeat;
+		background-size: contain;
 	}
 
 		.filters-panel .filters-item .filters-title:after {
 			content: '';
 			display: block;
 			position: absolute;
-			top: 5px;
-			right: 20px;
-			width: 27px;
-			height: 27px;
+			top: 8px;
+			right: 10px;
+			width: 20px;
+			height: 20px;
 			background: url('../images/icons-arrow-black-left.svg') no-repeat;
 			background-size: contain;
 			transform: rotate(-90deg);
@@ -2412,16 +2438,16 @@ footer {
 	.filters-panel .filters-item .filters-content {
 		display: none;
 		position: absolute;
-		top: 44px;
+		top: 40px;
 		border-radius: 2px;
 		border: 1px solid #d3d3d3;
 		border-top: none;
 		background-color: #fff;
 		width: 100%;
 	}
-
 		.filters-panel .filters-content .filters-row {
 			padding: 5px 10px;
+			cursor: pointer;
 		}
 			.filters-panel .filters-content .filters-row.disabled label {
 				color: #ccc;
@@ -2459,10 +2485,8 @@ footer {
 					padding-left: 15px;
 				}
 			.filters-panel .filters-content .filters-row .count {
-				display: inline-block;
 				float: right;
 			}
-
 
 
 
@@ -2513,115 +2537,86 @@ footer {
 
 
 /* FAQs */
-.faq {
-}
-
-.faq .faq-holder {
-	margin: auto;
-}
-
-.faq .faq-holder .faq-item {
-	padding: 50px 20px;
-	border-top: 1px solid #000;
-	padding: 30px 40px;
-}
-
-.faq-holder .faq-item .faq-item-inner {
-	max-width: 1140px;
+.faq-page .faq-holder {
+	max-width: 1200px;
 	margin: 0 auto;
+	display: flex;
+	gap: 30px;
+	margin: 30px 0;
+	flex-direction: column;
 }
 
-.faq .faq-holder .faq-item .title-holder {
+.faq-category {
+	border-top: 1px solid #000;
+	padding: 20px 0 0 0;
+}
+
+.faq-category:last-of-type {
+	border-bottom: 1px solid #000;
+	padding-bottom: 30px;
+}
+
+.faq-category .title-holder {
 	position: relative;
 	padding-right: 30px;
 	margin: 0px auto;
 	cursor: pointer;
 }
 
-.faq .title-holder .text {
-	font-size: 24px;
-	margin-bottom: 20px;
+.faq-category.active .title-holder:after {
+	transform: rotate(90deg);
 }
 
-.faq .faq-item .title-holder:after {
+.faq-category .title-holder .title {
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.faq-category .title-holder .text {
+	font-size: 21px;
+	line-height: 1.2em;
+	margin-bottom: 30px;
+}
+
+.faq-category .content {
+	display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.faq-item .question {
+	position: relative;
+	padding-left: 40px;
+	font-weight: 500;
+	cursor: pointer;
+	font-size: 21px;
+}
+
+.faq-item .question:before {
 	content: '';
 	display: block;
 	position: absolute;
 	top: 50%;
-	right: 0px;
+	left: 0;
 	transform: translateY(-50%);
 	width: 20px;
 	height: 25px;
 	background-image: url("../images/icon-triangle.png");
 	background-position: right;
 	background-size: cover;
-}
-
-.faq .faq-item.active .title-holder:after {
-	transform: rotate(90deg);
-}
-
-.faq .faq-holder .faq-item .title-holder .title {
-	font-size: 29px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
-
-.faq .faq-holder .faq-item .content {
+}                                                                      
+  
+.faq-item .answer {
+	position: relative;
+	padding: 0 0 10px 40px;
 	display: none;
-	margin: 0px auto;
+	font-size: 18px;  
 }
 
-.faq .faq-holder .faq-item.active .content {
+.faq-item.active .answer {
 	display: block;
-	padding-right: 40px;
-	position: relative;
-}
-
-.faq .faq-holder .faq-item .question {
-	position: relative;
-	margin-bottom: 10px;
-	padding-left: 40px;
-}
-
-.faq-holder .faq-item .question:before {
-	content: 'Q:';
-	position: absolute;
-	left: 0px;
-	font-weight: bold;
-	line-height: 1.5em;
-	font-size: 21px;
-}
-
-.faq-holder .faq-item .answer {
-	position: relative;
-	padding-left: 40px;
-}
-
-.faq-holder .faq-item .answer:before {
-	content: 'A:';
-	position: absolute;
-	left: 0px;
-	font-weight: bold;
-	line-height: 1.5em;
-	font-size: 21px;
-}
-
-.faq .faq-holder .faq-item.active {
-	background-color: #e8d5c5;
-}
-
-.faq .faq-holder .faq-item p {
-	margin-bottom: 0;
-	font-size: 21px;
-}
-
-.faq-holder .faq-sub-item {
-	margin-bottom: 30px;
-}
-
-.faq-holder .faq-item:last-of-type {
-	border-bottom: 1px solid #000;
 }
 
 
@@ -2675,8 +2670,8 @@ footer {
 		font-size: 16px;
 	}
 
-	/* Products Landing */
-	.products-holder .products-grid {
+	/* Products/Recipes Landing */
+	.content-items {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
@@ -2699,6 +2694,10 @@ footer {
 	}
 
 	/* Recipe Details */
+	.recipe-holder .main-info {
+		padding: 0 20px;
+	}
+
 	.recipe-details .recipe-holder .content-holder {
 		left: 0px;
 		top: 0px;
@@ -2714,14 +2713,8 @@ footer {
 		background: none;
 	}
 
-	.recipe-details .image-holder{
-		height: 640px;
-	}
-
-	.recipe-details .image-holder img {
-		height: 640px;
-		min-width: 100%;
-		max-width:inherit;
+	.recipe-details .main-info .image-holder{
+		height: auto;
 	}
 
 
@@ -2885,26 +2878,25 @@ footer {
 		padding: 10px;
 	}
 
-	/* Products Landing */
-	.products-wrapper .filters-holder {
+	/* Content with filters */
+	.content-with-filters .filters-holder {
 		display: none;
 	}
 
-	.products-wrapper.filter-active .filters-holder {
+	.content-with-filters.filter-active .filters-holder {
 		display: block;
-		position: absolute;
-		top: inherit;
-		bottom: inherit;
-		left: 50%;
-		transform: translateX(-50%);
 		padding: 20px;
-		width: calc(100% - 40px);
+		width: 100%;
 		-webkit-border-radius: 6px;
 		-moz-border-radius: 6px;
 		border-radius: 6px;
 		z-index: 2;
 		background-color: #111;
 		color: #fff;
+	}
+
+	.content-with-filters.filter-active .content-holder {
+		display: none;
 	}
 
 	.filters-holder .filters-content .action-buttons {
@@ -2925,16 +2917,16 @@ footer {
 		padding: 5px;
 	}
 
-	.products-holder .header {
+	.content-with-filters .header {
 		flex-direction: column;
 		gap: 10px;
 	}
 	
-	.products-holder .header .action-buttons {
+	.content-with-filters .header .action-buttons {
 		justify-content: space-between;
 	}
 
-	.products-holder .header .action-buttons .open-filters-button {
+	.content-with-filters .header .action-buttons .open-filters-button {
 		display: block;
 	}
 
@@ -2961,7 +2953,10 @@ footer {
 
 /* Medium devices (landscape tablets) */
 @media only screen and (max-width: 768px) {
-	
+	h1 {
+		font-size: 2.75em;
+	}
+
 	/* Footer */
 	footer .footer-top {
 		grid-template-columns: 1fr;
@@ -3073,9 +3068,7 @@ footer {
 		margin: auto;
 
 	}
-	.trendy-recipes-widget .trendy-recipes .left-content {
-		
-	}
+	
 	.trendy-recipes-widget .trendy-recipes .grid-items {
 		margin: auto;
 		padding: 30px 40px;
@@ -3116,6 +3109,34 @@ footer {
 		align-items: center;
 		flex-wrap: wrap;
 		justify-content: center;
+	}
+
+	/* Inspiration Landing */
+	.inspirations-holder .header .action-buttons {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 15px;
+	}
+
+	.inspirations-holder .header .action-buttons .search-holder {
+		width: 100%;
+	}
+
+	.inspirations-holder .filters-panel .filters-item {
+		min-width: 100%;
+	}
+
+	.inspirations-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px;
+	}
+
+	.inspiration-item .title {
+		font-size: 18px;
+	}
+
+	.inspiration-item .nav-link {
+		font-size: 14px;
 	}
 
 	/* Banner */
@@ -3223,22 +3244,25 @@ footer {
 
 /* Small devices (portrait tablets and large phones) */
 @media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 2.5em;
+	}
 	
-	/* Products Landing */
-	.products-holder .products-grid {
+	/* Products/Recipes Landing */
+	.content-items {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 25px;
 	}
 
-	.products-holder .header .action-buttons {
+	.content-with-filters .header .action-buttons {
 		flex-direction: column;
 	}
 
-	.products-holder .header .action-buttons .open-filters-button {
+	.content-with-filters .header .action-buttons .open-filters-button {
 		width: 100%;
 	}
 
-	.products-holder .header .action-buttons .search-holder {
+	.content-with-filters .header .action-buttons .search-holder {
 		width: 100%;
 	}
 
@@ -3252,10 +3276,7 @@ footer {
 	.product-details .related-recipes .recipes-holder {
 		grid-template-columns: repeat(1, 1fr);
 	}
-	.product-details .related-recipes .recipes-holder .relative-item{
-		max-width: 350px;
-		margin: auto;
-	}
+	
 
 	/* Grid Section */
 	.grid-items.three .cards {
