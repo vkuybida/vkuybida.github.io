@@ -1,0 +1,89 @@
+﻿.content-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.columns-3 .umb-block-grid__area-container {
+    gap: 30px;
+}
+
+.mg-top-large { margin-top: 20px; }
+.mg-top-medium { margin-top: 10px; }
+.mg-top-small { margin-top: 5px; }
+.mg-bottom-large { margin-bottom: 20px;}
+.mg-bottom-medium { margin-bottom: 10px; }
+.mg-bottom-small { margin-bottom: 5px; }
+.pd-top-large { padding-top: 20px; }
+.pd-top-medium { padding-top: 10px; }
+.pd-top-small { padding-top: 5px; }
+.pd-bottom-large { padding-bottom: 20px;}
+.pd-bottom-medium { padding-bottom: 10px; }
+.pd-bottom-small { padding-bottom: 5px; }
+
+.full-width-row {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+    .full-width-row .content-container {
+        max-width: 100%;
+    }
+
+.row-bg-black {
+    background-color: #000;
+    color: #fff;
+}
+
+
+@media only screen and (min-width: 576px) {
+    .content-container, .blockgrid-layout-page .breadcrumb-holder {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .content-container, .blockgrid-layout-page .breadcrumb-holder {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .content-container, .blockgrid-layout-page .breadcrumb-holder {
+        max-width: 960px;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .content-container, .blockgrid-layout-page .breadcrumb-holder {
+        max-width: 1140px;
+    }
+
+    .mg-top-large { margin-top: 40px; }
+    .mg-top-medium { margin-top: 20px; }
+    .mg-top-small { margin-top: 10px; }
+    .mg-bottom-large { margin-bottom: 40px;}
+    .mg-bottom-medium {margin-bottom: 20px;}
+    .mg-bottom-small { margin-bottom: 10px;}
+    .pd-top-large { padding-top: 40px; }
+    .pd-top-medium { padding-top: 20px; }
+    .pd-top-small { padding-top: 10px; }
+    .pd-bottom-large { padding-bottom: 40px;}
+    .pd-bottom-medium { padding-bottom: 20px; }
+    .pd-bottom-small { padding-bottom: 10px; }
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .content-container, .blockgrid-layout-page .breadcrumb-holder {
+        max-width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .columns-3 .umb-block-grid__area-container {
+        grid-template-columns: none;
+    }
+}
+
+

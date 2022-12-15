@@ -1,0 +1,61 @@
+$(function(){
+    var shareUrl = window.location.href;
+
+    function openPopup(url) {
+        var popup = window.open(url, 'popup', 'height=400,width=600,scrollbars=no');
+        if (window.focus) { popup.focus(); }
+    }
+
+    $(".button-social.facebook").on("click", function () {
+        openPopup("https://www.facebook.com/sharer/sharer.php?u=" + shareUrl)
+        return false
+    });
+    
+    $(".button-social.twitter").on("click", function () {
+        openPopup("https://twitter.com/intent/tweet?url=" + shareUrl)
+        return false
+    });
+
+    $(".button-social.whatsapp").on("click", function () {
+        openPopup("https://wa.me/?text=" + shareUrl)
+        return false
+    });
+
+    $(".button-social.pinterest").on("click", function () {
+        openPopup("http://pinterest.com/pin/create/link/?url=" + shareUrl)
+        return false
+    });
+
+    $(".button-social.copylink").on("click", function () {
+        navigator.clipboard.writeText(window.location.href);
+
+        $(this).append('<div id="msg-success"></div>');
+        var msg = $("#msg-success");
+        msg.css({
+            'position': 'absolute',
+            'bottom': '100%',
+            'left':'30%',
+            'background-color': '#198754',
+            'padding': '5px 15px',
+            'color':'white'
+        });
+
+        msg.html("Copied!");
+
+        setTimeout(function () {
+             $("#msg-success").remove();
+        }, 900);
+      
+    });
+
+    $(".button-social.email").on("click", function () {
+             var subject = $(this).attr("data-email-subject");
+            var body = $(this).attr("data-email-body") + "%0D%0A" + shareUrl;
+
+            window.open('mailto:?subject=' + subject + '&body=' + body, '_self')
+
+            return false
+    });
+
+  
+})

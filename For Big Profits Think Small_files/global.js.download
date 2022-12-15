@@ -1,0 +1,199 @@
+$(function(){
+
+	// Product Filters
+	$(".open-filters-button").on('click', function(e) {
+		e.preventDefault()
+
+		$('.products-wrapper').toggleClass('filter-active')
+	})
+
+	$('.filters-content .close').on('click', function(e) {
+		e.preventDefault();
+
+		$('.products-wrapper').removeClass('filter-active')
+	});
+
+	$('.filters-content .show-products').on('click', function(e) {
+		e.preventDefault();
+		
+		$('.products-wrapper').removeClass('filter-active')
+	})
+
+	/* Main Menu */
+	$(".menu-icon").click(function () {
+		$("body").toggleClass("menu-active");
+	});
+
+	/* Generic Slider */
+	$('.slider-wrapper .slider').each(function () {
+		var $slider = $(this)
+
+		var slidesPerViewDesktop = parseInt($slider.data('slides-desktop'))
+		if (!slidesPerViewDesktop)
+			slidesPerViewDesktop = 5;
+
+		var slidesPerViewMobile = parseInt($slider.data('slides-mobile'))
+		if (!slidesPerViewMobile)
+			slidesPerViewMobile = 2;
+
+		var slidesPerViewDesktopSmall = Math.floor(slidesPerViewDesktop * 0.8);
+		var slidesPerViewTablet = Math.floor((slidesPerViewDesktop + slidesPerViewMobile) / 2);
+
+		$slider.slick({
+			slidesToShow: slidesPerViewDesktop,
+			slidesToScroll: 1,
+			autoplay: false,
+			adaptiveHeight: true,
+			infinite: true,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: slidesPerViewDesktopSmall,
+					}
+				},
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: slidesPerViewTablet,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: slidesPerViewMobile,
+					}
+				}
+			]
+		})
+	})
+
+
+	$('.tab-label').click(function(){
+		var $this = $(this);
+		var id = '#'+$this.attr("data-product-details-item");
+		var activeId = '#'+$('.tabs .tab-label.active').attr("data-product-details-item");
+		
+		$('.tabs .tab-label.active').removeClass('active');
+		$(activeId).css("display", "none");
+		
+		$this.addClass("active")
+		$(id).css("display", "block");
+    });
+
+    $(".thumbnails-holder img").click(function () {
+        var $this = $(this);
+        var urlImg = $this.attr("src");
+      
+        $(".thumbnails-holder img").removeClass('active');
+        $("#product-main-img").attr("src", urlImg);
+        $this.addClass("active");
+    });
+
+	$(".tab-section-item").click(function(){
+		var $this = $(this);
+		
+		if ($this.hasClass("active")) {
+			$this.removeClass('active');
+		} else {
+			$this.addClass("active");
+		}
+	});
+	
+	$(".faq-item").click(function(){
+		var $this = $(this);
+		if ($this.hasClass("active")) {
+			$this.removeClass('active');
+		} else {
+			$this.addClass("active");
+		}
+	});
+
+	/* Recipe Details */
+	$(".dialog .close").click(function () {
+		$("#share-dialog").removeClass('show');
+	});
+
+	$(".btn-share").click(function () {
+		$("#share-dialog").addClass("show");
+	});
+
+	/* Recipe Directions  */
+
+	$(".recipe-directions .ingredients-holder").click(function () { 
+		var $this = $(this);
+		$this.toggleClass('active');
+	});
+	
+	$(".recipe-directions .preparation-holder").click(function () {
+		var $this = $(this);
+		$this.toggleClass('active');
+	});
+
+	/* Footer - Newsletter */
+	$(".newsletter-holder .title").click(function () {
+        $(this).parents('.newsletter-holder').toggleClass('active')
+	});
+
+	// Banner
+	$(".generic-slider .slider").each(function () {
+		var $slider = $(this)
+
+		var count = $slider.find('.slide').length
+
+		if (count > 1) {
+			$slider.slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: false,
+				autoplaySpeed: 3000,
+				dots: true,
+				responsive: [
+					{
+						breakpoint: 480,
+						settings: {
+							arrows: false,
+						}
+					}
+				]
+			});
+		}
+	});
+
+	
+
+	// Search
+	$('.search-open-icon').click(function () {
+		$('header').addClass('search-open');
+		$('header .search-box-holder input').focus();
+	});
+
+	$('.search-close-icon').click(function(){
+		$('header').removeClass('search-open');
+	});
+
+	/* Language */
+	$('.selected-language').on('click', function() {
+		$(this).parents('.language-selector').toggleClass('active')
+	})
+
+	/* Product/Recipe Details - image selector */
+	$(".thumbnails-holder img").click(function () {
+		var $this = $(this);
+
+		// display main image
+		var $parent = $(this).parents('.images-holder')
+		var newImageUrl = $this.attr("src");
+		$parent.find('.main-image').attr("src", newImageUrl);
+
+		// change selected in list
+		$(".thumbnails-holder img").removeClass('active');
+		$this.addClass("active");
+	});
+
+	/* Print */
+	$(".button-holder .button-print").on("click", function () {
+		window.print()
+		return false
+	});
+})
