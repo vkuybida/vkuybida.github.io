@@ -1,553 +1,875 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta http-equiv="X-UA-Compatible" name="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-
-    <link rel='dns-prefetch' href='//code.jquery.com' />
-    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-    <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-          rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css?r=3" />
-    <link rel="stylesheet" type="text/css" href="css/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css" />
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-            crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/slick/slick.min.js"></script>
-    <script src="js/global.js?r=3"></script>
-
-
-    <title>McCain CEU Foodservice</title>
+	<meta name="MobileOptimized" content="width" />
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#000">
+	<link rel="stylesheet" type="text/css" href="styles/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="styles/libs.css" media="all">
 </head>
 
-
-<body>
-
-	<!-- Header -->
-	<header>
-		<div class="logo">
-			<a href="index.html"><img src="images/mccain-logo.png" alt="McCain Logo" /></a>
-		</div>
-
-		<div class="search-wrapper">
-			<div class="search-close-icon"></div>
-			<div class="search-box-holder">
-				<input type="text" placeholder="Search" />
-				<a onclick="document.getElementById('search_header').submit();"></a>
+<body class="home-page">
+	<div class="dark-overlay"></div>
+	<div id="main">
+		<header>
+			<div class="row1480 static">
+				<div class="header-wrapper">
+					<div class="left">
+						<nav class="nav-menu mobile_hide">
+							<ul class="menu">
+								<li class="menu-item menu-item-has-children">
+									<a href="#">
+										<span>Products</span>
+										<em class="fa fa-angle-down sub-anchor"></em>
+									</a>
+									<div class="sub-menu">
+										<div class="row1460 ">
+											<div class="products">
+												<div class="menu-col">
+													<h4 class="col-title">POTATO PRODUCTS</h4>
+													<div class="menu-list twin-col">
+														<a href="#" class="item">
+															<div class="thumb">
+																<img src="./img/menu-product.png" alt="">
+															</div>
+															<span class="prod-name">Superfries</span>
+														</a>
+														<a href="#" class="item">
+															<div class="thumb">
+																<img src="./img/menu-product.png" alt="">
+															</div>
+															<span class="prod-name">Breakfast</span>
+														</a>
+														<a href="#" class="item">
+															<div class="thumb">
+																<img src="./img/menu-product.png" alt="">
+															</div>
+															<span class="prod-name">For Sharing</span>
+														</a>
+														<a href="#" class="item">
+															<div class="thumb">
+																<img src="./img/menu-product.png" alt="">
+															</div>
+															<span class="prod-name">Regular Fries</span>
+														</a>
+														<a href="#" class="item">
+															<div class="thumb">
+																<img src="./img/menu-product.png" alt="">
+															</div>
+															<span class="prod-name">For Fun</span>
+														</a>
+													</div>
+												</div>
+												<div class="menu-col">
+													<h4 class="col-title">Deep’n Delicious</h4>
+													<div class="menu-list">
+														<a href="#" class="item">
+															<div class="thumb">
+																<img src="./img/menu-product.png" alt="">
+															</div>
+															<span class="prod-name">Cakes</span>
+														</a>
+														<a href="#" class="item">
+															<div class="thumb">
+																<img src="./img/menu-product.png" alt="">
+															</div>
+															<span class="prod-name">Minis</span>
+														</a>
+													</div>
+												</div>
+												<div class="menu-col">
+													<h4 class="col-title">McCain Pockets</h4>
+													<div class="menu-list">
+														<a href="#" class="item">
+															<div class="thumb">
+																<img src="./img/menu-product.png" alt="">
+															</div>
+															<span class="prod-name">Pizza Pockets </span>
+														</a>
+														<a href="#" class="item">
+															<div class="thumb">
+																<img src="./img/menu-product.png" alt="">
+															</div>
+															<span class="prod-name">Breakfast Pockets</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a href="#">
+										<span>Recipes</span>
+										<em class="fa fa-angle-down sub-anchor"></em>
+									</a>
+									<div class="sub-menu">
+										<div class="row1460">
+											<div class="recipes">
+												<a href="#" class="menu-item">
+													<div class="thumb">
+														<img src="./img/recipe-detail-banner.jpg" alt="">
+													</div>
+													<span class="prod-name">Sides</span>
+												</a>
+												<a href="#" class="menu-item">
+													<div class="thumb">
+														<img src="./img/recipe-detail-banner.jpg" alt="">
+													</div>
+													<span class="prod-name">Kids</span>
+												</a>
+												<a href="#" class="menu-item">
+													<div class="thumb">
+														<img src="./img/recipe-detail-banner.jpg" alt="">
+													</div>
+													<span class="prod-name">Breakfasts</span>
+												</a>
+												<a href="#" class="menu-item">
+													<div class="thumb">
+														<img src="./img/recipe-detail-banner.jpg" alt="">
+													</div>
+													<span class="prod-name">Desserts</span>
+												</a>
+												<a href="#" class="menu-item">
+													<div class="thumb">
+														<img src="./img/recipe-detail-banner.jpg" alt="">
+													</div>
+													<span class="prod-name">Quick & Tasty</span>
+												</a>
+												<a href="#" class="menu-item">
+													<div class="thumb">
+														<img src="./img/recipe-detail-banner.jpg" alt="">
+													</div>
+													<span class="prod-name">Crowd pleasers</span>
+												</a>
+												<a href="#" class="menu-item">
+													<div class="thumb">
+														<img src="./img/recipe-detail-banner.jpg" alt="">
+													</div>
+													<span class="prod-name">Dinners</span>
+												</a>
+											</div>
+										</div>
+								</li>
+								<li class="menu-item">
+									<a href="#">
+										<span>Sustainability</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="logo">
+						<a id="logo" href="/"><img src="./img/logo.png" alt=""></a>
+					</div>
+					<div class="right">
+						<div class="top">
+							<a href="#">Contact Us</a>
+							<a href="#">FR</a>
+						</div>
+						<div class="bottom">
+							<a href="#" class="btn yellow">Buy NOW</a>
+							<div class="search-icon btn">
+								<img src="./img/search-icon.svg" alt="search-icon">
+							</div>
+						</div>
+						<nav class="mobile-main-menu">
+							<div class="close-menu"></div>
+							<ul class="menu">
+								<li class="menu-has-children">
+									<a href="#">Products</a> <span class="chevron"></span>
+									<div class="sub-menu products">
+										<h4 class="menu-title">Potato Products</h4>
+										<div class="menu-list">
+											<a href="#" class="item">
+												<div class="thumb">
+													<img src="./img/menu-product.png" alt="">
+												</div>
+												<span class="prod-name">Superfries</span>
+											</a>
+											<a href="#" class="item">
+												<div class="thumb">
+													<img src="./img/menu-product.png" alt="">
+												</div>
+												<span class="prod-name">Breakfast</span>
+											</a>
+										</div>
+										<h4 class="menu-title">Deep’n Delicious</h4>
+										<div class="menu-list">
+											<a href="#" class="item">
+												<div class="thumb">
+													<img src="./img/menu-product.png" alt="">
+												</div>
+												<span class="prod-name">Cakes</span>
+											</a>
+											<a href="#" class="item">
+												<div class="thumb">
+													<img src="./img/menu-product.png" alt="">
+												</div>
+												<span class="prod-name">Minis</span>
+											</a>
+										</div>
+										<h4 class="menu-title">McCain Pockets</h4>
+										<div class="menu-list">
+											<a href="#" class="item">
+												<div class="thumb">
+													<img src="./img/menu-product.png" alt="">
+												</div>
+												<span class="prod-name">Pizza Pockets </span>
+											</a>
+											<a href="#" class="item">
+												<div class="thumb">
+													<img src="./img/menu-product.png" alt="">
+												</div>
+												<span class="prod-name">Breakfast Pockets</span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="menu-has-children">
+									<a href="#">Recipe</a> <span class="chevron"></span>
+									<div class="sub-menu recipe">
+										<div class="menu-list">
+											<a href="#" class="item">
+												<div class="thumb">
+													<img src="./img/recipe-detail-banner.jpg" alt="">
+												</div>
+												<span class="prod-name">Sides</span>
+											</a>
+											<a href="#" class="item">
+												<div class="thumb">
+													<img src="./img/recipe-detail-banner.jpg" alt="">
+												</div>
+												<span class="prod-name">Kids</span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li><a href="#">Sustainability</a></li>
+								<div class="second-mobile-nav">
+									<a href="#" class="btn yellow">Buy NOW</a>
+									<form action="#" class="search-form" method="get">
+										<label for="s">
+											<i class="fa fa-search" aria-hidden="true"></i>
+											<input class="search-input" type="text" placeholder="Search McCain.ca" id="s" name="s" value="">
+											<i class="fa-sharp fa-solid fa-circle-xmark reset"></i>
+										</label>
+									</form>
+									<div class="second-mobile-nav--links">
+										<a href="#">Contact us</a>
+										<span>Français</span>
+									</div>
+									<div class="second-mobile-nav--copyright">
+										<span>McCain® Foodservice</span>
+										<span>McCain® Corporate</span>
+									</div>
+									<div class="second-mobile-nav--footer-links">
+										<a href="#">About Us</a>
+										<a href="#">Contact Us</a>
+										<a href="#">Careers</a>
+										<a href="#">Privacy Policy</a>
+										<a href="#">Accessibility</a>
+									</div>
+								</div>
+							</ul>
+						</nav>
+						<div class="menu-burger"></div>
+					</div>
+				</div>
 			</div>
-		</div>
+			<!-- Search Box -->
+			<div class="search-header-box">
+				<div class="row1480">
+				<form action="#" class="search-form" method="get">
+					<label for="s">
+						<i class="fa fa-search" aria-hidden="true"></i>
+						<input class="search-input" type="text" placeholder="Search McCain.ca" id="s" name="s" value="">
+						<i class="fa-sharp fa-solid fa-circle-xmark reset"></i>
+					</label>
+				</form>
+					<div class="result">
+						<div class="result--col type-1">
+							<h4 class="type-name">Products</h4>
+							<div class="list">
+								<div class="item">
+									<div class="thumb">
+										<img src="./img/search-product.png" alt="">
+									</div>
+									<span class="name">McCain® </br> Superfries</span>
+								</div>
+								<div class="item">
+									<div class="thumb">
+										<img src="./img/search-product.png" alt="">
+									</div>
+									<span class="name">McCain® </br> Superfries</span>
+								</div>
+								<div class="item">
+									<div class="thumb">
+										<img src="./img/search-product.png" alt="">
+									</div>
+									<span class="name">McCain® </br> Superfries</span>
+								</div>
+							</div>
+						</div>
+						<div class="result--col type-2">
+							<h4 class="type-name">Recipes</h4>
+							<div class="list">
+								<div class="item">
+									<div class="thumb">
+										<img src="./img/search-recipe.png" alt="">
+									</div>
+									<span class="name">Cheddar Jalapeño Fries Recipe</span>
+								</div>
+								<div class="item">
+									<div class="thumb">
+										<img src="./img/search-recipe.png" alt="">
+									</div>
+									<span class="name">Cheese & Chive Superfries Recipe</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-		<div class="nav-right">
-			<div class="button-holder">
-				<a class="button yellow" href="#">
-					Subscribe
-				</a>
+<div class="hp-top-banner__section">
+	<div class="swiper mySwiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<picture>
+					<source media="(max-width: 600px)" srcset="./img/banner-image_553.jpg">
+					<source media="(min-width: 601px)" srcset="./img/banner-image.jpg">
+					<img src="./img/banner-image.jpg" alt="">
+				</picture>
+				<div class="row1480">
+					<div class="slide-heading">
+						<div class="title">
+							<h2>ENJOY</h2>
+							<h2><strong>THE BRIGHT</strong></h2>
+							<h2>SIDE</h2>
+						</div>
+						<div class="button">
+							<a href="#" class="btn">View Products</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="button-holder">
-				<a class="button yellow" href="#">
-					Contact Us
-				</a>
+			<div class="swiper-slide">
+				<picture>
+					<source media="(max-width: 600px)" srcset="./img/banner-image_553.jpg">
+					<source media="(min-width: 601px)" srcset="./img/banner-image.jpg">
+					<img src="./img/banner-image.jpg" alt="">
+				</picture>
+				<div class="row1480">
+					<div class="slide-heading">
+						<div class="title">
+							<h2>
+								ENJOY </br>
+								<strong>THE BRIGHT</strong> </br>
+								SIDE
+							</h2>
+						</div>
+						<div class="button">
+							<a href="#" class="btn">View Products</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="language-holder">
-				<div class="language-selector">
-					<div class="selected-language">Dutch</div>
-					<div class="languages-popup">
-						<div class="select-title">Select your language</div>
-						<ul>
-							<li class="selected"><a href="#">Dutch</a></li>
-							<li><a href="#">French</a></li>
-						</ul>
+			<div class="swiper-slide">
+				<picture>
+					<source media="(max-width: 600px)" srcset="./img/banner-image_553.jpg">
+					<source media="(min-width: 601px)" srcset="./img/banner-image.jpg">
+					<img src="./img/banner-image.jpg" alt="">
+				</picture>
+				<div class="row1480">
+					<div class="slide-heading">
+						<div class="title">
+							<h2>
+								ENJOY </br>
+								<strong>THE BRIGHT</strong> </br>
+								SIDE
+							</h2>
+						</div>
+						<div class="button">
+							<a href="#" class="btn">View Products</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="nav-right-mobile">
-			<div class="search-open-icon"></div>
-			<div class="menu-icon"></div>
-		</div>
-		
-	</header>
-
-	<!-- Main menu -->
-	<div class="main-menu">
-		<nav>
-			<ul class="menu-items">
-				<li><a href="products.html">Products</a></li>
-				<li><a href="inspiration.html">Inspiration</a></li>
-				<li><a href="recipes.html">Recipes</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
+		<div class="swiper-pagination"></div>
 	</div>
+</div>
 
-	<div class="mobile-menu">
-		<nav>
-			<ul class="menu-items">
-				<li>
-					<a href="products.html">Products</a>
-				</li>
-				<li>
-					<a href="inspiration.html">Inspiration</a>
-				</li>
-				<li><a href="recipes.html">Recipes</a></li>
-				<li>
-					<a href="#">About Us</a>
-					<ul class="sub-items">
-						<li><a href="#">Sustainability</a></li>
-						<li><a href="#">Our brand</a></li>
-						<li><a href="#">Jobs</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
+<div class="hp-our-latest__section">
+	<div class="row1480">
+		<div class="hp-our-latest__title">
+			<h2>see our <strong>LATEST</strong></h2>
+		</div>
+		<div class="hp-our-latest__slider">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="video-box" data-fancybox data-src="#video-modal-1">
+							<img class="preview" src="./img/our-latest-img.jpg" alt="">
+							<div class="play-btn"><i class="fa-sharp fa-solid fa-play"></i></div>
+							<div class="title">
+								<h4>It’s Potato Day</h4>
+								<span>Celebrate with us our favorite national day</span>
+							</div>
+						</div>
+						<div id="video-modal-1" class="video-modal" style="display: none;">
+							<video controls>
+								<source src="./img/video-lorem.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="video-box" data-fancybox data-src="#video-modal-2">
+							<img class="preview" src="./img/our-latest-img.jpg" alt="">
+							<div class="play-btn"><i class="fa-sharp fa-solid fa-play"></i></div>
+							<div class="title">
+								<h4>It’s Potato Day</h4>
+								<span>Celebrate with us our favorite national day</span>
+							</div>
+						</div>
+						<div id="video-modal-2" class="video-modal" style="display: none;">
+							<video controls>
+								<source src="./img/video-lorem.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="video-box" data-fancybox data-src="#video-modal-3">
+							<img class="preview" src="./img/our-latest-img.jpg" alt="">
+							<div class="play-btn"><i class="fa-sharp fa-solid fa-play"></i></div>
+							<div class="title">
+								<h4>It’s Potato Day</h4>
+								<span>Celebrate with us our favorite national day</span>
+							</div>
+						</div>
+						<div id="video-modal-3" class="video-modal" style="display: none;">
+							<video controls>
+								<source src="./img/video-lorem.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="video-box" data-fancybox data-src="#video-modal-4">
+							<img class="preview" src="./img/our-latest-img.jpg" alt="">
+							<div class="play-btn"><i class="fa-sharp fa-solid fa-play"></i></div>
+							<div class="title">
+								<h4>It’s Potato Day</h4>
+								<span>Celebrate with us our favorite national day</span>
+							</div>
+						</div>
+						<div id="video-modal-4" class="video-modal" style="display: none;">
+							<video controls>
+								<source src="./img/video-lorem.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="video-box" data-fancybox data-src="#video-modal-5">
+							<img class="preview" src="./img/our-latest-img.jpg" alt="">
+							<div class="play-btn"><i class="fa-sharp fa-solid fa-play"></i></div>
+							<div class="title">
+								<h4>It’s Potato Day</h4>
+								<span>Celebrate with us our favorite national day</span>
+							</div>
+						</div>
+						<div id="video-modal-5" class="video-modal" style="display: none;">
+							<video controls>
+								<source src="./img/video-lorem.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="video-box" data-fancybox data-src="#video-modal-6">
+							<img class="preview" src="./img/our-latest-img.jpg" alt="">
+							<div class="play-btn"><i class="fa-sharp fa-solid fa-play"></i></div>
+							<div class="title">
+								<h4>It’s Potato Day</h4>
+								<span>Celebrate with us our favorite national day</span>
+							</div>
+						</div>
+						<div id="video-modal-6" class="video-modal" style="display: none;">
+							<video controls>
+								<source src="./img/video-lorem.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="video-box" data-fancybox data-src="#video-modal-7">
+							<img class="preview" src="./img/our-latest-img.jpg" alt="">
+							<div class="play-btn"><i class="fa-sharp fa-solid fa-play"></i></div>
+							<div class="title">
+								<h4>It’s Potato Day</h4>
+								<span>Celebrate with us our favorite national day</span>
+							</div>
+						</div>
+						<div id="video-modal-7" class="video-modal" style="display: none;">
+							<video controls>
+								<source src="./img/video-lorem.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="video-box" data-fancybox data-src="#video-modal-8">
+							<img class="preview" src="./img/our-latest-img.jpg" alt="">
+							<div class="play-btn"><i class="fa-sharp fa-solid fa-play"></i></div>
+							<div class="title">
+								<h4>It’s Potato Day</h4>
+								<span>Celebrate with us our favorite national day</span>
+							</div>
+						</div>
+						<div id="video-modal-8" class="video-modal" style="display: none;">
+							<video controls>
+								<source src="./img/video-lorem.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="video-box" data-fancybox data-src="#video-modal-9">
+							<img class="preview" src="./img/our-latest-img.jpg" alt="">
+							<div class="play-btn"><i class="fa-sharp fa-solid fa-play"></i></div>
+							<div class="title">
+								<h4>It’s Potato Day</h4>
+								<span>Celebrate with us our favorite national day</span>
+							</div>
+						</div>
+						<div id="video-modal-9" class="video-modal" style="display: none;">
+							<video controls>
+								<source src="./img/video-lorem.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
 
-	<div class="main-content">
-
-		<div class="page-content home-page">
-
-			<!-- Main Banner -->
-			<section class="main-banner" style="display:none;">
-				<div class="banner-holder">
-					<div class="content">
-						<h1 class="title">Be on the winning team with</h1> 
-						<div class="description"><p></p></div>
-						<div class="button-holder">
-							<a href="#" class="button yellow">Find out more</a>
-						</div>
-					</div>
-					<picture>
-						<source media="(max-width: 600px)" srcset="images/banners/main-banner-1-Pickers.jpg"> 
-						<source media="(min-width: 601px)" srcset="images/banners/main-banner-1-Pickers.jpg"> 
-						<img src="images/banners/main-banner-1-Pickers.jpg" alt="Banner Image" />
-					</picture>
-				</div>
-			</section>
-		
-			<!-- Grid Section -->
-			<section class="grid3-banners">
-				<div class="banners-holder">
-					<div class="left-column">
-						<div class="banner-holder">
-							<div class="image-holder">
-								<img src="images/banners/main-banner-1-Pickers.jpg" alt="Image" />
-							</div>
-							<div class="content">
-								<h1 class="title">Be on the winning team with <span style="color: #f5a700;">P!CKERS</span></h1>
-								<div class="sub-title" style="display: none;"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
-								<div class="button-holder">
-									<a href="#" class="button yellow">Find out more</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="right-column">
-						<div class="banner-holder">
-							<div class="image-holder">
-								<img src="images/banners/main-banner-2-Good-to-Go.jpg" alt="Image" />
-							</div>
-							<div class="content">
-								<div class="title">GOOD TO GO</div>
-								<div class="sub-title"><p>Looking to excel your delivery or take out offering ? Redefine your menu? Adapt to current market and staffing challenges? 
-									Find out McCain solutions for delivery.</p></div>
-								<div class="button-holder">
-									<a href="#" class="button yellow">Find out more</a>
-								</div>
-							</div>
-						</div>
-						<div class="banner-holder">
-							<div class="image-holder">
-								<img src="images/banners/main-banner-3-Be-Good-Do-Good.jpg" alt="Image" />
-							</div>
-							<div class="content">
-								<div class="title">BE GOOD. DO GOOD.</div>
-								<div class="sub-title"><p>At McCain, we believe that good ethics is good business. Find out our ambitious commitments for 2025 and 2030 in 4 areas</p>
-								</div>
-								<div class="button-holder">
-									<a href="#" class="button yellow">Learn More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<!--Trendy Recipes widget -->
-			<section class="trendy-recipes-widget">
-				<div class="trendy-recipes">
-					<div class="left-content">
-						<div class="video-holder">
-							<iframe src="https://www.youtube.com/embed/WLCyWvO6UMg" title="So Bar & Eats put SureCrisp to the test!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
-					</div>
-					<div class="picked-recipes-wrapper">
-						<div class="picked-recipes">
-							<a href="#" class="recipe-item">
-								<div class="image-holder">
-									<img alt="Image" src="images/recipes/Recipe_Potato_Pops_Pulled_Pork-scaled-e1661169009412.jpg" />
-								</div>
-								<div class="title">Potato Pops Loaded mit Pulled Pork</div>
-							</a>
-							<a href="#" class="recipe-item">
-								<div class="image-holder">
-									<img alt="Image" src="images/recipes/Inspiration_1000001943_Potato-Pops_2.jpg" />
-								</div>
-								<div class="title">Potato Pops Loaded ‘Cheddar Cheese & Bacon’</div>
-							</a>
-							<a href="#" class="recipe-item">
-								<div class="image-holder">
-									<img alt="Image" src="images/recipes/Potato-Pops-Brunch-Style-scaled-e1661168557337.jpg" />
-								</div>
-								<div class="title">Potato Pops “Brunch Style”</div>
-							</a>
-							<a href="#" class="recipe-item">
-								<div class="image-holder">
-									<img alt="Image" src="images/recipes/Recipe-Potato-Cubes-scaled-e1661168365387.jpg" />
-								</div>
-								<div class="title">Potato Cubes Caesar Salad</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="button-holder">
-					<a class="button yellow" href="recipes.html">View all recipes</a>
-				</div>
-			</section>
-
-			<!-- Our newest products -->
-			<section class="our-newest-products">
-				<div class="grid-items three">
-					<div class="main-title">Our newest products</div>
-					<div class="cards">
-						<a href="#" class="product-item">
-							<div class="image-holder">
-								<img alt="Image" src="images/products/Ambiance_1000001357_Tradistyle fries-min.jpg" />
-							</div>
-							<div class="title">Tradistyle Fries</div>
-						</a>
-						<a href="#" class="product-item">
-							<div class="image-holder">
-								<img alt="Image" src="images/products/Ambiance_1000006742_Crispers-min.jpg" />
-							</div>
-							<div class="title">Crispers</div>
-						</a>
-						<a href="#" class="product-item">
-							<div class="image-holder">
-								<img alt="Image" src="images/products/Ambiance_1957_Crinkle fries-min.jpg" />
-							</div>
-							<div class="title">Crinkle Fries</div>
-						</a>
-					</div>
-				</div>
-
-				<div class="button-holder">
-					<a class="button yellow" href="products.html">View all products</a>
-				</div>
-
-			</section>
-
-			<!-- Our Brands -->
-			<section class="brands-holder">
-				<section class="brands">
-					<div class="title">Our Brands</div>
-					<div class="cards-holder">
-						<div class="card">
-							<a href="#"><img src="images/brands/anchor.png"/></a>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/brands/brew-city.png"/></a>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/brands/mccain-sunshine-2x-min.png"/></a>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/brands/moores.png"/></a>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/brands/ore-ida.png"/></a>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/brands/mora-logo.png"/></a>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/brands/lutosa-logo.png"/></a>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/brands/pickers-logo.png"/></a>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/brands/hebro-logo.png"/></a>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/brands/van-geloven-logo.png"/></a>
-						</div>
-					</div>
-				</section>
-			</section>
-
-			<!-- TODO: it looks ugly -->
-			<section class="slider-wrapper" style="display:none;">
-				<div class="main-title">
-					Trends
-				</div>
-				<div class="slider">
-					<div class="slide">
-						<a href="#">
-							<div class="image-holder">
-								<img src="images/products/Ambiance-1063_Wedges skin on-min.jpg" alt="Image">
-							</div>
-							<div class="title">Wedges Skin On</div>
-						</a>
-					</div>
-					<div class="slide">
-						<a href="#">
-							<div class="image-holder">
-								<img src="images/products/Ambiance_1000001357_Tradistyle fries-min.jpg" alt="Image">
-							</div>
-							<div class="title">Tradistyle Fries</div>
-						</a>
-					</div>
-					<div class="slide">
-						<a href="#">
-							<div class="image-holder">
-								<img src="images/products/Ambiance_1957_Crinkle fries-min.jpg" alt="Image">
-							</div>
-							<div class="title">Crinkle Fries</div>
-						</a>
-					</div>
-					<div class="slide">
-						<a href="#">
-							<div class="image-holder">
-								<img src="images/products/Ambiance_202804_Potato Pancake_Kartoffelpuffer-min.jpg" alt="Image">
-							</div>
-							<div class="title">Potato Pancake / Kartoffelpuffer</div>
-						</a>
-					</div>
-					<div class="slide">
-						<a href="#">
-							<div class="image-holder">
-								<img src="images/products/Ambiance_222501_Mini rosti-min.jpg" alt="Image">
-							</div>
-							<div class="title">Mini Rosti</div>
-						</a>
-					</div>
-					<div class="slide">
-						<a href="#">
-							<div class="image-holder">
-								<img src="images/products/Ambiance_512715_Potato Petals-min.jpg" alt="Image">
-							</div>
-							<div class="title">Potato Petals</div>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<!-- Banner TODO: 
-				1. why it's banner? it's generic-slider
-				2. it should have support of mobile images -->
-			<section class="generic-slider">
-				<div class="slider">
-					<div class="slide">
-						<div class="banner-holder">
-							<!-- <div class="content">
-								<div class="title">Title text</div>
-								<div class="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere quo labore architecto ad doloribus explicabo dolore consequatur veniam tenetur? Sunt porro quos ipsum, quis repellat incidunt laborum? Vel, tempora!</div>
-							</div> -->
-							<div class="button-holder">
-								<a href="#" class="button yellow">Learn More</a>
-							</div>
-							<div class="image-holder">
-								<img src="images/banners/banner-1-Big-Profit.jpg" alt="Banner Image" />
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="banner-holder">
-							<div class="button-holder">
-								<a href="#" class="button yellow">Learn More</a>
-							</div>
-							<div class="image-holder">
-								<img src="images/banners/banner-2-Surecrisp.jpg" alt="Banner Image" />
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="banner-holder">
-							<div class="button-holder">
-								<a href="#" class="button yellow">Learn More</a>
-							</div>
-							<div class="image-holder">
-								<img src="images/banners/banner-3-Future-delivered.jpg" alt="Banner Image" />
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="banner-holder">
-							<div class="button-holder">
-								<a href="#" class="button yellow">Learn More</a>
-							</div>
-							<div class="image-holder">
-								<img src="images/banners/banner-4-Crispers.jpg" alt="Banner Image" />
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="banner-holder">
-							<div class="button-holder">
-								<a href="#" class="button yellow">Learn More</a>
-							</div>
-							<div class="image-holder">
-								<img src="images/banners/banner-5-The-menu-heroes.jpg" alt="Banner Image" />
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="banner-holder">
-							<div class="button-holder">
-								<a href="#" class="button yellow">Learn More</a>
-							</div>
-							<div class="image-holder">
-								<img src="images/banners/banner-6-Delivery-Hub.jpg" alt="Banner Image" />
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<div class="banner-holder">
-							<div class="button-holder">
-								<a href="#" class="button yellow">Learn More</a>
-							</div>
-							<div class="image-holder">
-								<img src="images/banners/banner-7-Look-to-the-Future.jpg" alt="Banner Image" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+<div class="hp-our-products__section">
+	<img class="fries-1" src="./img/french-fries.png" alt="">
+	<img class="fries-2" src="./img/french-fries.png" alt="">
+	<img class="fries-3" src="./img/french-fries.png" alt="">
+	<div class="row1460">
+		<div class="hp-our-products__title desc-hide">
+			<div class="title">
+				<h3>OUR</h3>
+				<h2>Products</h2>
+			</div>
 		</div>
-
+		<div class="hp-our-products__wrapper">
+			<div class="left">
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="product">
+								<img src="./img/hp-slider-product.png" alt="">
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="product">
+								<img src="./img/hp-slider-product.png" alt="">
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="product">
+								<img src="./img/hp-slider-product.png" alt="">
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="product">
+								<img src="./img/hp-slider-product.png" alt="">
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="product">
+								<img src="./img/hp-slider-product.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="slider-navigation">
+					<div class="swiper-nav swiper-button-prev"></div>
+					<div class="swiper-nav swiper-button-next"></div>
+				</div>
+			</div>
+			<div class="button desc-hide">
+				<a href="#" class="btn">See all Products</a>
+			</div>
+			<div class="right">
+				<div class="title">
+					<h3>OUR</h3>
+					<h2>Products</h2>
+				</div>
+				<div class="button">
+					<a href="#" class="btn">See all Products</a>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
 
-	<!-- Footer -->
-	<footer>
-		<div class="footer-top">
-			<div class="left-container">
-				<div class="footer-links">
-					<div class="group-links">
-						<div class="title">Navigation</div>
-						<a href="#">Products</a>
-						<a href="#">Brand</a>
-						<a href="#">Inspiration</a>
-						<a href="#">Trends</a>
-						<a href="#">Contact</a>
-					</div>
 
-					<div class="group-links">
-						<div class="title">About McCain</div>
-						<a href="#">Background</a>
-						<a href="#">Sustainability</a>
-						<a href="#">Jobs</a>
-						<a href="faq.html">FAQ</a>
-					</div>
-					
-					<div class="group-links">
-						<div class="language-holder dark">
-							<div class="title">Language</div>
-							<div class="language-selector">
-								<div class="selected-language">Dutch</div>
-								<div class="languages-popup">
-									<div class="select-title">Select your language</div>
-									<ul>
-										<li class="selected"><a href="#">Dutch</a></li>
-										<li><a href="#">French</a></li>
-									</ul>
-								</div>
+<div class="hp-recipes__section" style="background-image: url('./img/hp-slider-recipes.jpg')">
+	<div class="hp-recipes__title">
+		<div class="title">
+			<h2>RECIPES</h2>
+			<h3>THAT WILL WARM</h3>
+			<h2>YOUR HEART</h2>
+		</div>
+		<div class="button">
+			<a href="#" class="btn yellow">See All Recipes</a>
+		</div>
+	</div>
+	<div class="hp-recipes__slider">
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="#" class="recipe-card">
+						<div class="thumbnail">
+							<img src="./img/blob-image.jpg" alt="">
+						</div>
+						<div class="text">
+							<h4 class="title">Cheese & Chive Superfries</h4>
+							<div class="info">
+								<span class="info--person"><img src="./img/person-icon.svg" alt="">8</span>
+								<span class="info--time"><img src="./img/time-icon.svg" alt="">50min</span>
+								<span class="info--like"><img src="./img/heart-icon.svg" alt="">213</span>
 							</div>
 						</div>
-
-						<div class="change-location-holder">
-							<div class="title">McCain in Europe</div>
-							<a href="#">View all countries</a>
-						</div>
-
-						<div class="social-icons-holder">
-							<div class="title">Find us on</div>
-						
-							<div class="social-icons">
-								<a href="#" target="_blank" title="Facebook" class="facebook"></a>
-								<a href="#" target="_blank" title="Instagram" class="instagram"></a>
-								<a href="#" target="_blank" title="Linkedin" class="linkedin"></a>
-							</div>
-						</div> 
-					</div>
-
+					</a>
 				</div>
-			</div>
-
-			<div class="right-container">
-				<div class="newsletter-holder">
-					<div class="title">Sign up for our newsletter</div>
-					<div class="form-holder">
-						<form>
-							<div class="form-row columns">
-								<input class="name" type="text" placeholder="First Name" />
-								<input type="text" placeholder="Last Name" />
+				<div class="swiper-slide">
+					<a href="#" class="recipe-card">
+						<div class="thumbnail">
+							<img src="./img/blob-image.jpg" alt="">
+						</div>
+						<div class="text">
+							<h4 class="title">Cheese & Chive Superfries</h4>
+							<div class="info">
+								<span class="info--person"><img src="./img/person-icon.svg" alt="">8</span>
+								<span class="info--time"><img src="./img/time-icon.svg" alt="">50min</span>
+								<span class="info--like"><img src="./img/heart-icon.svg" alt="">213</span>
 							</div>
-							<div class="form-row">
-								<input class="company" type="text" placeholder="Company" />
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="recipe-card">
+						<div class="thumbnail">
+							<img src="./img/blob-image.jpg" alt="">
+						</div>
+						<div class="text">
+							<h4 class="title">Cheese & Chive Superfries</h4>
+							<div class="info">
+								<span class="info--person"><img src="./img/person-icon.svg" alt="">8</span>
+								<span class="info--time"><img src="./img/time-icon.svg" alt="">50min</span>
+								<span class="info--like"><img src="./img/heart-icon.svg" alt="">213</span>
 							</div>
-							<div class="form-row">
-								<input class="email" type="email" placeholder="Email" />
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="recipe-card">
+						<div class="thumbnail">
+							<img src="./img/blob-image.jpg" alt="">
+						</div>
+						<div class="text">
+							<h4 class="title">Cheese & Chive Superfries</h4>
+							<div class="info">
+								<span class="info--person"><img src="./img/person-icon.svg" alt="">8</span>
+								<span class="info--time"><img src="./img/time-icon.svg" alt="">50min</span>
+								<span class="info--like"><img src="./img/heart-icon.svg" alt="">213</span>
 							</div>
-							<div class="form-row">
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value="" id="agreed" checked>
-									<label class="form-check-label" for="agreed">
-										Yes, I opt in for all communications
-									</label>
-								</div>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="recipe-card">
+						<div class="thumbnail">
+							<img src="./img/blob-image.jpg" alt="">
+						</div>
+						<div class="text">
+							<h4 class="title">Cheese & Chive Superfries</h4>
+							<div class="info">
+								<span class="info--person"><img src="./img/person-icon.svg" alt="">8</span>
+								<span class="info--time"><img src="./img/time-icon.svg" alt="">50min</span>
+								<span class="info--like"><img src="./img/heart-icon.svg" alt="">213</span>
 							</div>
-							<div class="form-row">
-								<div class="button-holder">
-									<a href="#" class="button yellow">Submit</a>
-								</div>
-							</div>
-						</form>
-					</div>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
-
-		<div class="footer-bottom">
-			<div class="bottom-links">
-				<a href="#">Global Privacy Policy</a>
-				<a href="#">Legal Information</a>
-				<a href="#">Cookies</a>
-			</div>
-			<div class="rights-reserved">©2022 McCain® Foods Limited | All rights reserved</div>
+		<div class="slider-navigation">
+			<div class="swiper-nav swiper-button-prev"></div>
+			<div class="swiper-nav swiper-button-next"></div>
 		</div>
-	</footer>
+		<div class="button desc_hide">
+			<a href="#" class="btn yellow">See All Recipes</a>
+		</div>
+	</div>
+</div>
 
+<div class="hp-sustainability__section">
+	<div class="left">
+		<div class="image">
+			<img src="./img/sustainability-image.jpg" alt="">
+		</div>
+	</div>
+	<div class="right">
+		<div class="small-chips"></div>
+		<div class="big-chips"></div>
+		<div class="title">
+			<h2>Sustainability </br>
+				AT <strong>McCain</strong>
+			</h2>
+			<p>Delicious, Planet-friendly food</p>
+			<a href="#" class="btn">Learn More</a>
+		</div>
+	</div>
+</div>
+
+<div class="hp-fry-school__section">
+	<div class="before-image">
+		<img src="./img/school-fry-img.png" alt="">
+	</div>
+	<div class="row1460">
+		<div class="hp-fry-school__wrapper">
+			<div class="left">
+				<div class="title">
+					<h2><strong>Fry School</strong></h2>
+					<h3>TO TURN ON</h3>
+					<h2>THE HEAT</h2>
+				</div>
+			</div>
+			<div class="right">
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<span class="step-index">Step 1</span>
+							<img src="./img/fry-slider-image.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<span class="step-index">Step 2</span>
+							<img src="./img/fry-slider-image.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<span class="step-index">Step 3</span>
+							<img src="./img/fry-slider-image.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<span class="step-index">Step 4</span>
+							<img src="./img/fry-slider-image.png" alt="">
+						</div>
+						<div class="swiper-slide">
+							<span class="step-index">Step 5</span>
+							<img src="./img/fry-slider-image.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="slider-navigation">
+					<div class="swiper-nav swiper-button-prev"></div>
+					<div class="swiper-nav swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<footer>
+	<div class="yellow-line-image">
+		<img src="./img/footer-after-image.png" alt="">
+	</div>
+	<div class="footer-newsletter__section">
+		<div class="row1480">
+			<div class="footer-newsletter__title">
+				<h2>Newsletter Signup</h2>
+				<p>Find out about new products, tasty recipes, savings and more!</p>
+			</div>
+			<div class="footer-newsletter__form">
+				<form action="#">
+					<div class="main-field">
+						<label class="field-wrapper">
+							<input type="email" placeholder="Enter your email">
+						</label>
+						<div class="submit-wrapper">
+							<button class="btn yellow" type="submit">
+								<svg xmlns="http://www.w3.org/2000/svg" width="26.998" height="26.995" viewBox="0 0 26.998 26.995">
+									<path id="Icon_ionic-ios-send" data-name="Icon ionic-ios-send"
+										d="M30.649,4.563,4.838,15.813a.592.592,0,0,0,.021,1.076l6.982,3.945a1.126,1.126,0,0,0,1.287-.127L26.895,8.838c.091-.077.309-.225.394-.141s-.049.3-.127.394L15.251,22.507a1.122,1.122,0,0,0-.113,1.343L19.7,31.17a.594.594,0,0,0,1.069-.014L31.444,5.344A.592.592,0,0,0,30.649,4.563Z"
+										transform="translate(-4.503 -4.503)" fill="#1e1e1b" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<label class="check-wrapper">
+						<input type="checkbox" name="test">
+						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+					</label>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="main-footer">
+		<div class="row1480">
+			<div class="footer-wrapper">
+				<div class="left">
+					<a href="#" class="footer-logo">
+						<img src="./img/logo.png" alt="logo">
+					</a>
+					<div class="social-media">
+						<h3 class="title">
+							Check us out!
+						</h3>
+						<div class="some">
+							<a target="_blank" href="https://facebook.com/" rel="nofollow"><i class="fa-brands fa-facebook-f"></i></a>
+							<a target="_blank" href="https://twitter.com/" rel="nofollow"><i class="fa-brands fa-twitter"></i></a>
+							<a target="_blank" href="https://pinterest.com/" rel="nofollow"><i
+									class="fa-brands fa-pinterest-p"></i></a>
+							<a target="_blank" href="https://tiktok.com/" rel="nofollow"><i class="fa-brands fa-tiktok"></i></a>
+							<a target="_blank" href="https://instagram.com/" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<nav class="footer-menu">
+						<div class="col">
+							<a href="#">McCain® Foodservice</a>
+							<a href="#">McCain® Corporate</a>
+							<a href="#">Careers</a>
+						</div>
+						<div class="col">
+							<a href="#">Contact Us</a>
+							<a href="#">Privacy Policy</a>
+							<a href="#">Accessibility</a>
+						</div>
+					</nav>
+				</div>
+				<div class="copyright">
+					<span>©2023 McCain® Foods Limited | All rights reserved</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!--<script type="text/javascript" src="js/lib.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/libs.js"></script>
+<script type="text/javascript" src="js/animate.js"></script>
 </body>
 
 </html>
