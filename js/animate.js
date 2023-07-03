@@ -4,7 +4,7 @@ $(document).ready(function () {
 		gsap.registerPlugin(ScrollTrigger);
 
 		let mm = ScrollTrigger.matchMedia({
-			'(min-width: 576px)': function () {
+			'': function () {
 				var tl = gsap.timeline({
 					scrollTrigger: {
 						trigger: 'header',
