@@ -3,8 +3,8 @@ $(document).ready(function () {
 		//GSAP ANIMATION
 		gsap.registerPlugin(ScrollTrigger);
 
-		let mm = ScrollTrigger.matchMedia({
-			'': function () {
+		ScrollTrigger.matchMedia({
+			'(min-width: 576px)': function () {
 				var tl = gsap.timeline({
 					scrollTrigger: {
 						trigger: 'header',
@@ -116,7 +116,6 @@ $(document).ready(function () {
 					.from('.main-footer .copyright span', {y: 100, opacity: 0, duration: 0.5, stagger: -0.2, ease: 'power2.out'}, '<');
 			},
 		});
-	
 	}
 });
 
