@@ -10,9 +10,11 @@
 		opacity: 1;
 		z-index: 9999;
 		pointer-events: none;
+		@include for-size(768px) {
+			display: none;
+		}
 	}
 }
-
 
 //Default Page Top Block
 .page-top {
@@ -159,6 +161,7 @@
 	i {
 		margin-left: 5px;
 		font-size: 40px;
+		color: $text;
 		@include for-size(576px) {
 			font-size: 25px;
 		}
@@ -231,14 +234,14 @@
 			position: relative;
 			@include flexbox();
 			@include align-items(flex-end);
+			@include flex-wrap(wrap);
 			@include for-size(1024px) {
 				min-height: 600px;
 				padding: 80px 0;
 			}
 			@include for-size(768px) {
 				min-height: 400px;
-
-				padding: 60px 0;
+				padding: 0;
 			}
 			picture {
 				position: absolute;
@@ -253,16 +256,16 @@
 					object-fit: cover;
 				}
 			}
-			&:after {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, 0.5);
-				z-index: 2;
-			}
+			// &:after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: 0;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	background-color: rgba(0, 0, 0, 0.5);
+			// 	z-index: 2;
+			// }
 			> div {
 				position: relative;
 				z-index: 3;
@@ -309,6 +312,9 @@
 							@include for-size(576px) {
 								font-size: 65px;
 							}
+						}
+						span {
+							display: block;
 						}
 					}
 				}
@@ -409,7 +415,6 @@
 					background-repeat: no-repeat;
 					transform: perspective(1000px) rotateY(-30deg);
 					@include transition(all, 0.4s, ease-in-out);
-					cursor: pointer;
 					@include for-size(1024px) {
 						transform: perspective(none) rotateY(0);
 					}
@@ -436,7 +441,7 @@
 					.play-btn {
 						position: absolute;
 						i {
-							@include transition(all, 0.2s, ease-in-out);
+							@include transition(all, 0.4s, ease-in-out);
 						}
 					}
 					.title {
@@ -445,7 +450,7 @@
 						text-align: center;
 						transition-property: opacity, transform;
 						transition-duration: 0.3s, 0.5s;
-						h4 {
+						h3 {
 							font-size: 26px;
 							font-weight: 900;
 							@include for-size(1024px) {
@@ -564,14 +569,15 @@
 			.product {
 				display: block;
 				@include transition(all, 0.4s, ease-in-out);
-				&:hover {
-					@include transform(rotate(5deg));
-				}
 			}
 		}
 		.left {
 			@include flex-basis(55%);
 			max-width: 55%;
+			@include for-size(1550px) {
+				@include flex-basis(45%);
+				max-width: 45%;
+			}
 			@include for-size(1024px) {
 				@include flex-basis(75%);
 				max-width: 75%;
@@ -586,30 +592,70 @@
 			.mySwiper {
 				overflow: visible;
 				.swiper-slide {
-					aspect-ratio: 3 / 4;
-					position: relative;
-					transition: all 0.6s ease-in-out;
-					img {
-						max-width: 100%;
-						height: 100%;
-						object-fit: cover;
+					@include transition(all, 0.3s, ease-in-out);
+					.product {
+						aspect-ratio: 3 / 4;
+						position: relative;
+						width: 100%;
+						max-width: 360px;
+						perspective: 1000px;
+						transition: none;
+						&:after {
+							content: '';
+							position: absolute;
+							bottom: -17px;
+							width: 80%;
+							height: 37px;
+							left: 9%;
+							max-width: 300px;
+							background-image: url('../img/product-shadow.png');
+							background-position: center;
+							background-size: contain;
+							background-repeat: no-repeat;
+							@include for-size(768px) {
+								bottom: -18px;
+							}
+						}
+						img {
+							max-width: 100%;
+							height: 100%;
+							object-fit: cover;
+							transition: all 0.4s ease-in-out;
+						}
+						&:hover {
+							img {
+								@include transform(rotate(5deg));
+							}
+						}
 					}
 				}
 				.swiper-slide-next {
 					+ .swiper-slide {
 						opacity: 0;
+						z-index: -1;
+						visibility: hidden;
 						@include for-size(1024px) {
 							opacity: 1;
+							z-index: 1;
+							visibility: visible;
 						}
 						+ .swiper-slide {
 							opacity: 0;
+							z-index: -1;
+							visibility: hidden;
 							@include for-size(1024px) {
 								opacity: 1;
+								z-index: 1;
+								visibility: visible;
 							}
 							+ .swiper-slide {
 								opacity: 0;
+								z-index: -1;
+								visibility: hidden;
 								@include for-size(1024px) {
 									opacity: 1;
+									z-index: 1;
+									visibility: visible;
 								}
 							}
 						}
@@ -619,7 +665,7 @@
 			.slider-navigation {
 				max-width: 600px;
 				margin: 20px auto 0;
-				@include for-size(1024px) {
+				@include for-size(1550px) {
 					@include justify-content(center);
 				}
 				@include for-size(576px) {
@@ -640,6 +686,10 @@
 			padding-left: 20px;
 			text-align: center;
 			overflow: visible;
+			@include for-size(1550px) {
+				@include flex-basis(53%);
+				max-width: 53%;
+			}
 			@include for-size(1024px) {
 				@include flex-basis(100%);
 				max-width: 100%;
@@ -689,6 +739,7 @@
 			max-width: 220px;
 			margin: 0 auto 10px;
 			font-weight: 900;
+			font-size: 28px;
 			@include for-size(1350px) {
 				font-size: 22px;
 			}
@@ -760,29 +811,49 @@
 					color: $c;
 				}
 			}
-			h2 {
-				font-size: 132px;
-				font-family: $font3;
-				line-height: 0.9;
-				@include for-size(1380px) {
-					font-size: 90px;
-				}
-				@include for-size(1280px) {
-					font-size: 75px;
-				}
-				@include for-size(1024px) {
-					font-size: 65px;
-				}
+			@include for-size(576px) {
+				margin-bottom: 15px;
 			}
-			h3 {
-				font-family: $font4;
-				font-size: 59px;
-				font-weight: 900;
-				@include for-size(1024px) {
-					font-size: 40px;
+			h2 {
+				span {
+					display: block;
 				}
-				@include for-size(768px) {
-					font-size: 30px;
+				.main {
+					font-size: 132px;
+					font-family: $font3;
+					line-height: 0.9;
+					@include for-size(1550px) {
+						font-size: 100px;
+					}
+					@include for-size(1380px) {
+						font-size: 90px;
+					}
+					@include for-size(1280px) {
+						font-size: 75px;
+					}
+					@include for-size(1024px) {
+						font-size: 65px;
+					}
+					@include for-size(576px) {
+						margin-bottom: 5px;
+					}
+				}
+				.small {
+					font-family: $font4;
+					font-size: 59px;
+					font-weight: 900;
+					@include for-size(1550px) {
+						font-size: 50px;
+					}
+					@include for-size(1024px) {
+						font-size: 40px;
+					}
+					@include for-size(768px) {
+						font-size: 30px;
+					}
+					@include for-size(576px) {
+						margin-bottom: 5px;
+					}
 				}
 			}
 		}
@@ -992,140 +1063,168 @@
 						font-size: 19px;
 					}
 				}
+				.btn {
+					font-weight: 700;
+				}
 			}
 		}
 	}
 }
 
 .hp-fry-school {
-	&__section {
-		padding: 90px 0;
-		position: relative;
-		overflow: hidden;
-		@include for-size(1024px) {
-			padding: 80px 0;
-		}
-		@include for-size(768px) {
-			padding: 60px 0;
-		}
-		@include for-size(576px) {
-			padding: 40px 0;
-		}
-		.row1460 {
-			max-width: 88%;
-		}
-		.before-image {
-			position: absolute;
-			left: 0;
-			top: 0;
-			z-index: 1;
-			max-width: 70%;
-			@include for-size(768px) {
-				max-width: 100%;
-			}
-			img {
-				max-width: 100%;
-				height: 100%;
-			}
-		}
-	}
-	&__wrapper {
-		@include flexbox();
-		@include align-items(center);
-		@include justify-content(space-between);
-		@include flex-wrap(wrap);
-		@include flex-direction(row);
-		> div {
-			@include flex-basis(48%);
-			max-width: 48%;
-			position: relative;
-			z-index: 2;
-			@include for-size(1024px) {
-				@include flex-basis(100%);
-				max-width: 100%;
-			}
-			&.left {
-				@include for-size(1024px) {
-					margin-bottom: 40px;
-				}
-				.title {
-					text-align: center;
-					h2 {
-						font-family: $font3;
-						font-size: 152px;
-						@include for-size(1380px) {
-							font-size: 120px;
-						}
-						@include for-size(1180px) {
-							font-size: 80px;
-						}
-						@include for-size(768px) {
-							font-size: 67px;
-						}
-						strong {
-							color: $a;
-						}
-					}
-					h3 {
-						color: $a;
-						font-size: 68px;
-						font-family: $font4;
-						font-weight: 900;
-						@include for-size(1180px) {
-							font-size: 40px;
-						}
-						@include for-size(768px) {
-							font-size: 34px;
-						}
-						@include for-size(576px) {
-							font-size: 29px;
-						}
-					}
-				}
-			}
-			&.right {
-				.swiper-slide {
-					position: relative;
-					.step-index {
-						position: absolute;
-						top: 50px;
-						right: 50px;
-						width: 135px;
-						height: 135px;
-						border-radius: 50%;
-						@include flexbox();
-						@include align-items(center);
-						@include justify-content(center);
-						@include flex-wrap(wrap);
-						@include flex-direction(row);
-						font-size: 45px;
-						font-family: $font3;
-						background-image: url('../img/step-bg.png');
-						background-position: center;
-						background-size: cover;
-						background-repeat: no-repeat;
-						@include for-size(576px){
-							top: 0;
-							right: 0;
-							font-size: 30px;
-							width: 80px;
-							height: 80px;
-						}
-					}
-					@include for-size(1024px) {
-						text-align: center;
-					}
-					img {
-						max-width: 100%;
-					}
-				}
-				.slider-navigation {
-					justify-content: center;
-					margin: 40px 0;
-				}
-			}
-		}
-	}
+  &__section {
+    padding: 90px 0;
+    position: relative;
+    overflow: hidden;
+    @include for-size(1024px) {
+      padding: 80px 0;
+    }
+    @include for-size(768px) {
+      padding: 60px 0;
+    }
+    @include for-size(576px) {
+      padding: 40px 0;
+    }
+    .row1460 {
+      max-width: 88%;
+    }
+    .before-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      max-width: 70%;
+      @include for-size(768px) {
+        max-width: 100%;
+      }
+      img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__wrapper {
+    @include flexbox();
+    @include align-items(stretch);
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    > div {
+      @include flex-basis(48%);
+      max-width: 48%;
+      position: relative;
+      z-index: 2;
+      @include for-size(1024px) {
+        @include flex-basis(100%);
+        max-width: 100%;
+      }
+      &.left {
+				@include flexbox();
+				@include align-items(center);
+				@include justify-content(center);
+        @include for-size(1024px) {
+          margin-bottom: 40px;
+        }
+        .title {
+          text-align: center;
+          h2 {
+            font-family: $font3;
+            font-size: 152px;
+            @include for-size(1550px) {
+              font-size: 125px;
+            }
+            @include for-size(1380px) {
+              font-size: 120px;
+            }
+            @include for-size(1180px) {
+              font-size: 80px;
+            }
+            @include for-size(768px) {
+              font-size: 67px;
+            }
+            strong {
+              color: $a;
+            }
+          }
+          h3 {
+            color: $a;
+            font-size: 68px;
+            font-family: $font4;
+            font-weight: 900;
+            @include for-size(1550px) {
+              font-size: 50px;
+            }
+            @include for-size(1180px) {
+              font-size: 40px;
+            }
+            @include for-size(768px) {
+              font-size: 34px;
+            }
+            @include for-size(576px) {
+              font-size: 29px;
+            }
+          }
+        }
+      }
+      &.right {
+        @include flex-basis(50%);
+        max-width: 50%;
+        padding: 20px 0 40px;
+        @include for-size(1024px) {
+          @include flex-basis(100%);
+          max-width: 100%;
+        }
+        .swiper-slide {
+          position: relative;
+          .step-index {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            @include flex-wrap(wrap);
+            @include flex-direction(row);
+            font-size: 45px;
+            font-family: $font3;
+            background-image: url("../img/step-bg.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            @include for-size(576px) {
+              top: 0;
+              right: 0;
+              font-size: 30px;
+              width: 80px;
+              height: 80px;
+            }
+          }
+          @include for-size(1024px) {
+            text-align: center;
+          }
+          img {
+            max-width: 100%;
+          }
+        }
+        .slider-navigation {
+          justify-content: center;
+          margin: 40px 0;
+          @include for-size(767px) {
+            margin: 20px 0 40px;
+          }
+          .swiper-nav {
+            @include for-size(767px) {
+              width: 45px;
+              height: 45px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 //PRODUCT DETAIL PAGE
@@ -1259,14 +1358,33 @@
 				margin: 0 auto;
 			}
 			@include for-size(576px) {
-				@include flex-basis(220px);
-				max-width: 220px;
+				@include flex-basis(230px);
+				max-width: 230px;
 			}
 			.product-thumbnail {
+				position: relative;
 				text-align: center;
-				aspect-ratio: 3 / 4;
+				display: block;
+				max-width: 100%;
+				width: 460px;
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -17px;
+					width: 80%;
+					height: 37px;
+					left: 9%;
+					max-width: 400px;
+					background-image: url('../img/product-shadow.png');
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+					@include for-size(768px) {
+						bottom: -18px;
+					}
+				}
 				img {
-					max-width: 100%;
+					width: 100%;
 					height: 100%;
 					object-fit: cover;
 				}
@@ -1307,6 +1425,11 @@
 						font-size: 25px;
 						cursor: pointer;
 						padding: 12px 15px;
+						width: 100%;
+						&:focus-visible {
+							border: 2px solid $a;
+							outline: $a;
+						}
 						span {
 							position: relative;
 							display: inline-block;
@@ -1377,7 +1500,7 @@
 							}
 						}
 						.note {
-							h4 {
+							.acc-title {
 								color: $a;
 								font-weight: 700;
 								margin-bottom: 5px;
@@ -1600,17 +1723,47 @@
 						column-gap: 30px;
 					}
 					.item {
+						&:hover {
+							.image-wrapper {
+								img {
+									@include transform(rotate(5deg));
+								}
+							}
+							.name {
+								h4 {
+									color: $a;
+								}
+							}
+						}
 						.image-wrapper {
 							max-width: 260px;
 							margin: 0 auto;
 							margin-bottom: 20px;
 							display: block;
-							aspect-ratio: 2 / 3;
+							aspect-ratio: 3 / 4;
+							position: relative;
+							&:after {
+								content: '';
+								position: absolute;
+								bottom: -17px;
+								width: 80%;
+								height: 37px;
+								left: 9%;
+								max-width: 300px;
+								background-image: url('../img/product-shadow.png');
+								background-position: center;
+								background-size: contain;
+								background-repeat: no-repeat;
+								@include for-size(768px) {
+									bottom: -18px;
+								}
+							}
 							@include for-size(576px) {
 								max-width: 150px;
 								margin: 0 auto;
 							}
 							img {
+								@include transition();
 								max-width: 100%;
 							}
 						}
@@ -1619,6 +1772,8 @@
 							h4 {
 								font-weight: 900;
 								margin-bottom: 0;
+								color: $text;
+								@include transition();
 								@include for-size(576px) {
 									font-size: 17px;
 								}
@@ -1721,6 +1876,15 @@
 				background-image: url('../img/repeater-bg-1.jpg');
 				background-position: center;
 				background-repeat: repeat;
+				.item {
+					&:hover {
+						.name {
+							h4 {
+								color: $b !important;
+							}
+						}
+					}
+				}
 			}
 			&.yellow-bg {
 				background-image: url('../img/breakfast-bg.jpg');
@@ -1939,7 +2103,8 @@
 				column-gap: 25px;
 			}
 			@include for-size(576px) {
-				column-gap: 15px;
+				column-gap: 20px;
+				margin-bottom: 20px;
 			}
 			.item {
 				display: grid;
@@ -1948,6 +2113,10 @@
 				grid-gap: 15px;
 				@include for-size(768px) {
 					grid-template-columns: 34px 1fr;
+				}
+				@include for-size(480px) {
+					grid-gap: 10px;
+					grid-template-columns: 30px 1fr;
 				}
 				.icon {
 					img,
@@ -1971,6 +2140,9 @@
 							@include for-size(576px) {
 								font-size: 12px;
 							}
+							@include for-size(480px) {
+								font-size: 10px;
+							}
 						}
 						&.opt {
 							font-size: 25px;
@@ -1979,6 +2151,9 @@
 							}
 							@include for-size(768px) {
 								font-size: 18px;
+							}
+							@include for-size(480px) {
+								font-size: 16px;
 							}
 						}
 					}
@@ -2231,7 +2406,9 @@
 				font-family: $font;
 				font-weight: 700;
 				font-size: 25px;
+				border: none;
 				cursor: pointer;
+				width: 100%;
 				padding: 12px 15px;
 				@include for-size(768px) {
 					font-size: 20px;
@@ -3468,3 +3645,2623 @@
 		height: 100%;
 	}
 }
+
+.fancybox__backdrop {
+	background: rgba(43, 43, 44, 0.9) !important;
+}
+
+//ILLA
+.hp-top-animation {
+  &__section {
+		overflow: hidden;
+    .swiper-slide {
+      height: auto;
+      .btn {
+        font-weight: 700;
+        font-size: 1.25vw;
+        @include for-size(767px) {
+          font-size: 4.25vw;
+        }
+      }
+      .desc {
+        @include for-size(767px) {
+          display: none;
+        }
+      }
+      .mobile {
+        display: none;
+        @include for-size(767px) {
+          display: block;
+        }
+        > img {
+          width: 100%;
+        }
+      }
+      &.slide-1 {
+        .big_image {
+          text-align: right;
+        }
+        .shine_bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 1;
+          width: 69%;
+          height: 100%;
+        }
+        .fries-bg {
+          width: 24%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+        }
+        .text-slide {
+          position: absolute;
+          bottom: 10%;
+          left: 12%;
+          width: 25%;
+          z-index: 3;
+          text-align: center;
+          h2 {
+            position: relative;
+            font-size: 11.875vw;
+            font-family: "McCainWedgeBrush", sans-serif;
+            color: #1e1e1b;
+            font-weight: 400;
+            margin-bottom: 27%;
+						span {
+							display: inline-block;
+						}
+            .one {
+              position: absolute;
+              top: 42%;
+              right: 16%;
+              font-size: 3.073vw;
+              font-family: "RooneyPro";
+              font-weight: 900;
+              text-transform: uppercase;
+            }
+            .three {
+              position: absolute;
+              bottom: -21%;
+              left: 5%;
+              font-size: 3.073vw;
+              font-family: "RooneyPro";
+              font-weight: 900;
+              text-transform: uppercase;
+            }
+            .four {
+              position: absolute;
+              bottom: -47%;
+              right: 5%;
+              width: 41%;
+            }
+          }
+        }
+        .mobile {
+          .text-slide {
+            @include center(true, false);
+            bottom: 9%;
+            width: 65%;
+            h2 {
+              font-size: 24vw;
+              .one {
+                font-size: 6.073vw;
+              }
+              .three {
+                font-size: 6.073vw;
+              }
+            }
+          }
+        }
+      }
+      &.slide-2 {
+        background: rgba(64, 106, 185, 1);
+        background: linear-gradient(
+          to bottom,
+          rgba(64, 106, 185, 1) 0%,
+          rgba(128, 178, 224, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#406ab9', endColorstr='#80b2e0', GradientType=0 );
+        .big_image {
+          img {
+            display: block;
+          }
+        }
+        .cloud {
+          position: absolute;
+          top: 2%;
+          left: 0;
+          right: 0;
+          z-index: 3;
+          width: 100%;
+          height: 100%;
+        }
+        .left-image {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 52%;
+          z-index: 2;
+        }
+        .right-image {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 54%;
+          z-index: 1;
+        }
+        .board-image {
+          position: absolute;
+          bottom: 11%;
+          right: -6%;
+          width: 33%;
+          z-index: 2;
+        }
+        .text-slide {
+          @include center();
+          z-index: 4;
+          width: 56%;
+          text-align: center;
+          h2 {
+            position: relative;
+            font-size: 6vw;
+            font-family: "RooneyPro", sans-serif;
+            color: #fff;
+            font-weight: 900;
+            margin-bottom: 3%;
+            text-transform: uppercase;
+						span {
+							display: inline-block;
+						}
+            .text1 {
+              font-size: 2vw;
+            }
+            .text2 {
+              font-size: 2vw;
+            }
+            .text3 {
+              display: block;
+              font-size: 6vw;
+              font-family: "MADEDillan", sans-serif;
+              > img {
+                width: 8%;
+                height: 8%;
+                display: inline-block;
+                vertical-align: baseline;
+              }
+            }
+          }
+        }
+        .mobile {
+          .text-slide {
+            top: 30%;
+            width: 80%;
+            h2 {
+              font-size: 10vw;
+              .text1 {
+                font-size: 5vw;
+              }
+              .text2 {
+                font-size: 5vw;
+              }
+            }
+          }
+        }
+      }
+      &.slide-3 {
+        background: #fb7431;
+        .shine_bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 1;
+          width: 77%;
+          height: 100%;
+        }
+        .fri_one {
+          position: absolute;
+          top: -5%;
+          right: -8%;
+          transform: rotate(95deg);
+          width: 31%;
+        }
+        .fri_two {
+          position: absolute;
+          top: 5%;
+          right: 25%;
+          transform: rotate(10deg);
+          width: 31%;
+        }
+        .item-image {
+          position: absolute;
+          top: 5%;
+          right: 13%;
+          z-index: 2;
+          width: 24%;
+        }
+        .text-slide {
+          @include center(false, true);
+          left: 9%;
+          z-index: 4;
+          width: 35%;
+          text-align: center;
+          h2 {
+            position: relative;
+            font-size: 6vw;
+            font-family: "RooneyPro", sans-serif;
+            color: #1e1e1b;
+            font-weight: 900;
+            margin-bottom: 3%;
+            text-transform: uppercase;
+						span {
+							display: inline-block;
+						}
+            .text1 {
+              font-size: 12vw;
+              font-family: "McCainWedgeBrush", sans-serif;
+            }
+            .text2 {
+              font-size: 12vw;
+              font-family: "McCainWedgeBrush", sans-serif;
+            }
+          }
+        }
+        .mobile {
+          .text-slide {
+            @include center(true, true);
+            width: 65%;
+            h2 {
+              font-size: 10vw;
+              .text1 {
+                font-size: 20vw;
+              }
+              .text2 {
+                font-size: 20vw;
+              }
+            }
+            .item-image {
+              position: static;
+              width: 60%;
+              margin: 0 auto;
+            }
+            .btn {
+              background: #fec72e;
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      bottom: 50px !important;
+      @include for-size(1024px) {
+        bottom: 30px !important;
+      }
+      @include for-size(768px) {
+        bottom: 15px !important;
+      }
+      .swiper-pagination-bullet {
+        width: 22px;
+        height: 22px;
+        background-color: #fff;
+        border: 1px solid #fec72e;
+        margin: 0 15px;
+        opacity: 1;
+        &.swiper-pagination-bullet-active {
+          background-color: $a;
+        }
+      }
+    }
+  }
+}
+.hp-fry-school {
+  &__section {
+    .swiper {
+      height: 100%;
+    }
+    .swiper-slide {
+      min-height: 480px;
+      @include for-size(490px) {
+        min-height: 300px;
+      }
+    }
+    .animate-slide-1 {
+      .text1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 36%;
+        @include for-size(767px) {
+          font-size: 3.875vw;
+        }
+      }
+      .text2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 49%;
+        @include for-size(767px) {
+          font-size: 3.875vw;
+        }
+      }
+      .text3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 44%;
+        @include for-size(767px) {
+          font-size: 3.875vw;
+        }
+      }
+      .image1 {
+        position: absolute;
+        left: 4%;
+        top: 30%;
+        width: 27%;
+        @include for-size(1024px) {
+          top: 44%;
+        }
+        .image1-1 {
+          position: absolute;
+          bottom: -6%;
+          left: -9%;
+          width: 40%;
+        }
+      }
+      .image2 {
+        position: absolute;
+        right: 43%;
+        top: 26%;
+        width: 21%;
+        @include for-size(1024px) {
+          top: 46%;
+        }
+        .image2-2 {
+          position: absolute;
+          top: -14%;
+          right: -20%;
+          width: 40%;
+        }
+      }
+      .image3 {
+        position: absolute;
+        right: 0%;
+        top: 33%;
+        width: 35%;
+        @include for-size(1024px) {
+          top: 44%;
+        }
+      }
+      .s-item {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 63%;
+        .item {
+          display: inline-block;
+          background-image: url("../img/slider/s-item.png");
+          width: 116px;
+          height: 116px;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 4vw;
+          line-height: 1.4;
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 12vw;
+            width: 80px;
+            height: 80px;
+          }
+          > span {
+            @include center();
+          }
+        }
+        > span:not(.item) {
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 2.344vw;
+          line-height: 1.4;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+    .animate-slide-2 {
+      .text1 {
+        position: absolute;
+        top: 40%;
+        left: 2%;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 36%;
+        @include for-size(767px) {
+          font-size: 4.875vw;
+        }
+      }
+      .text2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 49%;
+        @include for-size(767px) {
+          font-size: 4.875vw;
+        }
+      }
+      .image1 {
+        position: absolute;
+        right: 0;
+        top: 17%;
+        width: 53%;
+        @include for-size(1024px) {
+          top: 25%;
+        }
+        .image1-1 {
+          position: absolute;
+          bottom: -6%;
+          left: -14%;
+          width: 30%;
+        }
+      }
+      .s-item {
+        text-align: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .item {
+          display: inline-block;
+          background-image: url("../img/slider/s-item.png");
+          width: 116px;
+          height: 116px;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 4vw;
+          line-height: 1.4;
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 12vw;
+            width: 80px;
+            height: 80px;
+          }
+          > span {
+            @include center();
+          }
+        }
+        > span:not(.item) {
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 2.344vw;
+          line-height: 1.4;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+    .animate-slide-3 {
+      .text1 {
+        position: absolute;
+        top: 22%;
+        right: 0;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 47%;
+        @include for-size(767px) {
+          top: 40%;
+          font-size: 4.875vw;
+        }
+      }
+      .text2 {
+        position: absolute;
+        left: 0;
+        top: 48%;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 49%;
+        @include for-size(767px) {
+          font-size: 5.875vw;
+        }
+      }
+      .text3 {
+        position: absolute;
+        bottom: 21%;
+        left: 8%;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 44%;
+        @include for-size(1024px) {
+          bottom: 12%;
+          left: 0;
+          font-size: 4.875vw;
+        }
+      }
+      .image1 {
+        position: absolute;
+        left: 0;
+        top: 0%;
+        width: 44%;
+      }
+      .image2 {
+        position: absolute;
+        right: 0;
+        bottom: 22%;
+        width: 53%;
+        @include for-size(767px) {
+          bottom: 4%;
+        }
+        .image2-2 {
+          position: absolute;
+          bottom: -16%;
+          right: 3%;
+          width: 22%;
+        }
+      }
+      .s-item {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 55%;
+        .item {
+          display: inline-block;
+          background-image: url("../img/slider/s-item.png");
+          width: 116px;
+          height: 116px;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 4vw;
+          line-height: 1.4;
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 12vw;
+            width: 80px;
+            height: 80px;
+          }
+          > span {
+            @include center();
+          }
+        }
+        > span:not(.item) {
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 1.744vw;
+          line-height: 1.4;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+    .animate-slide-4 {
+      .text1 {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 47%;
+        @include for-size(767px) {
+          font-size: 5.875vw;
+        }
+      }
+      .text2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 40%;
+        @include for-size(767px) {
+          font-size: 4.875vw;
+        }
+      }
+      .image1 {
+        position: absolute;
+        right: 0;
+        top: 35%;
+        width: 70%;
+        @include for-size(767px) {
+          top: 48%;
+        }
+      }
+      .image2 {
+        position: absolute;
+        left: 10%;
+        top: 0%;
+        width: 38%;
+      }
+      .s-item {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 55%;
+        .item {
+          display: inline-block;
+          background-image: url("../img/slider/s-item.png");
+          width: 116px;
+          height: 116px;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 4vw;
+          line-height: 1.4;
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 12vw;
+            width: 80px;
+            height: 80px;
+          }
+          > span {
+            @include center();
+          }
+        }
+        > span:not(.item) {
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 1.844vw;
+          line-height: 1.4;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+    .animate-slide-5 {
+      .text1 {
+        position: absolute;
+        bottom: 19%;
+        left: 23%;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 61%;
+        @include for-size(767px) {
+          font-size: 5.875vw;
+        }
+      }
+      .image1 {
+        position: absolute;
+        left: 0;
+        top: 25%;
+        width: 48%;
+        @include for-size(767px) {
+          top: 31%;
+        }
+        .image1-1 {
+          position: absolute;
+          top: -19%;
+          left: 1%;
+          width: 93%;
+        }
+      }
+      .image2 {
+        position: absolute;
+        right: 0;
+        top: 22%;
+        width: 48%;
+        @include for-size(767px) {
+          top: 28%;
+        }
+      }
+      .s-item {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        @include for-size(767px) {
+          width: 100%;
+          text-align: left;
+        }
+        .item {
+          display: inline-block;
+          background-image: url("../img/slider/s-item.png");
+          width: 116px;
+          height: 116px;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 4vw;
+          line-height: 1.4;
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 12vw;
+            width: 80px;
+            height: 80px;
+          }
+          > span {
+            @include center();
+          }
+        }
+        > span:not(.item) {
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 1.844vw;
+          line-height: 1.4;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+    .animate-slide-6 {
+      .text1 {
+        position: absolute;
+        bottom: 5%;
+        left: 16%;
+        font-size: 1.875vw;
+        font-family: "McCainWedgeBrush", sans-serif;
+        width: 61%;
+        @include for-size(767px) {
+          font-size: 4.875vw;
+        }
+      }
+      .image1 {
+        position: absolute;
+        right: 27%;
+        top: 19%;
+        width: 40%;
+        @include for-size(767px) {
+          top: 17%;
+        }
+        @include for-size(545px) {
+          top: 32%;
+          width: 33%;
+        }
+        .image1-1 {
+          position: absolute;
+          bottom: 0;
+          right: -20%;
+          width: 72%;
+        }
+      }
+      .image1-2 {
+        position: absolute;
+        bottom: 0;
+        left: -77%;
+        width: 74%;
+      }
+      .s-item {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        @include for-size(767px) {
+          width: 100%;
+        }
+        .item {
+          display: inline-block;
+          background-image: url("../img/slider/s-item.png");
+          width: 116px;
+          height: 116px;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 4vw;
+          line-height: 1.4;
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 12vw;
+            width: 80px;
+            height: 80px;
+          }
+          > span {
+            @include center();
+          }
+        }
+        > span:not(.item) {
+          font-family: "McCainWedgeBrush", sans-serif;
+          font-size: 1.844vw;
+          line-height: 1.4;
+          display: inline-block;
+          vertical-align: middle;
+          @include for-size(767px) {
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+.medleys-hat {
+	&__section{
+		position: relative;		
+		
+		padding: 500px 0px;
+		background-image: url("../img/medleys-hat-bg.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@include for-size ($sm) {
+			padding: 400px 0px;
+			background-image: url("../img/medleys-hat-bg-mobile.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.slice {
+			position: absolute;				
+			top: 50%;
+			right: -15%;
+
+			@include for-size ($sm) {
+				top: 60%;
+				right: -55%;
+			}
+		}
+
+		.title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			max-width: 100%;
+			transform: translate(-50%, -50%);
+		};
+
+		.title-list {
+			max-width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-family: $font3;
+			font-size: 130px;
+			font-weight: 900;
+			font-style: normal;
+			color: $c;
+
+			@include for-size ($row1260) {
+			 font-size: 100px;
+			}
+
+
+			@include for-size ($sm) {
+				font-size: 80px;
+			}
+
+			:first-child {
+				font-family: $font4;
+				font-weight: 900;
+				text-align: center;
+			}
+
+			:last-child{
+				margin-top: -25px;
+				font-family: $font3;
+				font-size: 150px;
+				font-weight: normal;		
+
+				@include for-size ($sm) {
+					margin-top: -25px;
+					font-size: 100px;
+
+				}
+			}
+		};
+
+		.btn-more {
+			position: absolute;
+			top: 90%;
+			left: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: none;
+			border: none;
+			font-family: $font3;
+			font-weight: 400;
+			font-size: 40px;
+			color: $b;
+
+			transform: translate(-50%, 0%);
+
+			svg {
+				display: block;
+				width: 80px;
+				height: 30px;
+			}
+
+			@include for-size ($sm) {
+				font-size: 30px;
+			}
+				
+		}
+	}
+}
+
+.medleys-products {
+	&__section {
+		position: relative;
+		background-color: rgb(91, 16, 16);
+
+		.products-slice {
+			position: absolute;
+			top: 50%;
+			left: -15%;
+
+			@include for-size ($sm) {
+				top: 85%;
+				left: -40%;
+			}
+		}
+
+		.cloud-top-title {
+			position: absolute;
+			top: 5%;
+			left: 5%;
+			margin-top: 0;
+			display: flex;
+			align-items: center;
+			font-family: $font3;
+			font-size: 62px;
+			font-weight: normal;
+			line-height: 70px;
+			font-style: normal;	
+
+			@include for-size ($sm) {
+				top: 0%;
+				margin-top: -10px;
+				font-size: 32px;
+				line-height: 35px;				
+			}
+
+			:first-child {
+				margin-right: 20px;	
+
+				@include for-size ($sm) {
+					margin-right: 10px;
+				}
+
+				svg {
+					width: auto;					
+
+					@include for-size ($sm) {
+						width: 60px;
+					}					
+				}
+			}
+
+			:last-child {				
+				:last-child {
+					color: $a;
+				}
+			}			
+		}
+
+		.cloud-top-img {
+			width: auto;
+
+			@include for-size ($sm) {
+				width: 85%;				
+			}			
+		}
+
+		.arrow {
+			position: absolute;
+			left: 15%;
+			transform: rotate(-56deg); 
+
+
+			@include for-size ($sm) {
+				width: 60px;
+				top: 5%;
+				left: 80%;				
+				transform: scale(-1, 1);
+			}
+
+		}
+
+		.products-list {
+			position: relative;
+			margin-top: 50px;
+			padding-bottom: 240px;
+			display: flex;
+			justify-content: center;
+			z-index: 1;
+
+			@include for-size ($sm) {
+				flex-direction: column;
+				align-items: center;
+			}
+	
+		}	
+
+		.products-list-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 500px;
+
+			.products-imgBg1 {			
+				background-image: url("../img/medleys-bg-products.png");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+		
+				img {
+					padding: 40px;
+					transition: all 0.4s;
+					
+					&:hover {
+						transform: rotate(5deg);
+					}
+
+				}
+			}
+
+			.products-imgBg2 {
+				background-image: url("../img/medleys-bg-products2.png");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+				rotate: 180deg;
+				
+				img {					
+					padding: 40px;
+					rotate: 180deg;
+					transition: all 0.4s;
+					
+					&:hover {
+						transform: rotate(5deg);
+					}
+				}
+			}
+		}
+
+		.products-list-item-title {
+			margin: 15px 0px;
+			font-family: $font4;
+			font-size: 32px;
+			font-weight: 900;
+			line-height: 37px;
+			font-style: normal;
+			text-align: center;
+			color: #fff9dc;
+
+			@include for-size ($sm) {
+				font-size: 20px;
+				line-height: 25px;
+			}
+		}
+
+		.products-list-item-buttons {
+			width: 325px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			
+			@include for-size ($sm) {
+				margin-bottom: 50px;
+			}
+			
+			li {			
+				display: flex;	
+
+				.learn {
+					position: relative;
+					display: inline-block;
+					padding: 15px 17px 15px;
+					font-family: $font;
+					font-size: 22px;
+					font-weight: bold;
+					font-style: normal;
+					text-align: center;
+					color: #1e1e1b;
+					border: none;
+					border-radius: 28px;
+					background: #FFF9DC;
+					z-index: 1;
+					overflow: hidden;
+					cursor: pointer;
+					&::before {
+						content: "";
+						position: absolute;
+						z-index: -1;
+						background: #1e1e1b;
+						border-radius: 50%;
+						height: 400%;
+						width: 150%;
+						top: 100%;
+						left: -150%;
+						transition: all 0.3s ease-in-out;
+						box-shadow: inset 0 0 0 1000px #1e1e1b;
+						background-clip: padding-box;						
+					}
+
+					&:hover {
+						color: #FFF9DC;
+						&::before {
+							top: -40%;
+							left: -30%;
+							color: #FFF9DC;
+						}
+					}
+					
+				}
+
+				.buy {
+					position: relative;
+					padding: 15px 30px;
+					font-family: $font;
+					font-size: 22px;
+					font-weight: bold;
+					font-style: normal;
+					text-align: left;
+					border: none;
+					border-radius: 28px;
+					color: #fff9dc;
+					background: #1E1E1B;
+					z-index: 1;
+					overflow: hidden;
+					cursor: pointer;
+				
+					&::before {
+						content: "";
+						position: absolute;
+						z-index: -1;
+						background:#FFF9DC;
+						border-radius: 50%;
+						height: 400%;
+						width: 150%;
+						top: 100%;
+						left: -150%;
+						transition: all 0.3s ease-in-out;
+						box-shadow: inset 0 0 0 1000px #FFF9DC;
+						background-clip: padding-box;
+					}
+				
+					&:hover {
+						color:#1E1E1B;
+				
+						&::before {
+							top: -40%;
+							left: -30%;
+							color: #1E1E1B;
+						}
+					}
+				}
+			}
+		}
+
+		.cloud-bottom {
+			position: absolute;
+			bottom: -1px;
+			right: 0%;
+
+			@include for-size ($sm) {
+				left: 10%;
+			}
+
+			.cloud-bottom-describe {
+				position: absolute;
+				display: flex;
+				justify-content: space-between;
+				top: 40%;
+				left: 40%;
+				z-index: 1;
+
+			img {
+				width: auto;
+				
+				@include for-size ($sm) {
+					width: 50px;
+				}
+				
+			}
+
+				.cloud-bottom-describe-title {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				top: -25%;				
+
+					:first-child {
+						
+						font-family: $font3;
+						font-size: 73px;
+						font-weight: normal;
+						font-style: normal;
+						color: #fb7431;
+
+						@include for-size ($sm) {
+							font-size: 35px;
+						}
+						
+					}
+
+					:nth-child(2) {
+						position: relative;
+						top: -20px;
+						font-family: $font4;
+						font-size: 52px;
+						font-weight: 900;
+						font-style: normal;
+						text-align: center;
+						color: #fb7431;
+
+						@include for-size ($sm) {
+							top: -10px;
+							font-size: 30px;
+						}
+					}
+					
+					:last-child {
+						position: relative;
+						top: -35px;
+						font-family: $font3;
+						font-size: 72px;
+						font-weight: normal;
+						font-style: normal;
+						text-align: center;
+						color: #1e1e1b;
+
+						@include for-size ($sm) {
+							top: -25px;
+							font-size: 35px;
+						}
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+
+.frozen-aisle {
+	&__section {
+		position: relative;
+		padding: 180px 0px;
+
+		
+		background-image: url("../img/frozen-aisle.png"), linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@include for-size($sm) {
+			padding: 130px 0px;
+		}
+
+		h2 {
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			line-height: 1.2;
+		}
+
+		:first-child {
+			font-family: $font4;
+			font-size: 68px;
+			font-weight: 900;
+			font-style: normal;
+			text-align: center;
+			color: #fff9dc;
+			br {
+				display: none;
+			}
+
+			@include for-size ($row1100) {
+				font-size: 50px;
+			}
+
+			@include for-size($sm) {
+				font-size: 30px;
+				br {
+					display: block;
+				}
+			}
+		}
+
+		:last-child {
+			margin-left: 50px;
+			font-family: $font3;
+			font-size: 132px;
+			font-weight: normal;
+			font-style: normal;
+			text-align: center;
+			color: #fff9dc;
+
+			@include for-size ($row1100) {
+				font-size: 100px;
+			}
+
+			@include for-size($sm) {
+				font-size: 50px;
+			}
+		}
+	}
+}
+
+.air-fry-hat {
+	&__section {
+		position: relative;
+		min-height: 1000px;
+
+		background-image: url("../img/air-fry-hat-bg.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@include for-size($row1280) {
+			background-position: left;			
+		}
+
+		@include for-size($sm) {
+			background-image: url("../img/air-fry-hat-bg-mobile.png");
+			background-position: top;			
+			background-size: cover;
+		}
+		
+		@include for-size($xs) {
+			background-image: url("../img/air-fry-hat-bg-mobile.png");
+			background-position: center;
+		}
+
+		.air-fry-hat_slice {
+			position: absolute;
+			top: 70%;
+			left: 60%;			
+
+			@include for-size ($sm) {
+					left: 40%;
+					transform: rotate(-110deg);
+				}
+
+			@include for-size ($xs) {
+				left: 30%;
+				transform: rotate(-110deg);
+			}
+		}
+
+		h1 {
+			position: absolute;
+			top: 40%;
+			right: 5%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;	
+			text-align: center;
+
+			@include for-size($xs) {			
+				top: 47%;
+			}
+
+			:first-child {
+				font-family: $font4;
+				font-size: 65px;
+				font-weight: 900;
+				font-weight: 900;
+				font-style: normal;
+				color: #fff9dc;				
+
+				@include for-size($sm) {
+					font-size: 50px;						
+				}
+				
+				@include for-size($xs) {
+					font-size: 36px;
+				}
+			}
+
+			:nth-child(2) {
+				font-family: $font3;
+				font-size: 150px;
+				font-weight: 900;
+				font-style: normal;
+				color: #fff9dc;
+
+				@include for-size($row1650) {
+					font-size: 90px;
+				}
+
+				@include for-size($xs) {
+					font-size: 70px;
+				}
+			}
+
+			:last-child {
+				font-family: $font3;
+				font-size: 79px;
+				font-weight: normal;
+				line-height: 69px;
+				font-style: normal;				
+							
+				color: #fec72e;
+
+				@include for-size($sm) {
+						font-size: 60px;
+				}
+			
+				@include for-size($xs) {
+					font-size: 30px;					
+				}
+			}
+
+		}
+
+		.cloud-bottom {
+			position: absolute;
+			bottom: 0%;
+			left: 0%;	
+
+			.cloud-bottom_list {
+				position: absolute;
+				top: 30%;
+				left: 5%;
+				display: flex;
+				align-items: center;
+
+				font-family: $font3;
+				font-size: 46px;
+				font-weight: 900;
+				line-height: 50px;
+				font-style: normal;
+				text-align: left;
+				color: #1e1e1b;
+				
+				.cloud-bottom_arrow {
+					margin-right: 20px;
+				}
+
+				@include for-size($xs) {
+					font-size: 30px;
+
+					.cloud-bottom_arrow {
+						width: 70px;
+						margin-right: 10px;
+					}
+
+				}				
+
+				.font-weight {					
+					font-weight: normal;
+				}
+			}
+
+
+			
+		}
+	}
+}
+
+.fryer-tips {
+	&__section {
+		position: relative;
+
+		background-image: url("../img/fryer-tips-bg.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.title {
+			position: absolute;
+			top: 30%;
+			left: 10%;			
+
+			@include for-size ($row1560) {
+				left: 5%;
+			}
+
+			@include for-size ($row1280) {
+				top: 27%;
+				left: 1%;
+			}
+
+			@include for-size ($sm) {
+				position: relative;
+				top: 0;
+				left: 0;
+				margin-bottom: 100px;
+			}
+
+			h1 {
+				font-family: $font3;
+				font-size: 132px;
+				font-weight: normal;
+				font-style: normal;
+				text-align: center;
+				color: #1e1e1b;
+
+				@include for-size ($row1560) {
+					font-size: 120px;
+				}
+
+				@include for-size ($row1280) {
+					font-size: 90px;
+				}
+
+				@include for-size ($sm) {
+					font-size: 60px;
+				}
+				
+			}			
+		}
+
+		.fryer-tips_slider {
+			padding: 50px 0px 0px;
+			min-height: 1100px;			
+
+			.fryer-tips-slide-swiper {		
+				@include for-size ($sm) {
+					padding: 0px 0px 110px;
+				}
+				
+				p {
+					font-family: "McCain Wedge Brush";
+					font-size: 50px;
+					font-weight: normal;
+					line-height: 50px;
+					font-style: normal;
+					text-align: center;
+					color: #1e1e1b;
+				}
+
+				.swiper-button-prev,
+				.swiper-button-next {
+					display: flex;
+					gap: 30px;
+					height: 63px;
+					width: 63px;
+					border-radius: 50%;
+					background-color: #fec72e;
+					color: #1e1e1b;
+					transform: scaleX(-1);
+					z-index: 1;
+					overflow: hidden;
+
+					&::after {
+						font-size: 26px;
+						font-weight: 700;
+					}
+
+					@include for-size ($sm) {
+						height: 40px;
+						width: 40px;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						z-index: -1;
+						background: #1E1E1B;
+						border-radius: 50%;
+						height: 200%;
+						width: 150%;
+						top: 100%;
+						left: -150%;
+						transition: all 0.3s ease-in-out;
+						box-shadow: inset 0 0 0 1000px #1E1E1B;
+						background-clip: padding-box;
+					}
+
+					&:hover {
+						color: #fec72e;
+
+						&::before {
+							top: -40%;
+							left: -30%;
+							color: #1E1E1B;
+						}
+					}
+				}
+				.fryer-tips {		
+					&__slide1 {
+						text-align: center;
+
+						.main-photo {
+							transform: rotate(-11deg);
+
+							@include for-size ($row1560) {
+								width: 550px;
+							}	
+
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+
+							@include for-size ($sm) {
+								width: 310px;
+							}
+						}
+
+						.slider-navigation {
+							position: absolute;
+							top: 85%;
+							left: 54%;
+							transform: rotate(169deg);
+
+							@include for-size ($sm) {
+								left: 60%;
+							}
+						}
+						
+						.text1 {
+							position: absolute;
+							top: 70%;
+							left: 22%;
+							z-index: 1;
+							font-family: $font3;
+
+							@include for-size ($row1560) {
+								left: 20%;
+								font-size: 45px;
+							}
+
+							@include for-size ($row1280) {
+								left: 15%;
+								font-size: 40px;
+							}
+
+							@include for-size($sm) {
+								top: -20%;
+								left: 15%;
+								font-size: 30px;
+								line-height: 30px;
+							}
+						}
+						
+						.fat-arrow {
+							position: absolute;
+							top: 77%;
+							left: 35%;
+							z-index: 1;
+							transform: rotate(-125deg);
+
+							@include for-size ($row1560) {
+								width: 90px;
+								left: 33%;
+							}
+
+							@include for-size ($row1280) {
+								width: 80px;
+							}
+
+							@include for-size ($sm) {
+								width: 50px;
+								top: 90%;
+								left: 70%;
+							}
+						}
+
+						.thin-arrow {
+							position: absolute;
+							top: 25%;
+							left: 60%;
+							z-index: 1;
+							transform: rotate(-115deg);
+
+							@include for-size ($row1560) {
+							width: 90px;
+							left: 63%;
+							}
+
+							@include for-size ($row1280) {
+								width: 80px;
+								top: 27%;
+							}
+
+							@include for-size ($sm) {
+								top: -15%;
+								left: 50%;
+								width: 50px;								
+								transform: rotate(200deg);
+							}
+						}
+
+						.text2 {
+							position: absolute;
+							top: 15%;
+							left: 59%;
+							font-family: $font3;
+
+							@include for-size ($row1560) {
+								top: 12%;
+								font-size: 45px;
+							}
+
+							@include for-size ($row1280) {
+								top: 11%;
+								left: 60%;
+								font-size: 40px;
+							}
+
+							@include for-size ($sm) {
+								top: 105%;
+								left: 10%;
+								font-size: 30px;
+								line-height: 30px;
+							}
+						}					
+						
+						.pot-potato {
+							position: absolute;
+							top: 50%;
+							left: 62%;
+
+							@include for-size ($row1280) {
+								left: 60%;
+								width: 240px;
+							}
+
+							@include for-size ($sm) {
+								top: 77%;
+								left: 8%;
+								width: 120px;
+							}
+						}
+					}
+			
+					&__slide2 {
+						text-align: center;
+
+						.main-photo {
+							transform: rotate(11deg);
+
+							@include for-size ($row1560) {
+								width: 550px;
+							}
+						
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+						
+							@include for-size ($sm) {
+								width: 310px;
+							}
+						}
+
+						.bg-main-photo1 {
+							position: absolute;
+							transform: rotate(-11deg);
+							
+							@include for-size ($row1560) {
+								width: 550px;
+							}
+						
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+						
+							@include for-size ($sm) {
+								width: 310px;
+							}
+						}
+
+						.slider-navigation {
+							position: absolute;
+							top: 85%;
+							left: 47%;
+							transform: rotate(191deg);
+							
+							@include for-size ($sm) {
+								left: 44%;
+							}
+						}
+
+						.text1 {
+							position: absolute;
+							top: 32%;
+							left: 68%;
+							font-family: $font3;
+
+							@include for-size ($row1560) {
+								left: 71%;
+								font-size: 45px;
+							}							
+
+							@include for-size ($sm) {
+								top: 110%;
+								left: 30%;
+								line-height: 30px;
+								font-size: 30px;
+							}
+						}
+					
+						.fat-arrow {
+							position: absolute;
+							top: 20%;
+							left: 63%;
+							z-index: 1;
+							transform: rotate(61deg);
+							
+							img {
+								@include for-size ($sm) {
+									transform: scaleX(-1);
+								}								
+							}
+
+							@include for-size ($row1560) {
+								left: 65%;
+								width: 90px;
+							}
+
+							@include for-size ($row1280) {
+								left: 66%;
+								width: 80px;
+							}
+
+							@include for-size ($sm) {
+								top: 103%;								
+								left: 15%;
+								width: 50px;
+								transform: rotate(165deg);
+							}
+						}
+					}
+			
+					&__slide3 {
+						text-align: center;						
+
+						.main-photo {
+							transform: rotate(355deg);
+
+							@include for-size ($row1560) {
+								width: 550px;
+							}
+							
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+						
+							@include for-size ($sm) {
+								width: 310px;
+							}
+						}
+
+						.bg-main-photo1 {
+							position: absolute;
+							transform: rotate(-11deg);
+
+							@include for-size ($row1560) {
+								width: 550px;
+							}
+						
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+						
+							@include for-size ($sm) {
+								width: 310px;
+							}
+						}
+
+						.bg-main-photo2 {
+							position: absolute;
+							transform: rotate(11deg);
+
+							@include for-size ($row1560) {
+								width: 550px;
+							}
+						
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+						
+							@include for-size ($sm) {
+								width: 310px;
+							}
+						}
+
+						.slider-navigation {
+							position: absolute;
+							top: 86%;
+							left: 52%;	
+							transform: rotate(173deg);
+
+							@include for-size ($sm) {
+								left: 55%;
+							}
+						}
+
+						.text1 {
+							position: absolute;
+							top: 65%;
+							left: 20%;
+							z-index: 1;
+							font-family: $font3;
+							
+							@include for-size ($row1560) {
+								font-size: 45px;
+							}
+
+							@include for-size ($row1280) {
+								left: 15%;
+								font-size: 40px;
+							}
+
+							@include for-size ($sm) {
+								top: -22%;
+								left: 5%;
+								font-size: 30px;
+								line-height: 30px;
+							}
+						}
+						
+						.thin-arrow {
+							position: absolute;
+							top: 15%;
+							left: 60%;
+							transform: rotate(239deg);
+
+							@include for-size ($row1560) {
+								top: 16%;
+								left: 63%;
+								width: 90px;
+							}
+
+							@include for-size ($row1280) {
+								width: 80px;
+							}
+
+							@include for-size ($sm) {
+								top: 100%;
+								width: 50px;
+								left: 15%;
+								transform: rotate(337deg);
+							}
+						}
+					
+						.text2 {
+							position: absolute;
+							top: 10%;
+							left: 62%;
+							font-family: $font3;
+
+							@include for-size ($row1560) {
+								font-size: 45px;
+							}
+
+							@include for-size ($row1280) {
+								top: 7%;								
+							}
+
+							@include for-size ($sm) {
+								top: 105%;
+								left: 25%;
+								font-size: 30px;
+								line-height: 30px;
+							}
+						}
+					
+						.fat-arrow {
+							position: absolute;
+							top: 50%;
+							left: 30%;
+							z-index: 1;
+							transform: rotate(-75deg);
+
+							@include for-size ($row1560) {
+								left: 28%;
+								width: 90px;
+							}
+
+							@include for-size ($row1280) {
+								left: 25%;
+								width: 80px;
+							}
+
+							@include for-size ($sm) {
+								width: 50px;
+								top: -20%;
+								left: 83%;
+								transform: rotate(0deg);
+							}
+							
+						}
+
+						.vibro-pot {
+							position: absolute;
+							top: 30%;
+							left: 70%;
+
+							@include for-size ($row1280) {
+								width: 210px;
+							}
+
+							@include for-size ($sm) {
+								top: -13%;
+								left: 45%;
+								width: 140px;
+							}
+						}
+					}
+			
+					&__slide4 {
+						text-align: center;
+
+						.main-photo {
+							transform: rotate(345deg);
+
+							@include for-size ($row1560) {
+								width: 550px;
+							}
+						
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+						
+							@include for-size ($sm) {
+								width: 310px;
+							}
+						}
+
+						.bg-main-photo1 {
+							position: absolute;
+							transform: rotate(-11deg);
+							@include for-size ($row1560) {
+								width: 550px;
+							}
+
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+
+							@include for-size ($sm) {
+								width: 310px;
+							}
+						}
+
+						.bg-main-photo2 {
+							position: absolute;
+							transform: rotate(11deg);
+
+							@include for-size ($row1560) {
+								width: 550px;
+							}
+						
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+						
+							@include for-size ($sm) {
+								width: 310px;
+							}	
+						}
+
+						.bg-main-photo3 {
+							position: absolute;
+							transform: rotate(355deg);
+
+							@include for-size ($row1560) {
+								width: 550px;
+							}
+						
+							@include for-size ($row1280) {
+								width: 450px;
+							}
+						
+							@include for-size ($sm) {
+								width: 310px;
+							}
+						}
+
+						.slider-navigation {
+							position: absolute;
+							top: 85%;
+							left: 54%;
+							transform: rotate(165deg);
+						}
+
+						.text1 {
+							position: absolute;
+							top: 20%;
+							left: 67%;
+							font-family: $font3;
+
+							@include for-size ($row1560) {
+								left: 70%;
+								font-size: 45px;
+								line-height: 45px;
+							}
+
+							@include for-size  ($row1280) {
+								font-size: 40px;
+								line-height: 40px;
+							}
+
+							@include for-size ($sm) {
+								top: -22%;
+								left: 5%;
+								font-size: 30px;
+								line-height: 30px;
+							}
+						}
+						
+						.thin-arrow {
+							position: absolute;
+							top: 50%;
+							left: 65%;
+							transform: rotate(265deg);
+
+							@include for-size ($row1560) {
+								width: 90px;
+							}
+
+							@include for-size ($row1280) {
+								left: 64%;
+								width: 80px;
+							}
+
+							@include for-size ($sm) {
+								top: -10%;
+								left: 80%;
+								width: 50px;
+								transform: rotate(180deg);
+							}
+						}
+					
+						.text2 {
+							position: absolute;
+							top: 58%;
+							left: 73%;
+							font-family: $font3;
+
+							@include for-size ($row1560) {
+								font-size: 45px;
+								line-height: 45px;
+							}
+						
+							@include for-size ($row1280) {
+								font-size: 40px;
+								line-height: 40px;
+							}
+							
+							@include for-size ($sm) {
+								top: 110%;
+								left: 5%;
+								line-height: 30px;
+								font-size: 30px;
+							}
+						}
+					
+						.fat-arrow {
+							position: absolute;
+							top: 10%;
+							left: 65%;
+							transform: rotate(90deg);
+
+							@include for-size ($row1560) {
+								width: 90px;
+							}
+
+							@include for-size ($row1280) {
+								left: 63%;
+								width: 80px;
+							}
+
+							@include for-size ($sm) {
+								top: 92%;
+								left: 12%;
+								width: 50px;
+								transform: rotate(190deg);
+								img {
+									transform: scaleX(-1);
+								}
+							}
+						}
+
+						.pot {
+							position: absolute;
+							top: 65%;
+							left: 15%;
+
+							@include for-size ($row1280) {
+								width: 210px;
+							}
+
+							@include for-size ($sm) {
+								top: 97%;
+								left: 60%;
+								width: 150px;
+							}
+						}
+					}
+				
+				}
+			}
+		}
+
+		
+		.fryer-tips-cloud {
+			position: absolute;
+			right: 0;
+			bottom: -1px;
+
+			.arrow {
+				position: absolute;
+				right: 10%;
+				transform: rotate(-151deg);
+
+				@include for-size ($sm) {
+					width: 60px;
+					top: -15%;
+					right: 15%;
+
+				}
+			}
+
+			p {
+				position: absolute;
+				top: 50%;
+				right: 10%;
+				font-family: $font3;
+				font-size: 50px;
+				font-weight: normal;
+				line-height: 50px;
+				font-style: normal;
+				text-align: center;
+				color: #fff9dc;
+
+				@include for-size ($sm) {
+					top: 40%;
+					font-size: 30px;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+}
+
+.air-fry-slide {
+	&__section {
+		position: relative;
+		padding: 80px 0px;
+		background-color: #1E1E1B;
+		z-index: 1;
+
+		@include for-size ($row) {			
+			padding: 30px 0px 60px;
+		}
+
+		.air-fry-slide {
+			text-align: center;
+
+			figure {
+				background-image: url("../img/air-fry-slide-bg-card.png");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;				
+			}
+
+			img {
+				width: 250px;
+				height: 350px;
+				transition: all 0.4s;
+
+				&:hover {
+						transform: rotate(5deg);						
+					}
+
+				@include for-size($row) {
+					width: 170px;
+					height: 240px;
+				}
+			}
+
+			p {
+				display: block;
+				margin: 0 auto;
+				max-width: 370px;
+				font-family: $font4;
+				font-size: 32px;
+				font-weight: 900;
+				line-height: 37px;
+				font-style: normal;
+				text-align: center;
+				color: #fff9dc;
+
+				@include for-size ($row) {
+					font-size: 20px;
+					line-height: 24px;
+				}
+			}
+
+			a {
+				font-weight: bold;
+			}	
+		}	
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			width: 56px;
+			height: 56px;
+			top: 40%;
+			border-radius: 50%;
+			background-color: $a;
+			color: $text;
+			margin: 0;
+			border: none;
+			z-index: 1;
+			overflow: hidden;			
+
+			&::after {
+				font-size: 26px;
+				font-weight: 700;			
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				background: #FFF9DC;
+				border-radius: 50%;
+				height: 200%;
+				width: 150%;
+				top: 100%;
+				left: -150%;
+				transition: all 0.3s ease-in-out;
+				box-shadow: inset 0 0 0 1000px #FFF9DC;
+				background-clip: padding-box;
+			}
+
+			&:hover {
+				color: #1E1E1B;
+
+				&::before {
+					top: -40%;
+					left: -30%;
+					color: #1E1E1B;
+				}
+			}
+
+			@include for-size ($sm) {
+				display: none;
+			}
+			
+		}
+		.swiper-button-next {
+			right: 10%
+		}
+		.swiper-button-prev {
+			left: 10%;
+		}
+	}
+}
+
+
+.FamilyDinner {
+	&__section {
+		@include flexbox();
+			@include align-items(stretch);
+			@include justify-content(space-between);
+			@include flex-wrap(wrap);
+			@include flex-direction(row);
+			position: relative;
+			overflow: hidden;
+		
+			.FamilyDinner-left {
+				@include flex-basis(71%);
+				max-width: 71%;
+				position: relative;
+		
+				@include for-size(1380px) {
+					@include flex-basis(64%);
+					max-width: 64%;
+				}
+		
+				@include for-size(1024px) {
+					@include flex-basis(100%);
+					max-width: 100%;
+				}
+		
+				.FamilyDinner-image {
+					aspect-ratio: 16 / 9;
+		
+					@include for-size(1024px) {
+						aspect-ratio: auto;
+						height: 550px;
+					}
+		
+					@include for-size(576px) {
+						height: 380px;
+						width: 100%;
+						aspect-ratio: 16 / 13;
+					}
+		
+					img  {
+						position: relative;
+						height: 100%;
+						object-fit: cover;
+
+						@include for-size(1024px) {
+							width: 100%;
+						}	
+
+						@include for-size(576px) {
+							object-fit: cover;
+						}
+					}					
+				}
+			}
+		
+			.FamilyDinner-right {
+				@include flex-basis(29%);
+				max-width: 29%;
+				position: relative;
+				z-index: 3;
+				@include flexbox();
+				@include align-items(center);
+				
+		
+				.big-chips {
+					position: absolute;
+					bottom: 55%;
+					right: 40%;
+					width: 100%;
+					height: 750px;
+					z-index: 2;
+		
+					@include for-size(1024px) {
+						bottom: -70%;
+						right: -60%;
+						width: 1000px;
+						height: 300px;
+						z-index: 2;
+					}
+		
+					@include for-size(576px) {
+						bottom: 40%;
+						right: -15%;
+						width: 716px;
+						height: 450px;
+						z-index: 2;
+					}
+		
+					&:after {
+						content: url('../img/air-fry-familyDinner-cloud.png');
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						transform: rotate(22deg);
+
+						@include for-size(1024px) {
+							transform: rotate(90deg);
+						}
+		
+						@include for-size(576px) {
+							content: url('../img/air-fry-familyDinner-cloud-mobile.png');
+							transform: rotate(0deg);
+						}
+					}
+				}
+		
+				.small-chips {
+					position: absolute;
+					bottom: -13%;
+					right: -50%;
+					width: 100%;
+					height: 750px;
+					z-index: 3;
+		
+					@include for-size(1024px) {
+						bottom: -65%;
+						right: -15%;
+						width: 85%;
+						height: 350px;
+					}
+		
+					@include for-size(576px) {
+						bottom: -85%;
+						right: -10%;
+						width: 400px;
+						height: 450px;
+					}
+		
+					&:before {
+						content: url('../img/air-fry-familyDinner-cloud-slice.png');
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+		
+						@include for-size(576px) {
+							content: url('../img/air-fry-familyDinner-cloud-slice-mobile.png');
+						}
+					}
+				}
+		
+				@include for-size(1380px) {
+					@include flex-basis(35%);
+					max-width: 35%;
+				}
+		
+				@include for-size(1024px) {
+					@include flex-basis(100%);
+					max-width: 100%;
+					@include justify-content(center);
+					padding-bottom: 80px;
+				}
+		
+				.title {
+					text-align: center;
+					position: relative;
+					z-index: 5;					
+					left: -55%;
+		
+					@include for-size(1024px) {
+						left: auto;
+						top: -5%;
+					}
+		
+					h2 {
+						line-height: 0.8;	
+						font-style: normal;
+						font-family: $font3;
+						font-size: 170px;
+						margin-bottom: -25px;
+						color: $b;
+						
+
+						@include for-size(1380px) {
+							font-size: 100px;
+							margin-bottom: -20px;
+						}		
+										
+					}
+		
+					p {
+						font-size: 75px;
+						font-weight: 400;
+						line-height: 75px;
+						font-family: $font3;
+						
+		
+						@include for-size(1024px) {
+							font-size: 22px;
+							line-height: 33px;
+						}
+		
+						@include for-size(768px) {
+							font-size: 36px;
+							line-height: 33px;
+							font-family: $font3;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+

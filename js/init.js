@@ -17,7 +17,7 @@ $.fn.clickOff = function (callback, selfDestroy) {
 };
 $(document).ready(function () {
 	('use strict');
-	
+
 	//=====Mobile Menu======
 	$('.menu-burger').on('click', function () {
 		$(this).toggleClass('open');
@@ -62,15 +62,6 @@ $(document).ready(function () {
 	});
 	//====End Mobile Menu=====
 
-	//=====Home PAGE TOP BANNER======
-	var hpTopBannerSwiper = new Swiper('.hp-top-banner__section .mySwiper', {
-		slidesPerView: 1,
-		pagination: {
-			el: '.hp-top-banner__section .swiper-pagination',
-			clickable: true,
-		},
-	});
-	//=====END Home PAGE TOP BANNER======
 	//=====SINGLE RECIPE BANNER======
 	var singleRecipeSwiper = new Swiper('.recipe-detail__banner .mySwiper', {
 		slidesPerView: 1,
@@ -94,8 +85,10 @@ $(document).ready(function () {
 		speed: 1000,
 		centeredSlides: true,
 		slidesPerView: 'auto',
-		autoplay: {
-			delay: 4000,
+		grabCursor: true,
+		mousewheel: true,
+		keyboard: {
+			enabled: true,
 		},
 		breakpoints: {
 			300: {
@@ -161,17 +154,7 @@ $(document).ready(function () {
 		},
 	});
 	//=====END OUR REVIPES SLIDER======
-	//=====Home FRY SCHOOL SLIDER======
-	var FrySchoolSwiper = new Swiper('.hp-fry-school__section .mySwiper', {
-		slidesPerView: 1,
-		spaceBetween: 20,
-		speed: 1000,
-		navigation: {
-			nextEl: '.hp-fry-school__section .swiper-button-next',
-			prevEl: '.hp-fry-school__section .swiper-button-prev',
-		},
-	});
-	//=====END FRY SCHOOL SLIDER======
+	
 	//=====ABOUT GALLERY SLIDER======
 	var aboutGallerySlider = new Swiper('.about-gallery__slider .mySwiper', {
 		slidesPerView: 1,
@@ -216,6 +199,42 @@ $(document).ready(function () {
 		},
 	});
 	//=====END YOU MAY ALSO LIKE SLIDER======
+
+	//=====AIR FRY RECOMMENDED SLIDER========
+	var AFRPSwiper = new Swiper('.air-fry-slide-swiper', {
+        slidesPerView: 1,
+		spaceBetween: 20,
+		speed: 600,
+        navigation: {
+            nextEl: '.air-fry-slide-swiper .swiper-button-next',
+            prevEl: '.air-fry-slide-swiper .swiper-button-prev',
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1.4,
+				spaceBetween: 50,
+				centeredSlides: true,
+				initialSlide: 1,
+				loop: false,				
+			},
+			768: {
+				slidesPerView: 3,
+				centeredSlides: true,
+				initialSlide: 0,
+			},
+			1100: {
+				slidesPerView: 3.9,
+				spaceBetween: 30,
+				centeredSlides: true,
+				loop: true,
+				nitialSlide: 0,
+			},
+		},
+    });
+	//=====END AIR FRY RECOMMENDED SLIDER========
+
+	
+
 	//=====PRODUCT DETAILS ACCORDION======
 	$('.product-details-acc .item .acc-title').click(function () {
 		var title = $(this),
@@ -231,6 +250,7 @@ $(document).ready(function () {
 		return false;
 	});
 	//=====END PRODUCT DETAILS ACCORDION======
+	
 	//=====FAQ ACCORDION======
 	$('.faq__section .faq__acc .item .acc-title').click(function () {
 		var title = $(this),

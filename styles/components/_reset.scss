@@ -47,7 +47,7 @@ mark {
 input,
 textarea,
 select {
-	outline: 0 none;
+	// outline: 0 none;
 	padding: 0 10px;
 	@include transition(all, 0.2s, ease-in-out);
 }
@@ -211,11 +211,11 @@ p {
 }
 a {
 	color: $a;
-	outline: 0;
+	// outline: 0;
 	text-decoration: none;
 	@include transition();
 	&:hover {
-		outline: 0;
+		// outline: 0;
 	}
 }
 img {

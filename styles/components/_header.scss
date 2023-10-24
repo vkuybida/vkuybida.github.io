@@ -18,6 +18,10 @@ header {
 	background-repeat: no-repeat;
 	position: relative;
 	z-index: 100;
+	height: 100%;
+	@include for-size(1550px){
+		padding: 10px 0 20px;
+	}
 	&:after {
 		content: '';
 		background-color: rgba(0, 0, 0, 0.6);
@@ -32,8 +36,11 @@ header {
 		z-index: -1;
 		@include transition();
 	}
+	.row1480 {
+		max-width: 90%;
+	}
 	@include for-size(1140px) {
-		padding: 10px 20px 25px;
+		padding: 10px 0 25px;
 	}
 	.header-wrapper {
 		display: grid;
@@ -41,6 +48,7 @@ header {
 		align-items: flex-end;
 		grid-gap: 50px;
 		@include for-size(1250px) {
+			grid-template-columns: auto 220px 1fr;
 			grid-gap: 25px;
 		}
 		@include for-size(1140px) {
@@ -71,10 +79,7 @@ header {
 							padding: 17px 20px;
 							border-radius: 50px;
 							text-decoration: none;
-							@include for-size(1480px) {
-								font-size: 22px;
-							}
-							@include for-size(1250px) {
+							@include for-size(1550px) {
 								font-size: 20px;
 							}
 						}
@@ -96,11 +101,13 @@ header {
 								display: none;
 							}
 							> a {
-								em {
+								.sub-anchor {
 									display: inline-block;
 									font-size: 16px;
 									color: #000;
 									margin-top: 2px;
+									border: none;
+									background-color: transparent;
 								}
 							}
 						}
@@ -154,6 +161,7 @@ header {
 											.thumb {
 												aspect-ratio: 2 / 1;
 												position: relative;
+												@include transition();
 												&:after {
 													content: url('../img/sub-menu-item-bg.png');
 													position: absolute;
@@ -173,8 +181,17 @@ header {
 												font-weight: 700;
 												font-family: $font;
 												color: $text;
+												@include transition();
 												@include for-size(1380px) {
 													font-size: 20px;
+												}
+											}
+											&:hover {
+												.thumb {
+													@include transform(rotate(5deg));
+												}
+												.prod-name {
+													color: $a;
 												}
 											}
 										}
@@ -202,6 +219,7 @@ header {
 										-webkit-mask-image: url('../img/mask-1.svg');
 										-webkit-mask-size: cover;
 										mask-image: url('../img/mask-1.svg');
+										@include transition();
 										img {
 											max-width: 100%;
 											width: 100%;
@@ -216,8 +234,17 @@ header {
 										font-weight: 700;
 										font-family: $font;
 										color: $text;
+										@include transition();
 										@include for-size(1380px) {
 											font-size: 20px;
+										}
+									}
+									&:hover {
+										.thumb {
+											@include transform(rotate(5deg));
+										}
+										.prod-name {
+											color: $a;
 										}
 									}
 								}
@@ -241,12 +268,19 @@ header {
 			position: relative;
 			z-index: 10;
 			display: block;
+			@include for-size(1550px){
+				max-width: 220px;
+				margin: 0 auto;
+			}
 			img {
 				max-width: 100%;
 				object-fit: cover;
 				margin-bottom: -65px;
-				@include for-size(1140px) {
-					margin-bottom: -50px;
+				@include for-size(1550px){
+					margin-bottom: -45px;
+				}
+				@include for-size(1150px){
+					margin-bottom: -40px;
 				}
 			}
 		}
@@ -270,6 +304,10 @@ header {
 					font-family: $font4;
 					padding: 15px 35px;
 					transition: color .4s ease-in-out;
+					@include for-size(1550px){
+						font-size: 20px;
+						padding: 15px 30px;
+					}
 				}
 				.search-icon {
 					display: inline-block;
@@ -285,6 +323,9 @@ header {
 				}
 				&.top {
 					margin-bottom: 10px;
+					@include for-size(1550px){
+						margin-bottom: 5px;
+					}
 					a,
 					span {
 						font-family: $font4;
@@ -292,10 +333,13 @@ header {
 						color: $text;
 						font-size: 21px;
 						text-decoration: none;
+						@include for-size(1550px){
+							font-size: 17px;
+						}
 					}
 					a {
 						&:hover {
-							color: $a;
+							color: $b;
 						}
 					}
 				}
