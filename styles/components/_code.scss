@@ -4503,7 +4503,7 @@
 	&__section{
 		position: relative;		
 		
-		padding: 500px 0px;
+		min-height:86.5vh;
 		background-image: url("../img/medleys-hat-bg.png");
 		background-position: center;
 		background-repeat: no-repeat;
@@ -4609,7 +4609,7 @@
 .medleys-products {
 	&__section {
 		position: relative;
-		background-color: rgb(91, 16, 16);
+		background-color: #570610;
 
 		.products-slice {
 			position: absolute;
@@ -4617,7 +4617,7 @@
 			left: -15%;
 
 			@include for-size ($sm) {
-				top: 85%;
+				top: 90%;
 				left: -40%;
 			}
 		}
@@ -4690,17 +4690,18 @@
 
 		.products-list {
 			position: relative;
-			margin-top: 50px;
-			padding-bottom: 240px;
+			margin-top: -20px;
+			padding-bottom: 190px;
 			display: flex;
 			justify-content: center;
 			z-index: 1;
 
 			@include for-size ($sm) {
+				margin-top: 10px;
+				padding-bottom: 120px;
 				flex-direction: column;
-				align-items: center;
+				align-items: center;				
 			}
-	
 		}	
 
 		.products-list-item {
@@ -4765,10 +4766,12 @@
 			width: 325px;
 			margin: 0 auto;
 			display: flex;
-			justify-content: space-between;
+			justify-content: center;
+			gap: 10px;
 			
-			@include for-size ($sm) {
-				margin-bottom: 50px;
+			@include for-size ($sm) {	
+				margin-bottom: 50px;			
+				gap: 5px;				
 			}
 			
 			li {			
@@ -4777,7 +4780,7 @@
 				.learn {
 					position: relative;
 					display: inline-block;
-					padding: 15px 17px 15px;
+					padding: 15px 17px;
 					font-family: $font;
 					font-size: 22px;
 					font-weight: bold;
@@ -4790,6 +4793,12 @@
 					z-index: 1;
 					overflow: hidden;
 					cursor: pointer;
+
+					@include for-size ($sm) {
+						padding: 10px 15px;
+						font-size: 18px;
+					}
+
 					&::before {
 						content: "";
 						position: absolute;
@@ -4831,6 +4840,11 @@
 					z-index: 1;
 					overflow: hidden;
 					cursor: pointer;
+
+					@include for-size ($sm) {
+						padding: 10px 17px;
+						font-size: 18px;
+					}
 				
 					&::before {
 						content: "";
@@ -5013,7 +5027,7 @@
 .air-fry-hat {
 	&__section {
 		position: relative;
-		min-height: 1000px;
+		min-height: 88vh;
 
 		background-image: url("../img/air-fry-hat-bg.png");
 		background-position: center;
@@ -5053,7 +5067,7 @@
 
 		h1 {
 			position: absolute;
-			top: 40%;
+			top: 35%;
 			right: 5%;
 			display: flex;
 			flex-direction: column;
@@ -5141,6 +5155,10 @@
 					margin-right: 20px;
 				}
 
+				@include for-size($sm) {
+					font-size: 40px;
+				}
+
 				@include for-size($xs) {
 					font-size: 30px;
 
@@ -5148,8 +5166,7 @@
 						width: 70px;
 						margin-right: 10px;
 					}
-
-				}				
+				}		
 
 				.font-weight {					
 					font-weight: normal;
@@ -5166,13 +5183,14 @@
 	&__section {
 		position: relative;
 
-		background-image: url("../img/fryer-tips-bg.png");
+		background-image: url("../img/airfryer/orange-background.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 
 		.title {
-			position: absolute;
+			display: none;
+			/*position: absolute;
 			top: 30%;
 			left: 10%;			
 
@@ -5184,21 +5202,21 @@
 				top: 27%;
 				left: 1%;
 			}
-
+			*/
 			@include for-size ($sm) {
 				position: relative;
-				top: 0;
-				left: 0;
-				margin-bottom: 100px;
+				padding: 40px 0 0 0;
+				display: block;
 			}
 
 			h1 {
 				font-family: $font3;
 				font-size: 132px;
-				font-weight: normal;
+				font-weight: bold;
 				font-style: normal;
 				text-align: center;
 				color: #1e1e1b;
+				margin: 0;
 
 				@include for-size ($row1560) {
 					font-size: 120px;
@@ -5209,37 +5227,111 @@
 				}
 
 				@include for-size ($sm) {
-					font-size: 60px;
+					font-size: 72px;
 				}
-				
+			   
 			}			
 		}
 
 		.fryer-tips_slider {
-			padding: 50px 0px 0px;
-			min-height: 1100px;			
+			padding: 50px 0px;
+			position: relative;
+			
+			@include for-size ($sm) {
+				padding: 0;
+			}
 
-			.fryer-tips-slide-swiper {		
-				@include for-size ($sm) {
-					padding: 0px 0px 110px;
-				}
+			.fryer-tips-slide-swiper {	
 				
-				p {
-					font-family: "McCain Wedge Brush";
-					font-size: 50px;
-					font-weight: normal;
-					line-height: 50px;
-					font-style: normal;
-					text-align: center;
-					color: #1e1e1b;
+
+				.swiper-slide-active {
+					.slider-navigation {
+						background: #570610;
+					}
 				}
+
+				.slide-desktop {
+					position: relative;
+					left: 50%;
+					transform: translate(-50%, 0);
+					zoom: 90%;
+
+					@include for-size ($sm) {
+						display: none;
+					}
+				}
+
+				.slide-mobile {
+					display: none;
+
+					@include for-size ($sm) {
+						display: block;
+						position: relative;
+						left: 50%;
+						transform: translate(-50%, 0);
+					}
+				}
+			
+				.fryer-tips-slider-navigation1 {
+					position: absolute;
+					top: 84.5%;
+					left: 53.5%;
+					transform: rotate(170deg);
+					z-index: 1;
+
+					@include for-size ($sm) {
+						top: 67%;
+						left: 59%;
+					}
+				}
+
+				.fryer-tips-slider-navigation2 {
+					position: absolute;
+					top: 84%;
+					left: 48%;
+					transform: rotate(197deg);
+					z-index: 1;
+
+					@include for-size ($sm) {
+						top: 61%;
+						left: 44%;
+						transform: rotate(194deg);
+					}
+				}
+
+				.fryer-tips-slider-navigation3 {
+					position: absolute;
+					top: 84.5%;
+					left: 51.5%;
+					transform: rotate(177deg);
+					z-index: 1;
+
+					@include for-size ($sm) {
+						top: 70.5%;
+						left: 53%;
+						transform: rotate(176deg);
+					}
+				}
+			
+				.fryer-tips-slider-navigation4 {
+					position: absolute;
+					top: 84%;
+					left: 56%;
+					transform: rotate(164deg);
+					z-index: 1;
+
+					@include for-size($sm) {
+						top: 67.5%;
+						left: 60%;
+						transform: rotate(161deg);
+					}
+				}				
 
 				.swiper-button-prev,
 				.swiper-button-next {
 					display: flex;
-					gap: 30px;
-					height: 63px;
-					width: 63px;
+					height: 50px;
+					width: 50px;
 					border-radius: 50%;
 					background-color: #fec72e;
 					color: #1e1e1b;
@@ -5250,11 +5342,15 @@
 					&::after {
 						font-size: 26px;
 						font-weight: 700;
+
+						@include for-size ($sm) {
+							font-size: 20px;
+						}
 					}
 
 					@include for-size ($sm) {
-						height: 40px;
-						width: 40px;
+						height: 33px;
+						width: 33px;
 					}
 
 					&::before {
@@ -5282,628 +5378,19 @@
 						}
 					}
 				}
-				.fryer-tips {		
-					&__slide1 {
-						text-align: center;
-
-						.main-photo {
-							transform: rotate(-11deg);
-
-							@include for-size ($row1560) {
-								width: 550px;
-							}	
-
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-
-							@include for-size ($sm) {
-								width: 310px;
-							}
-						}
-
-						.slider-navigation {
-							position: absolute;
-							top: 85%;
-							left: 54%;
-							transform: rotate(169deg);
-
-							@include for-size ($sm) {
-								left: 60%;
-							}
-						}
-						
-						.text1 {
-							position: absolute;
-							top: 70%;
-							left: 22%;
-							z-index: 1;
-							font-family: $font3;
-
-							@include for-size ($row1560) {
-								left: 20%;
-								font-size: 45px;
-							}
-
-							@include for-size ($row1280) {
-								left: 15%;
-								font-size: 40px;
-							}
-
-							@include for-size($sm) {
-								top: -20%;
-								left: 15%;
-								font-size: 30px;
-								line-height: 30px;
-							}
-						}
-						
-						.fat-arrow {
-							position: absolute;
-							top: 77%;
-							left: 35%;
-							z-index: 1;
-							transform: rotate(-125deg);
-
-							@include for-size ($row1560) {
-								width: 90px;
-								left: 33%;
-							}
-
-							@include for-size ($row1280) {
-								width: 80px;
-							}
-
-							@include for-size ($sm) {
-								width: 50px;
-								top: 90%;
-								left: 70%;
-							}
-						}
-
-						.thin-arrow {
-							position: absolute;
-							top: 25%;
-							left: 60%;
-							z-index: 1;
-							transform: rotate(-115deg);
-
-							@include for-size ($row1560) {
-							width: 90px;
-							left: 63%;
-							}
-
-							@include for-size ($row1280) {
-								width: 80px;
-								top: 27%;
-							}
-
-							@include for-size ($sm) {
-								top: -15%;
-								left: 50%;
-								width: 50px;								
-								transform: rotate(200deg);
-							}
-						}
-
-						.text2 {
-							position: absolute;
-							top: 15%;
-							left: 59%;
-							font-family: $font3;
-
-							@include for-size ($row1560) {
-								top: 12%;
-								font-size: 45px;
-							}
-
-							@include for-size ($row1280) {
-								top: 11%;
-								left: 60%;
-								font-size: 40px;
-							}
-
-							@include for-size ($sm) {
-								top: 105%;
-								left: 10%;
-								font-size: 30px;
-								line-height: 30px;
-							}
-						}					
-						
-						.pot-potato {
-							position: absolute;
-							top: 50%;
-							left: 62%;
-
-							@include for-size ($row1280) {
-								left: 60%;
-								width: 240px;
-							}
-
-							@include for-size ($sm) {
-								top: 77%;
-								left: 8%;
-								width: 120px;
-							}
-						}
-					}
-			
-					&__slide2 {
-						text-align: center;
-
-						.main-photo {
-							transform: rotate(11deg);
-
-							@include for-size ($row1560) {
-								width: 550px;
-							}
-						
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-						
-							@include for-size ($sm) {
-								width: 310px;
-							}
-						}
-
-						.bg-main-photo1 {
-							position: absolute;
-							transform: rotate(-11deg);
-							
-							@include for-size ($row1560) {
-								width: 550px;
-							}
-						
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-						
-							@include for-size ($sm) {
-								width: 310px;
-							}
-						}
-
-						.slider-navigation {
-							position: absolute;
-							top: 85%;
-							left: 47%;
-							transform: rotate(191deg);
-							
-							@include for-size ($sm) {
-								left: 44%;
-							}
-						}
-
-						.text1 {
-							position: absolute;
-							top: 32%;
-							left: 68%;
-							font-family: $font3;
-
-							@include for-size ($row1560) {
-								left: 71%;
-								font-size: 45px;
-							}							
-
-							@include for-size ($sm) {
-								top: 110%;
-								left: 30%;
-								line-height: 30px;
-								font-size: 30px;
-							}
-						}
-					
-						.fat-arrow {
-							position: absolute;
-							top: 20%;
-							left: 63%;
-							z-index: 1;
-							transform: rotate(61deg);
-							
-							img {
-								@include for-size ($sm) {
-									transform: scaleX(-1);
-								}								
-							}
-
-							@include for-size ($row1560) {
-								left: 65%;
-								width: 90px;
-							}
-
-							@include for-size ($row1280) {
-								left: 66%;
-								width: 80px;
-							}
-
-							@include for-size ($sm) {
-								top: 103%;								
-								left: 15%;
-								width: 50px;
-								transform: rotate(165deg);
-							}
-						}
-					}
-			
-					&__slide3 {
-						text-align: center;						
-
-						.main-photo {
-							transform: rotate(355deg);
-
-							@include for-size ($row1560) {
-								width: 550px;
-							}
-							
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-						
-							@include for-size ($sm) {
-								width: 310px;
-							}
-						}
-
-						.bg-main-photo1 {
-							position: absolute;
-							transform: rotate(-11deg);
-
-							@include for-size ($row1560) {
-								width: 550px;
-							}
-						
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-						
-							@include for-size ($sm) {
-								width: 310px;
-							}
-						}
-
-						.bg-main-photo2 {
-							position: absolute;
-							transform: rotate(11deg);
-
-							@include for-size ($row1560) {
-								width: 550px;
-							}
-						
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-						
-							@include for-size ($sm) {
-								width: 310px;
-							}
-						}
-
-						.slider-navigation {
-							position: absolute;
-							top: 86%;
-							left: 52%;	
-							transform: rotate(173deg);
-
-							@include for-size ($sm) {
-								left: 55%;
-							}
-						}
-
-						.text1 {
-							position: absolute;
-							top: 65%;
-							left: 20%;
-							z-index: 1;
-							font-family: $font3;
-							
-							@include for-size ($row1560) {
-								font-size: 45px;
-							}
-
-							@include for-size ($row1280) {
-								left: 15%;
-								font-size: 40px;
-							}
-
-							@include for-size ($sm) {
-								top: -22%;
-								left: 5%;
-								font-size: 30px;
-								line-height: 30px;
-							}
-						}
-						
-						.thin-arrow {
-							position: absolute;
-							top: 15%;
-							left: 60%;
-							transform: rotate(239deg);
-
-							@include for-size ($row1560) {
-								top: 16%;
-								left: 63%;
-								width: 90px;
-							}
-
-							@include for-size ($row1280) {
-								width: 80px;
-							}
-
-							@include for-size ($sm) {
-								top: 100%;
-								width: 50px;
-								left: 15%;
-								transform: rotate(337deg);
-							}
-						}
-					
-						.text2 {
-							position: absolute;
-							top: 10%;
-							left: 62%;
-							font-family: $font3;
-
-							@include for-size ($row1560) {
-								font-size: 45px;
-							}
-
-							@include for-size ($row1280) {
-								top: 7%;								
-							}
-
-							@include for-size ($sm) {
-								top: 105%;
-								left: 25%;
-								font-size: 30px;
-								line-height: 30px;
-							}
-						}
-					
-						.fat-arrow {
-							position: absolute;
-							top: 50%;
-							left: 30%;
-							z-index: 1;
-							transform: rotate(-75deg);
-
-							@include for-size ($row1560) {
-								left: 28%;
-								width: 90px;
-							}
-
-							@include for-size ($row1280) {
-								left: 25%;
-								width: 80px;
-							}
-
-							@include for-size ($sm) {
-								width: 50px;
-								top: -20%;
-								left: 83%;
-								transform: rotate(0deg);
-							}
-							
-						}
-
-						.vibro-pot {
-							position: absolute;
-							top: 30%;
-							left: 70%;
-
-							@include for-size ($row1280) {
-								width: 210px;
-							}
-
-							@include for-size ($sm) {
-								top: -13%;
-								left: 45%;
-								width: 140px;
-							}
-						}
-					}
-			
-					&__slide4 {
-						text-align: center;
-
-						.main-photo {
-							transform: rotate(345deg);
-
-							@include for-size ($row1560) {
-								width: 550px;
-							}
-						
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-						
-							@include for-size ($sm) {
-								width: 310px;
-							}
-						}
-
-						.bg-main-photo1 {
-							position: absolute;
-							transform: rotate(-11deg);
-							@include for-size ($row1560) {
-								width: 550px;
-							}
-
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-
-							@include for-size ($sm) {
-								width: 310px;
-							}
-						}
-
-						.bg-main-photo2 {
-							position: absolute;
-							transform: rotate(11deg);
-
-							@include for-size ($row1560) {
-								width: 550px;
-							}
-						
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-						
-							@include for-size ($sm) {
-								width: 310px;
-							}	
-						}
-
-						.bg-main-photo3 {
-							position: absolute;
-							transform: rotate(355deg);
-
-							@include for-size ($row1560) {
-								width: 550px;
-							}
-						
-							@include for-size ($row1280) {
-								width: 450px;
-							}
-						
-							@include for-size ($sm) {
-								width: 310px;
-							}
-						}
-
-						.slider-navigation {
-							position: absolute;
-							top: 85%;
-							left: 54%;
-							transform: rotate(165deg);
-						}
-
-						.text1 {
-							position: absolute;
-							top: 20%;
-							left: 67%;
-							font-family: $font3;
-
-							@include for-size ($row1560) {
-								left: 70%;
-								font-size: 45px;
-								line-height: 45px;
-							}
-
-							@include for-size  ($row1280) {
-								font-size: 40px;
-								line-height: 40px;
-							}
-
-							@include for-size ($sm) {
-								top: -22%;
-								left: 5%;
-								font-size: 30px;
-								line-height: 30px;
-							}
-						}
-						
-						.thin-arrow {
-							position: absolute;
-							top: 50%;
-							left: 65%;
-							transform: rotate(265deg);
-
-							@include for-size ($row1560) {
-								width: 90px;
-							}
-
-							@include for-size ($row1280) {
-								left: 64%;
-								width: 80px;
-							}
-
-							@include for-size ($sm) {
-								top: -10%;
-								left: 80%;
-								width: 50px;
-								transform: rotate(180deg);
-							}
-						}
-					
-						.text2 {
-							position: absolute;
-							top: 58%;
-							left: 73%;
-							font-family: $font3;
-
-							@include for-size ($row1560) {
-								font-size: 45px;
-								line-height: 45px;
-							}
-						
-							@include for-size ($row1280) {
-								font-size: 40px;
-								line-height: 40px;
-							}
-							
-							@include for-size ($sm) {
-								top: 110%;
-								left: 5%;
-								line-height: 30px;
-								font-size: 30px;
-							}
-						}
-					
-						.fat-arrow {
-							position: absolute;
-							top: 10%;
-							left: 65%;
-							transform: rotate(90deg);
-
-							@include for-size ($row1560) {
-								width: 90px;
-							}
-
-							@include for-size ($row1280) {
-								left: 63%;
-								width: 80px;
-							}
-
-							@include for-size ($sm) {
-								top: 92%;
-								left: 12%;
-								width: 50px;
-								transform: rotate(190deg);
-								img {
-									transform: scaleX(-1);
-								}
-							}
-						}
-
-						.pot {
-							position: absolute;
-							top: 65%;
-							left: 15%;
-
-							@include for-size ($row1280) {
-								width: 210px;
-							}
-
-							@include for-size ($sm) {
-								top: 97%;
-								left: 60%;
-								width: 150px;
-							}
-						}
-					}
-				
-				}
-			}
+			}			
 		}
-
 		
 		.fryer-tips-cloud {
 			position: absolute;
 			right: 0;
 			bottom: -1px;
+			max-width: 35%;
+
+			@include for-size ($sm) {
+				position: relative;
+				max-width: 100%;
+			}
 
 			.arrow {
 				position: absolute;
@@ -5925,15 +5412,18 @@
 				font-family: $font3;
 				font-size: 50px;
 				font-weight: normal;
-				line-height: 50px;
+				line-height: 1;
 				font-style: normal;
 				text-align: center;
 				color: #fff9dc;
 
+				@include for-size (1200px) {
+					font-size: 40px;
+				}
+
 				@include for-size ($sm) {
 					top: 40%;
 					font-size: 30px;
-					line-height: 30px;
 				}
 			}
 		}
@@ -5955,15 +5445,35 @@
 			text-align: center;
 
 			figure {
-				background-image: url("../img/air-fry-slide-bg-card.png");
 				background-position: center;
 				background-repeat: no-repeat;
-				background-size: cover;				
+				background-size: contain;	
+
+				@include for-size ($sm) {
+					background-size: contain;
+				}
+			}
+
+			.air-fry-slide-bg1 {
+				background-image: url("../img/airfryer/potato-bg-1.png");	
+			}
+
+			.air-fry-slide-bg2 {
+				background-image: url("../img/airfryer/potato-bg-2.png");
+			}
+
+			.air-fry-slide-bg3 {
+				background-image: url("../img/airfryer/potato-bg-3.png");
+			}
+
+			.air-fry-slide-bg4 {
+				background-image: url("../img/airfryer/potato-bg-4.png");
 			}
 
 			img {
 				width: 250px;
 				height: 350px;
+				padding: 10px;
 				transition: all 0.4s;
 
 				&:hover {
@@ -6081,9 +5591,15 @@
 					@include flex-basis(100%);
 					max-width: 100%;
 				}
+
+				@include for-size ($sm) {
+					background-image: url("../img/FamilyDiner.png");
+					background-position: left;
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
 		
 				.FamilyDinner-image {
-					aspect-ratio: 16 / 9;
 		
 					@include for-size(1024px) {
 						aspect-ratio: auto;
@@ -6105,7 +5621,8 @@
 							width: 100%;
 						}	
 
-						@include for-size(576px) {
+						@include for-size($sm) {
+							display: none;
 							object-fit: cover;
 						}
 					}					
@@ -6217,7 +5734,7 @@
 					text-align: center;
 					position: relative;
 					z-index: 5;					
-					left: -55%;
+					left: -40%;
 		
 					@include for-size(1024px) {
 						left: auto;
