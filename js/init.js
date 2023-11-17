@@ -202,8 +202,6 @@ $(document).ready(function () {
 
 	//=====AIR FRY RECOMMENDED SLIDER========
 	var AFRPSwiper = new Swiper('.air-fry-slide-swiper', {
-        slidesPerView: 1,
-		spaceBetween: 20,
 		speed: 600,
         navigation: {
             nextEl: '.air-fry-slide-swiper .swiper-button-next',
@@ -211,7 +209,7 @@ $(document).ready(function () {
 		},
 		breakpoints: {
 			320: {
-				slidesPerView: 1.4,
+				slidesPerView: 1.6,
 				spaceBetween: 50,
 				centeredSlides: true,
 				initialSlide: 1,
@@ -223,7 +221,7 @@ $(document).ready(function () {
 				initialSlide: 0,
 			},
 			1100: {
-				slidesPerView: 3.9,
+				slidesPerView: 3.7,
 				spaceBetween: 30,
 				centeredSlides: true,
 				loop: true,

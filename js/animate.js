@@ -29,32 +29,32 @@ $(document).ready(function () {
 
 	//=====FRYER TIPS SLIDER===========
 	var FTSwiper = new Swiper('.fryer-tips-slide-swiper', {
-		slidesPerView: 1,
-		spaceBetween: 20,
-		centeredSlides: true,
-		effect: 'fade',
-		fadeEffect: { crossFade: true },
-		speed: 300,
-		navigation: {
-			nextEl: '.fryer-tips_slider .swiper-button-next',
-			prevEl: '.fryer-tips_slider .swiper-button-prev',
-    	},
-		on: {
-			init: function() {
-                var nav = document.querySelector('.slider-navigation');
-                nav.classList.add('fryer-tips-slider-navigation1');
-            },
-			slideChange: function () {
-				var activeIndex = this.activeIndex;
-				for (var i = 1; i <= 4; i++) {
-					var nav = document.querySelector('.slider-navigation');
-					nav.classList.remove('fryer-tips-slider-navigation' + i);
-				}
-				var nav = document.querySelector('.slider-navigation');
-				nav.classList.add('fryer-tips-slider-navigation' + (activeIndex + 1));
-			},
+	slidesPerView: 1,
+	spaceBetween: 20,
+	centeredSlides: true,
+	effect: 'fade',
+	fadeEffect: { crossFade: true },
+	speed: 300,
+	navigation: {
+		nextEl: '.fryer-tips-slide-swiper .swiper-button-next',
+		prevEl: '.fryer-tips-slide-swiper .swiper-button-prev',
+	},
+	on: {
+		init: function () {
+			var nav = document.querySelector('.slider-navigation');
+			nav.classList.add('fryer-tips-slider-navigation1');
 		},
+		slideChange: function () {
+			var activeIndex = this.activeIndex;
+			var nav = document.querySelector('.slider-navigation');
+			for (var i = 1; i <= 4; i++) {
+				nav.classList.remove('fryer-tips-slider-navigation' + i);
+			}
+			nav.classList.add('fryer-tips-slider-navigation' + (activeIndex + 1));
+		},
+	},
 	});
+
 	//=====END FRYER TIPS SLIDER===========
 
 	if (document.body.classList.contains('home-page')) {
@@ -417,92 +417,88 @@ $(document).ready(function () {
 					});				
 					tl11.from('.fryer-tips__section .fryer-tips-slide-swiper', { y: -300,opacity: 0, duration: 1, ease: "power2.out" })
 				
-					// var tl11navi_title = gsap.timeline({
-					// 	scrollTrigger: {
-					// 		trigger: '.fryer-tips-slide-swiper',	
-					// 		start: 'top 50%',
-					// 		once: true,
-					// 	},
-					// });				
-					// tl11navi_title.from('.fryer-tips-slide-swiper .title', { y: -300,opacity: 0, duration: 1, ease: "power2.out" })
+					var tl11navi_title = gsap.timeline({
+						scrollTrigger: {
+							trigger: '.fryer-tips-slide-swiper',	
+							start: 'top 50%',
+							once: true,
+						},
+					});				
+					tl11navi_title.from('.fryer-tips-slide-swiper .title', { y: -300,opacity: 0, duration: 1, ease: "power2.out" })
 
-					// var tl12s1 = gsap.timeline({
-					// 	scrollTrigger: {
-					// 		trigger: '.fryer-tips-slide-swiper .fryer-tips__slide1',	
-					// 		start: 'top 50%',
-					// 		once: true,
-					// 	},
-					// });				
-					// tl12s1.from('.fryer-tips-slide-swiper .fryer-tips__slide1 .main-photo', { scale: 0, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide1 .slider-navigation', { y: 300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide1 .text1', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide1 .fat-arrow', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide1 .text2', { x: 300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide1 .thin-arrow', { x: 300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide1 .pot-potato', { x: 300, opacity: 0, duration: 1, ease: "power2.out" })
+					var tl12s1 = gsap.timeline({
+						scrollTrigger: {
+							trigger: '.fryer-tips-slide-swiper',	
+							start: 'top 50%',
+							once: true,
+						},
+					});				
+					tl12s1.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .slide-main-foto', { x: 300, scale: 1, opacity: 0, duration: 0.5, ease: "power2.out" })
+					.from('.fryer-tips-slide-swiper .fryer-tips-slider-navigation1', { opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .fat-arrow', { x: -300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
+					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .text1', { x: -300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
+					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .thin-arrow', { x: 300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
+					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .text2', { x: 300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
+					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .pot-potato', { x: 300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')				
 
-					// tl12s2 = gsap.timeline({
-					// 	scrollTrigger: {
-					// 		trigger: '.fryer-tips-slide-swiper .fryer-tips__slide2',	
-					// 		start: 'top 50%',
-					// 		once: true,
-					// 	},
-					// });				
-					// tl12s2.from('.fryer-tips-slide-swiper .fryer-tips__slide2 .main-photo', { scale: 0, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide2 .slider-navigation', { y: 300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide2 .text1', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide2 .fat-arrow', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					
-					// tl12s3 = gsap.timeline({
-					// 	scrollTrigger: {
-					// 		trigger: '.fryer-tips-slide-swiper .fryer-tips__slide3',	
-					// 		start: 'top 50%',
-					// 		once: true,
-					// 	},
-					// });				
-					// tl12s3.from('.fryer-tips-slide-swiper .fryer-tips__slide3 .main-photo', { scale: 0, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide3 .slider-navigation', { y: 300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide3 .text1', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide3 .fat-arrow', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide3 .text2', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide3 .thin-arrow', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide3 .vibro-pot', { scale: 0, opacity: 0, duration: 1, ease: "power2.out" })
-
-					// tl12s4 = gsap.timeline({
-					// 	scrollTrigger: {
-					// 		trigger: '.fryer-tips-slide-swiper .fryer-tips__slide4',	
-					// 		start: 'top 50%',
-					// 		once: true,
-					// 	},
-					// });				
-					// tl12s4.from('.fryer-tips-slide-swiper .fryer-tips__slide4 .main-photo', { scale: 0, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide4 .slider-navigation', { y: 300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide4 .text1', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide4 .fat-arrow', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide4 .text2', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide4 .thin-arrow', { x: -300, opacity: 0, duration: 1, ease: "power2.out" })
-					// .from('.fryer-tips-slide-swiper .fryer-tips__slide4 .pot', { scale: 0, opacity: 0, duration: 1, ease: "power2.out" })
-
-
-					// FTSwiper.on("slideChange", function() {
-					// 	var activeAftSlideIndex = FTSwiper.realIndex;
-					// 	if (activeAftSlideIndex === 0) {
-					// 		tl12s1.restart();
-					// 		tl11navi_title.restart();
-					// 	}
-					// 	if (activeAftSlideIndex === 1) {
-					// 		tl12s2.restart();
-					// 		tl11navi_title.restart();
-					// 	}
-					// 	if (activeAftSlideIndex === 2) {
-					// 		tl12s3.restart();
-					// 		tl11navi_title.restart();
-					// 	}
-					// 	if (activeAftSlideIndex === 3) {
-					// 		tl12s4.restart();
-					// 		tl11navi_title.restart();
-					// 	}
-					// });	
+					FTSwiper.on("slideChange", function() {
+						var activeAftSlideIndex = FTSwiper.realIndex;
+						if (activeAftSlideIndex === 0) {
+							tl12s1.restart();
+							// tl11navi_title.restart();
+						}
+						if (activeAftSlideIndex === 1) {
+							tl12s2 = gsap.timeline({
+								scrollTrigger: {
+									trigger: '.fryer-tips-slide-swiper',	
+									start: 'top 50%',
+									once: true,
+								},
+								});				
+								tl12s2.from('.fryer-tips-slide-swiper .fryer-tips-slide2 .slide-main-foto', { x: 300, scale: 1, opacity: 0, duration: 0.5, ease: "power2.out" })
+								.from('.fryer-tips-slide-swiper .fryer-tips-slider-navigation2', { opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips-slide-swiper .fryer-tips-slide2 .text1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips-slide-swiper .fryer-tips-slide2 .fat-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							tl12s2.restart();
+							// tl11navi_title.restart();
+						}
+						if (activeAftSlideIndex === 2) {
+							tl12s3 = gsap.timeline({
+								scrollTrigger: {
+									trigger: '.fryer-tips-slide-swiper',	
+									start: 'top 50%',
+									once: true,
+								},
+								});				
+								tl12s3.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .slide-main-foto', { x: 300, opacity: 0, duration: 0.5, ease: "power2.out" })
+								.from('.fryer-tips-slide-swiper .fryer-tips-slider-navigation3', { opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .text1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .fat-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .text2', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .thin-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .vibro-pot', { scale: 0, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							tl12s3.restart();
+							// tl11navi_title.restart();
+						}
+						if (activeAftSlideIndex === 3) {
+							tl12s4 = gsap.timeline({
+								scrollTrigger: {
+									trigger: '.fryer-tips-slide-swiper',	
+									start: 'top 50%',
+									once: true,
+								},
+							});				
+							tl12s4.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .slide-main-foto', { x: 300, opacity: 0, duration: 0.5, ease: "power2.out" })
+							.from('.fryer-tips-slide-swiper .fryer-tips-slider-navigation4', { y: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .text1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .fat-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .text2', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .thin-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .pot', { scale: 0, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							tl12s4.restart();
+							// tl11navi_title.restart();
+						}
+					});	
 				
 					var tl12s5 = gsap.timeline({
 						scrollTrigger: {
