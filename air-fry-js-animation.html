@@ -342,158 +342,207 @@
 
 
         <div class="air-fry-hat__section">
-            <img class="air-fry-hat_slice" src="./img/air-fri-hat-slice.png" alt="">
-            <h1>
-                <span>AIR FRYING YOUR</span>
-                <span>MCCAIN FRIES</span>
-                <span>FASTER, EASIER, CRISPIER</span>
-            </h1>
+            <img class="air-fry-hat_slice" src="./img/airfryer/air-fry-hat-slice.png" alt="">
+            
+            <div class="image-holder">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./img/airfryer/banner-air-fryer-mobile.jpg" >
+                    <source media="(min-width: 769px)" srcset="./img/airfryer/banner-air-fryer.jpg" >
+                    <img src="./img/airfryer/banner-air-fryer.jpg" alt="">
+                </picture>
+            </div>
+
+            <div class="content-holder">
+                <h1>
+                    <span class="text0">AIR FRYING YOUR</span>
+                    <span class="text1">MCCAIN FRIES</span>
+                    <span class="text2">FASTER, EASIER, CRISPIER</span>
+                </h1>
+            </div>
             <div class="cloud-bottom">
-                <img class="cloud-bottom_img" src="./img/air-fry-cloud-bottom.png" alt="">
-                <ul class="cloud-bottom_list">
-                    <li>
-                        <img class="cloud-bottom_arrow" src="./img/air-fry-cloud-arrow.png" alt="">
-                    </li>
-                    <li>
-                        <span>Our Top</span><br />
-                        <span class="cloud-bottom_span">Air Fryer </span><span>Tips!</span>
-                    </li>
-                </ul>
+                <img class="cloud-bottom_img" src="./img/airfryer/air-fry-cloud-orange.png" alt="">
+
+                <a href="#tips" class="arrow-nav-box">
+                    <div class="content-holder">
+                        <div class="image-holder">
+                            <img class="arrow" src="./img/airfryer/air-fry-cloud-arrow.png" alt="">
+                        </div>
+                        <div class="title-holder">
+                            <span>Our Top</span><br />
+                            <span class="highlight">Air Fryer </span>
+                            <span>Tips!</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
 
-        <div class="fryer-tips__section2">
+        <!-- TIPS SLIDER -->
+        <div class="fryer-tips" id="tips">
             <div class="fryer-tips_slider">
-                <div class="fryer-tips-slide-swiper">
+                <div class="fryer-tips_swiper">
 
                     <div class="title">
-                        <h1>Air Fryer<br>Tips</h1>
+                        <h2>Air Fryer<br>Tips</h2>
                     </div>
 
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide fryer-tips-slide1">
-                            <div class="slide-main-foto">
-                                <img class="main-photo-gif" src="./img/airfryer/gifs/step1.gif">
+                        <!-- SLIDE 1 -->
+                        <div class="swiper-slide slide1">
+                            <div class="content-wrapper">
+                                <div class="photo1 polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step1.gif">
+                                    <div class="slider-navigation">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                                <div class="content-holder">
+                                    <div class="arrow1 thick-arrow-1"></div>
+                                    <p class="text1">Cook in batches <br> if necessary</p>
+                                    
+                                    <div class="arrow2 thin-arrow-1"></div>
+                                    <p class="text2">Don’t overfill the basket –<br>we suggest 1/2 full of fries for<br> even cooking</p>
+
+                                    <img class="pot-potato" src="./img/airfryer/tips/fryer-tips-pot-potato.png">
+                                </div>
                             </div>
-                            <p class="text1">Cook in batches <br> if necessary</p>
-                            <img class="thin-arrow" src="./img/fryer-tips-arrow-thin.png">
-                            <p class="text2">Don’t overfill the basket –<br>we suggest 1/2 full of fries for<br> even
-                                cooking
-                            </p>
-                            <img class="fat-arrow" src="./img/fryer-tips-arrow-fat.png">
-                            <img class="pot-potato" src="./img/fryer-tips-pot-potato.png">
                         </div>
-                        <div class="swiper-slide fryer-tips-slide2">
-                            <div class="fat-arrow">
-                                <img src="./img/fryer-tips-arrow-fat.png">
+                        <!-- SLIDE 2 -->
+                        <div class="swiper-slide slide2">
+                            <div class="content-wrapper">
+                                <div class="photo1 prev-photo polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step1.gif">
+                                </div>
+                                <div class="photo2 polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step2.gif">
+                                    <div class="slider-navigation">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                                <div class="content-holder">
+                                    <div class="arrow1 thick-arrow-1"></div>
+                                    <p class="text1">Preheat the<br>air fryer for<br>extra crispiness</p>
+                                </div>
                             </div>
-                            <div class="slide-main-foto1">
-                                <img class="main-photo-gif1" src="./img/airfryer/gifs/step1.gif">
-                            </div>
-                            <div class="slide-main-foto">
-                                <img class="main-photo-gif" src="./img/airfryer/gifs/step2.gif">
-                            </div>
-                            <p class="text1">Preheat the<br>air fryer for<br>extra crispiness</p>
                         </div>
-                        <div class="swiper-slide fryer-tips-slide3">
-                            <p class="text1">Shake basket<br>halfway through<br>cooking…..</p>
-                            <img class="fat-arrow" src="./img/fryer-tips-fat-arrow-3slide.png">
-                            <div class="slide-main-foto2">
-                                <img class="main-photo-gif2" src="./img/airfryer/gifs/step1.gif">
+                        <!-- SLIDE 3 -->
+                        <div class="swiper-slide slide3">
+                            <div class="content-wrapper">
+                                <div class="photo1 prev-photo polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step1.gif">
+                                </div>
+                                <div class="photo2 prev-photo polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step2.gif">
+                                </div>
+                                <div class="photo3 polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step3.gif">
+                                    <div class="slider-navigation">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+
+                                <div class="content-holder">
+                                    <div class="arrow1 thick-arrow-2"></div>
+                                    <p class="text1">Shake basket<br>halfway through<br>cooking…..</p>
+                                    
+                                    <div class="arrow2 thin-arrow-1"></div>
+                                    <p class="text2">…..to get the crispiest,<br>fluffiest texture</p>
+                                    
+                                    <img class="vibro-pot" src="./img/airfryer/tips/fryer-tips-vibro-pot.png">
+
+                                </div>
                             </div>
-                            <div class="slide-main-foto1">
-                                <img class="main-photo-gif1" src="./img/airfryer/gifs/step2.gif">
-                            </div>
-                            <div class="slide-main-foto">
-                                <img class="main-photo-gif" src="./img/airfryer/gifs/step3.gif">
-                            </div>
-                            <img class="thin-arrow" src="./img/fryer-tips-arrow-thin.png">
-                            <p class="text2">…..to get the crispiest,<br>fluffiest texture</p>
-                            <img class="vibro-pot" src="./img/fryer-tips-vibro-pot.png">
                         </div>
-                        <div class="swiper-slide fryer-tips-slide4">
-                            <div class="slide-main-foto3">
-                                <img class="main-photo-gif3" src="./img/airfryer/gifs/step1.gif">
+                        <!-- SLIDE 4 -->
+                        <div class="swiper-slide slide4">
+                            <div class="content-wrapper">
+                                <div class="photo1 prev-photo polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step1.gif">
+                                </div>
+                                <div class="photo2 prev-photo polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step2.gif">
+                                </div>
+                                <div class="photo3 prev-photo polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step3.gif">
+                                </div>
+                                <div class="photo4 polaroid-photo">
+                                    <img src="./img/airfryer/tips/gifs/step4.gif">
+                                    <div class="slider-navigation">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+
+                                <div class="content-holder">
+                                    <div class="arrow1 normal-arrow-1"></div>
+                                    <p class="text1">Cooking time can<br>vary by air fryer<br>(and how full the basket is)</p>
+                                    <div class="arrow2 thin-arrow-2"></div>
+                                    <p class="text2">To avoid grease<br>and dirt build up,<br>clean after each use</p>
+                                    <img class="pot" src="./img/airfryer/tips/fryer-tips-pot.png">
+                                </div>
                             </div>
-                            <div class="slide-main-foto2">
-                                <img class="main-photo-gif2" src="./img/airfryer/gifs/step2.gif">
-                            </div>
-                            <div class="slide-main-foto1">
-                                <img class="main-photo-gif1" src="./img/airfryer/gifs/step3.gif">
-                            </div>
-                            <div class="slide-main-foto">
-                                <img class="main-photo-gif" src="./img/airfryer/gifs/step4.gif">
-                            </div>
-                            <div class="fat-arrow">
-                                <img src="./img/fryer-tips-arrow-fat.png">
-                            </div>
-                            <p class="text1">Cooking time can<br>vary by air fryer<br>(and how full the basket is)</p>
-                            <img class="thin-arrow" src="./img/fryer-tips-arrow-thin.png">
-                            <p class="text2">To avoid grease<br>and dirt build up,<br>clean after each use</p>
-                            <img class="pot" src="./img/fryer-tips-pot.png">
                         </div>
-                    </div>
-                    <div class="slider-navigation">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>
             <div class="fryer-tips-cloud">
-                <img class="arrow" src="./img/fryer-tips-cloud-arrow.png">
-                <img class="cloud" src="./img/fryer-tips-cloud.png">
+                <img class="arrow" src="./img/airfryer/tips/fryer-tips-cloud-arrow.png">
+                <img class="cloud" src="./img/airfryer/tips/fryer-tips-cloud.png">
                 <p>Check our Air Fryer<br> Recommended products</p>
             </div>
         </div>
 
-        <div class="air-fry-slide__section">
+        <div class="air-fryer-slide__section">
             <div class="air-fry-slide-swiper">
                 <div class="swiper-wrapper air-fry-slide-swiper-wrapper">
                     <div class="swiper-slide air-fry-slide">
                         <figure class="air-fry-slide-bg2">
-                            <img src="./img/air-fry-recommendedProduct-slide.png">
+                            <img src="./img/airfryer/sample-product-1.png">
                         </figure>
                         <p>McCain® Superfries Straight Cut</p>
                         <a href="#" class="btn yellow">Buy Now</a>
                     </div>
                     <div class="swiper-slide air-fry-slide">
                         <figure class="air-fry-slide-bg3">
-                            <img src="./img/air-fry-recommendedProduct-slide.png">
+                            <img src="./img/airfryer/sample-product-2.png">
                         </figure>
                         <p>McCain® Bistro Style Super Crisps</p>
                         <a href="#" class="btn yellow">Buy Now</a>
                     </div>
                     <div class="swiper-slide air-fry-slide">
                         <figure class="air-fry-slide-bg4">
-                            <img src="./img/air-fry-recommendedProduct-slide.png">
+                            <img src="./img/airfryer/sample-product-1.png">
                         </figure>
                         <p>McCain® Superfries Straight Cut</p>
                         <a href="#" class="btn yellow">Buy Now</a>
                     </div>
                     <div class="swiper-slide air-fry-slide">
                         <figure class="air-fry-slide-bg1">
-                            <img src="./img/air-fry-recommendedProduct-slide.png">
+                            <img src="./img/airfryer/sample-product-2.png">
                         </figure>
                         <p>McCain® Bistro Style Super Crisps</p>
                         <a href="#" class="btn yellow">Buy Now</a>
                     </div>
                     <div class="swiper-slide air-fry-slide">
                         <figure class="air-fry-slide-bg2">
-                            <img src="./img/air-fry-recommendedProduct-slide.png">
+                            <img src="./img/airfryer/sample-product-1.png">
                         </figure>
                         <p>McCain® Superfries Straight Cut</p>
                         <a href="#" class="btn yellow">Buy Now</a>
                     </div>
                     <div class="swiper-slide air-fry-slide">
                         <figure class="air-fry-slide-bg3">
-                            <img src="./img/air-fry-recommendedProduct-slide.png">
+                            <img src="./img/airfryer/sample-product-2.png">
                         </figure>
                         <p>McCain® Superfries Straight Cut</p>
                         <a href="#" class="btn yellow">Buy Now</a>
                     </div>
                     <div class="swiper-slide air-fry-slide">
                         <figure class="air-fry-slide-bg4">
-                            <img src="./img/air-fry-recommendedProduct-slide.png">
+                            <img src="./img/airfryer/sample-product-1.png">
                         </figure>
                         <p>McCain® Superfries Straight Cut</p>
                         <a href="#" class="btn yellow">Buy Now</a>
@@ -504,22 +553,26 @@
             </div>
         </div>
 
-        <div class="FamilyDinner__section">
-            <div class="FamilyDinner-left">
-                <div class="FamilyDinner-image">
-                    <img src="./img/air-fry-familyDinner-bg.png" alt="">
-                </div>
+        <div class="airfryer-family-dinner">
+            <div class="image-holder">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./img/airfryer/banner-FamilyDinner-mobile.jpg" >
+                    <source media="(min-width: 769px)" srcset="./img/airfryer/banner-FamilyDinner.jpg" >
+                    <img src="./img/airfryer/banner-FamilyDinner.jpg" alt="">
+                </picture>
+                
             </div>
-            <div class="FamilyDinner-right">
-                <div class="small-chips"></div>
-                <div class="big-chips"></div>
+            
+            <div class="small-chips"></div>
+            
+            <div class="content-holder">
                 <div class="title">
                     <h2>
                         <span class="title-span1">FASTER</span>
                         <span class="title-span2">EASIER</span>
                         <span class="title-span3">Crisper</span>
                     </h2>
-                    <p>McCain made</br>For the Air Fryer</p>
+                    <p>McCain made</br>for the Air Fryer</p>
                 </div>
             </div>
         </div>

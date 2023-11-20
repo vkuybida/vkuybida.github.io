@@ -28,31 +28,17 @@ $(document).ready(function () {
 	//=====END FRY SCHOOL SLIDER======
 
 	//=====FRYER TIPS SLIDER===========
-	var FTSwiper = new Swiper('.fryer-tips-slide-swiper', {
-	slidesPerView: 1,
-	spaceBetween: 20,
-	centeredSlides: true,
-	effect: 'fade',
-	fadeEffect: { crossFade: true },
-	speed: 300,
-	navigation: {
-		nextEl: '.fryer-tips-slide-swiper .swiper-button-next',
-		prevEl: '.fryer-tips-slide-swiper .swiper-button-prev',
-	},
-	on: {
-		init: function () {
-			var nav = document.querySelector('.slider-navigation');
-			nav.classList.add('fryer-tips-slider-navigation1');
-		},
-		slideChange: function () {
-			var activeIndex = this.activeIndex;
-			var nav = document.querySelector('.slider-navigation');
-			for (var i = 1; i <= 4; i++) {
-				nav.classList.remove('fryer-tips-slider-navigation' + i);
-			}
-			nav.classList.add('fryer-tips-slider-navigation' + (activeIndex + 1));
-		},
-	},
+	var FTSwiper = new Swiper('.fryer-tips_swiper', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		centeredSlides: true,
+		effect: 'fade',
+		fadeEffect: { crossFade: true },
+		speed: 300,
+		navigation: {
+			nextEl: '.fryer-tips_swiper .swiper-button-next',
+			prevEl: '.fryer-tips_swiper .swiper-button-prev',
+		}
 	});
 
 	//=====END FRYER TIPS SLIDER===========
@@ -410,36 +396,36 @@ $(document).ready(function () {
 				
 					var tl11 = gsap.timeline({
 						scrollTrigger: {
-							trigger: '.fryer-tips__section',	
+							trigger: '.fryer-tips',	
 							start: 'top 50%',
 							once: true,
 						},
 					});				
-					tl11.from('.fryer-tips__section .fryer-tips-slide-swiper', { y: -300,opacity: 0, duration: 1, ease: "power2.out" })
+					tl11.from('.fryer-tips .fryer-tips_swiper', { y: -300,opacity: 0, duration: 1, ease: "power2.out" })
 				
 					var tl11navi_title = gsap.timeline({
 						scrollTrigger: {
-							trigger: '.fryer-tips-slide-swiper',	
+							trigger: '.fryer-tips_swiper',	
 							start: 'top 50%',
 							once: true,
 						},
 					});				
-					tl11navi_title.from('.fryer-tips-slide-swiper .title', { y: -300,opacity: 0, duration: 1, ease: "power2.out" })
+					tl11navi_title.from('.fryer-tips_swiper .title', { x: 300,opacity: 0, duration: 1, ease: "power2.out" })
 
 					var tl12s1 = gsap.timeline({
 						scrollTrigger: {
-							trigger: '.fryer-tips-slide-swiper',	
+							trigger: '.fryer-tips_swiper',	
 							start: 'top 50%',
 							once: true,
 						},
 					});				
-					tl12s1.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .slide-main-foto', { x: 300, scale: 1, opacity: 0, duration: 0.5, ease: "power2.out" })
-					.from('.fryer-tips-slide-swiper .fryer-tips-slider-navigation1', { opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .fat-arrow', { x: -300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
-					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .text1', { x: -300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
-					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .thin-arrow', { x: 300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
-					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .text2', { x: 300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
-					.from('.fryer-tips-slide-swiper .fryer-tips-slide1 .pot-potato', { x: 300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')				
+					tl12s1.from('.fryer-tips_swiper .slide1 .photo1', { x: 300, scale: 1, opacity: 0, duration: 0.5, ease: "power2.out", rotation:45, transformOrigin:"50% 50%" })
+					.from('.fryer-tips_swiper .slide1 .slider-navigation', { opacity: 0, duration: 3, ease: "power2.out" }, '<')
+					.from('.fryer-tips_swiper .slide1 .arrow1', { x: 300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
+					.from('.fryer-tips_swiper .slide1 .text1', { x: 300, opacity: 0, duration: 1, ease: "power2.out", rotation:120, transformOrigin:"50% 50%" }, '<')
+					.from('.fryer-tips_swiper .slide1 .arrow2', { x: -300, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')
+					.from('.fryer-tips_swiper .slide1 .text2', { x: -300, opacity: 0, duration: 1, ease: "power2.out", rotation:120, transformOrigin:"50% 50%" }, '<')
+					.from('.fryer-tips_swiper .slide1 .pot-potato', { x: -300, scale: 0, opacity: 0, duration: 0.7, ease: "power2.out" }, '<')		
 
 					FTSwiper.on("slideChange", function() {
 						var activeAftSlideIndex = FTSwiper.realIndex;
@@ -450,51 +436,51 @@ $(document).ready(function () {
 						if (activeAftSlideIndex === 1) {
 							tl12s2 = gsap.timeline({
 								scrollTrigger: {
-									trigger: '.fryer-tips-slide-swiper',	
+									trigger: '.fryer-tips_swiper',	
 									start: 'top 50%',
 									once: true,
 								},
 								});				
-								tl12s2.from('.fryer-tips-slide-swiper .fryer-tips-slide2 .slide-main-foto', { x: 300, scale: 1, opacity: 0, duration: 0.5, ease: "power2.out" })
-								.from('.fryer-tips-slide-swiper .fryer-tips-slider-navigation2', { opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-								.from('.fryer-tips-slide-swiper .fryer-tips-slide2 .text1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-								.from('.fryer-tips-slide-swiper .fryer-tips-slide2 .fat-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								tl12s2.from('.fryer-tips_swiper .slide2 .photo2', { x: 300, scale: 1, opacity: 0, duration: 0.5, ease: "power2.out", rotation:45, transformOrigin:"50% 50%" })
+								.from('.fryer-tips_swiper .slide2 .slider-navigation', { opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips_swiper .slide2 .text1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out", rotation:120, transformOrigin:"50% 50%" }, '<')
+								.from('.fryer-tips_swiper .slide2 .arrow1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
 							tl12s2.restart();
 							// tl11navi_title.restart();
 						}
 						if (activeAftSlideIndex === 2) {
 							tl12s3 = gsap.timeline({
 								scrollTrigger: {
-									trigger: '.fryer-tips-slide-swiper',	
+									trigger: '.fryer-tips_swiper',	
 									start: 'top 50%',
 									once: true,
 								},
 								});				
-								tl12s3.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .slide-main-foto', { x: 300, opacity: 0, duration: 0.5, ease: "power2.out" })
-								.from('.fryer-tips-slide-swiper .fryer-tips-slider-navigation3', { opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .text1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .fat-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .text2', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .thin-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-								.from('.fryer-tips-slide-swiper .fryer-tips-slide3 .vibro-pot', { scale: 0, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								tl12s3.from('.fryer-tips_swiper .slide3 .photo3', { x: 300, opacity: 0, duration: 0.5, ease: "power2.out", rotation:45, transformOrigin:"50% 50%" })
+								.from('.fryer-tips_swiper .slide3 .slider-navigation', { opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips_swiper .slide3 .text1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out", rotation:120, transformOrigin:"50% 50%" }, '<')
+								.from('.fryer-tips_swiper .slide3 .arrow1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips_swiper .slide3 .text2', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out", rotation:120, transformOrigin:"50% 50%" }, '<')
+								.from('.fryer-tips_swiper .slide3 .arrow2', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+								.from('.fryer-tips_swiper .slide3 .vibro-pot', { scale: 0, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
 							tl12s3.restart();
 							// tl11navi_title.restart();
 						}
 						if (activeAftSlideIndex === 3) {
 							tl12s4 = gsap.timeline({
 								scrollTrigger: {
-									trigger: '.fryer-tips-slide-swiper',	
+									trigger: '.fryer-tips_swiper',	
 									start: 'top 50%',
 									once: true,
 								},
 							});				
-							tl12s4.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .slide-main-foto', { x: 300, opacity: 0, duration: 0.5, ease: "power2.out" })
-							.from('.fryer-tips-slide-swiper .fryer-tips-slider-navigation4', { y: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .text1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .fat-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .text2', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .thin-arrow', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
-							.from('.fryer-tips-slide-swiper .fryer-tips-slide4 .pot', { scale: 0, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							tl12s4.from('.fryer-tips_swiper .slide4 .photo4', { x: 300, opacity: 0, duration: 0.5, ease: "power2.out", rotation:45, transformOrigin:"50% 50%" })
+							.from('.fryer-tips_swiper .slide4 .slider-navigation', { y: 0, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							.from('.fryer-tips_swiper .slide4 .text1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out", rotation:120, transformOrigin:"50% 50%" }, '<')
+							.from('.fryer-tips_swiper .slide4 .arrow1', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							.from('.fryer-tips_swiper .slide4 .text2', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out", rotation:120, transformOrigin:"50% 50%" }, '<')
+							.from('.fryer-tips_swiper .slide4 .arrow2', { x: -300, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
+							.from('.fryer-tips_swiper .slide4 .pot', { scale: 0, opacity: 0, duration: 0.5, ease: "power2.out" }, '<')
 							tl12s4.restart();
 							// tl11navi_title.restart();
 						}
@@ -502,35 +488,35 @@ $(document).ready(function () {
 				
 					var tl12s5 = gsap.timeline({
 						scrollTrigger: {
-							trigger: '.fryer-tips__section',	
+							trigger: '.fryer-tips',	
 							start: 'top 50%',
 							once: true,
 						},
 					});
-					tl12s5.from('.fryer-tips__section .fryer-tips-cloud', { y: 300,opacity: 0, duration: 1, ease: "power2.out" })
+					tl12s5.from('.fryer-tips .fryer-tips-cloud', { y: 300,opacity: 0, duration: 1, ease: "power2.out" })
 
 				
 					var tl13 = gsap.timeline({
 						scrollTrigger: {
-							trigger: '.air-fry-slide__section',	
+							trigger: '.air-fryer-slide__section',	
 							start: 'top 50%',
 							once: true,
 						},
 					});
 				
-					tl13.from('.air-fry-slide__section div', { x: 1000, duration: 1.5, ease: "power2.out" })
+					tl13.from('.air-fryer-slide__section div', { x: 1000, duration: 1.5, ease: "power2.out" })
 				
 					var tl14 = gsap.timeline({
 						scrollTrigger: {
-							trigger: '.FamilyDinner__section',	
+							trigger: '.airfryer-family-dinner',	
 							start: 'top 50%',
 							once: true,
 						},
 					});
 				
-					tl14.from('.FamilyDinner__section h2 ', { y: 300, duration: 1, opacity: 0, ease: "power2.out" })
-					tl14.from('.FamilyDinner__section p', { y: 300, duration: 1, ease: "power2.out" })
-					tl14.from('.FamilyDinner__section .small-chips', { x: 250, duration: 1, ease: "power2.out" });
+					tl14.from('.airfryer-family-dinner h2 ', { y: 300, duration: 1, opacity: 0, ease: "power2.out" })
+					tl14.from('.airfryer-family-dinner p', { y: 300, duration: 0.7, ease: "power2.out" })
+					tl14.from('.airfryer-family-dinner .small-chips', { x: 250, duration: 0.7, ease: "power2.out" });
 			},
 		});
 	}
